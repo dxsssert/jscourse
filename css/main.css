@@ -282,6 +282,7 @@ header nav ul li.active::after {
     transition: all 0.3s ease;
     width: 80%;
     align-self: center;
+    margin-top: auto;
 }
 
 .add-to-cart-btn:hover {
