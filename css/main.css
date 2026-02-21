@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: 400;
+    color: white;
+    font-size: 20px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(26, 14, 1, 1) 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+header {
+    padding: 50px 0;
+}
+
+.name {
+    margin: 20px 20px;
+    text-transform: uppercase;
+    font-size: 29px;
+    font-weight: 800;
+    user-select: none;
+    pointer-events: none;
+    cursor: none !important;
+    display: inline-block;
+}
+
+nav {
+    float: right;
+    width: 50%;
+    margin: 30px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    color: #fff;
+}
+
+header nav ul li:not(.active) a:hover {
+    border-bottom: 5px solid #DC7000;
+}
+
+header nav ul li.active::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 5px;
+    background: #FA9021;
+    border-radius: 10px;
+}
+
+.hero {
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.hero img {
+    max-width: 100%;
+    width: 540px;
+    height: 540px;
+    position: absolute;
+    top: 250px;
+    right: 0;
+}
+
+.hero--info {
+    width: 530px;
+    padding-top: 70px;
+}
+
+.hero--info h2 {
+    margin: 20px 20px;
+    font-size: 50px;
+    font-weight: 600;
+    user-select: none;
+    pointer-events: none;
+    cursor: none !important;
+}
+
+.hero--info p {
+    line-height: 170%;
+    font-weight: 500;
+    margin: 30px;
+    user-select: none;
+    pointer-events: none;
+    cursor: none !important;
+}
+
+.hero--info .btn {
+    margin: 20px 20px;
+    background: #FA9021;
+    color: #fff;
+    border-radius: 50px;
+    padding: 15px 30px;
+    border: 0;
+    transition: all 500ms ease;
+    display: inline-block;
+}
+
+.hero--info .btn:hover {
+    font-size: 20px;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.trending h3 {
+    font-weight: 600;
+    font-size: 31px;
+    padding: 0;
+    text-align: left;
+}
+
+.trending .see-all {
+    color: #fff;
+    background: #25211D;
+    border-radius: 5px;
+    padding: 12px 23px;
+    float: right;
+    display: block;
+    transition: all 500ms ease;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.trending .see-all:hover {
+    transform: scale(1.1);
+}
+
+.trending .Books {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px 0;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.trending .Books span {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.Books-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.about-section {
+    text-align: center;
+    margin: 50px 0;
+    padding: 30px 0;
+    position: relative;
+}
+
+.about-section h2 {
+    color: #ffffff;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-section p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: 29px;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #d4b483;
+    margin: 40px auto;
+    width: 50%;
+}
+
+.trending .Block {
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(37, 33, 29, 0.7);
+    flex: 1;
+    min-width: 250px;
+    max-width: calc(25% - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.trending .Block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(250, 144, 33, 0.3);
+    background: rgba(37, 33, 29, 0.9);
+    border: 1px solid #FA9021;
+}
+
+.book-image-container {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.book-image {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.Block:hover .book-image {
+    transform: scale(1.05);
+}
+
+.Block:hover span {
+    color: #FA9021;
+}
+
+.Block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #FA9021;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.Block:hover::before {
+    transform: scaleX(1);
+}
+
+.add-to-cart-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #FA9021;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 80%;
+    align-self: center;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #DC7000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #FA9021;
+    margin: 40px auto;
+    width: 80%;
+    opacity: 0.3;
+}
+
+/* Стили для подвала */
+.footer {
+    background-color: #1a0e01;
+    padding: 50px 0;
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 15px;
+}
+
+.footer-section h4 {
+    color: #FA9021;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
