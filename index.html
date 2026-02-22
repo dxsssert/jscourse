@@ -4,97 +4,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="icon" href="https://avatars.mds.yandex.net/i?id=e53a59574d211d3d178d4bac3494854420748606-10110781-images-thumbs&n=13">
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <title>Bookline</title>
 </head>
 <body>
     <div class="wrapper">
         <header class="container">
-            <span class="name">Bookline</span>
-            <nav>
-                <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Catalog</a></li>
-                    <li><a href="#">Basket</a></li>
-                </ul>
-            </nav>
-        </header>
-        
-        <div class="hero container">
-            <div class="hero--info">
-                <h2>Bookline – books that inspire.</h2>
-                <p>Welcome to BookHub – your personal online library! Discover thousands of books for every taste: from classics to modern bestsellers, from sci-fi to psychology.</p>
-                <button class="btn">Start to read</button>
+    <div class="header-left">
+        <div class="logo">
+            <div class="logo-image">
+                <img src="images/logo.png" alt="" class="logo-image">
             </div>
-            <img src="images/1.png" alt="">
+            <span class="name">Bookline</span>  
         </div>
         
-        <div class="about-section">
-            <h2>About Us</h2>
-            <p>
-                BookHub is a passionate community where literature comes alive. We connect readers with their next favorite book through 
-                expertly curated collections and personalized recommendations. Our mission is to make discovering great books simple,
-                enjoyable, and inspiring for every type of reader.
-            </p>
+        <div class="catalog-btn">
+            <a href="#">Каталог</a>
+        </div>
+    </div>
+    
+    <nav>
+        <ul>
+            <li class="search-item">
+                <form class="search-form" action="#" method="get">
+                    <input type="text" placeholder="Поиск книг..." class="search-input">
+                    <button type="submit" class="search-btn">
+                        <img src="images/search-icon.png" alt="Поиск">
+                    </button>
+                </form>
+            </li>
+
+            <li class="icon-item">
+                <a href="#">
+                    <img src="images/basket-icon.png" alt="Корзина" class="nav-icon">
+                </a>
+            </li>
+            <li class="icon-item">
+                <a href="#">
+                    <img src="images/profile-icon.png" alt="Личный кабинет" class="nav-icon">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+        
+       <div class="hero container">
+    <div class="hero-content">
+        <div class="hero--info">
+            <h2>Bookline – книги, которые вдохновляют</h2>
+            <p>Добро пожаловать на Bookline - вашу личную онлайн библиотеку! Откройте для себя тысячи книг на любой вкус: от классики до современных бестселлеров, от научной фантастики до психологии.</p>
         </div>
         
+        <div class="hero-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="images/banner1.jpg" alt="Акция 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/banner2.jpg" alt="Акция 2"> 
+                </div>
+                <div class="carousel-slide">
+                    <img src="images/banner3.jpg" alt="Акция 3">
+                </div>
+            </div>
+            
+            <!-- Кнопки управления -->
+            <button class="carousel-prev">❮</button>
+            <button class="carousel-next">❯</button>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container trending"></div>
         <div class="container trending">
-            <h3>Book Catalog</h3>
-            <a href="#" class="see-all">SEE ALL</a>
+            <h3>Хиты продаж</h3>
             
             <div class="Books">
                 <div class="Block">
                     <div class="book-image-container">
-                        <img src="images/i (3).png" alt="" class="book-image">
+                        <img src="images/1.jpeg" alt="" class="book-image">
                     </div>
-                    <span>Роберт Лафоре Объектно-ориентированное <br>программирование C++</span>
+                    <span>Я переиграю тебя<br> Тони Майрон</span>
                     <button class="add-to-cart-btn">Добавить в корзину</button>
                 </div>
                 
                 <div class="Block">
                     <div class="book-image-container">
-                        <img src="images/ItLcGiVC-ipad.jpeg" alt="" class="book-image">
+                        <img src="images/2.jpeg" alt="" class="book-image">
                     </div>
-                    <span>Легендариум культовой франшизы: смыслы и<br>символы, чудовища и герои</span>
+                    <span>Герой нашего времени<br>Михаил Лермонтов</span>
                     <button class="add-to-cart-btn">Добавить в корзину</button>
                 </div>
                 
                 <div class="Block">
                     <div class="book-image-container">
-                        <img src="images/cwAncgcU-ipad.jpeg" alt="" class="book-image">
+                        <img src="images/3.jpeg" alt="" class="book-image">
                     </div>
-                    <span>Лайк, репост: автор «Пиши, сокращай» — <br>о системном подходе к соцсетям</span>
+                    <span>Нейросети могут всё<br>Дамир Халилов</span>
                     <button class="add-to-cart-btn">Добавить в корзину</button>
                 </div>
                 
                 <div class="Block">
                     <div class="book-image-container">
-                        <img src="images/ApOv8ISe-ipad.jpeg" alt="" class="book-image">
+                        <img src="images/4.jpeg" alt="" class="book-image">
                     </div>
                     <span>Как укротить свой мозг? Важнейшая работа<br>Нобелевского лауреата о мышлении</span>
                     <button class="add-to-cart-btn">Добавить в корзину</button>
                 </div>
             </div>
             
-            <hr class="divider">
+            <!-- <hr class="divider"> -->
+        </div>
+        
+
+
+        <div class="reviews-section">
+    <h3>Что говорят наши читатели</h3>
+    <div class="reviews">
+
+        <!-- Первый набор (оригинальные отзывы) -->
+        <div class="review-card">
+            <p class="quote">«Я переиграю тебя» — одна из лучших книг года! Сюжет держит в напряжении до последней страницы. Спасибо Bookline за такие находки!</p>
+            <div class="stars">★★★★★</div>
+            <div class="reviewer">Максим Сидоров<br><small>Читатель, 3 дня назад</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">Классика в новом прочтении. Лермонтов звучит свежо даже в 2026 году. Лучшая онлайн-библиотека, в которой я был.</p>
+            <div class="stars">★★★★★</div>
+            <div class="reviewer">Анна Ковалёва<br><small>Читательница, 1 неделя назад</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">«Нейросети могут всё» — must-read для всех, кто хочет понять будущее. Простым языком и с примерами. Рекомендую!</p>
+            <div class="stars">★★★★☆</div>
+            <div class="reviewer">Дмитрий Волков<br><small>Читатель, 2 недели назад</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">После этой книги начал иначе думать. «Как укротить свой мозг» реально меняет жизнь. Огромное спасибо Bookline!</p>
+            <div class="stars">★★★★★</div>
+            <div class="reviewer">Елена Морозова<br><small>Читательница, вчера</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">Нашла здесь редкие издания, которых нигде больше нет. Bookline — настоящая находка для библиофила!</p>
+            <div class="stars">★★★★★</div>
+            <div class="reviewer">София Петрова<br><small>Читательница, 5 дней назад</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">Рекомендации попадают в точку каждый раз. Уже прочитала 7 книг по совету сайта — все в восторге!</p>
+            <div class="stars">★★★★★</div>
+            <div class="reviewer">Артём Лебедев<br><small>Читатель, 12 дней назад</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">Удобный интерфейс, быстрая загрузка, приятные цены. Для фантастики и психологии — лучшее место.</p>
+            <div class="stars">★★★★☆</div>
+            <div class="reviewer">Кира Смирнова<br><small>Читательница, 1 неделю назад</small></div>
+        </div>
+
+        <!-- ТОЧНЫЙ дубль всех отзывов выше (это обязательно для плавного зацикливания) -->
+        <div class="review-card">
+            <p class="quote">«Я переиграю тебя» — одна из лучших книг года! Сюжет держит в напряжении до последней страницы. Спасибо Bookline за такие находки!</p>
+            <div class="stars">★★★★★</div>
+            <div class="reviewer">Максим Сидоров<br><small>Читатель, 3 дня назад</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">Классика в новом прочтении. Лермонтов звучит свежо даже в 2026 году. Лучшая онлайн-библиотека, в которой я был.</p>
+            <div class="stars">★★★★★</div>
+            <div class="reviewer">Анна Ковалёва<br><small>Читательница, 1 неделя назад</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">«Нейросети могут всё» — must-read для всех, кто хочет понять будущее. Простым языком и с примерами. Рекомендую!</p>
+            <div class="stars">★★★★☆</div>
+            <div class="reviewer">Дмитрий Волков<br><small>Читатель, 2 недели назад</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">После этой книги начал иначе думать. «Как укротить свой мозг» реально меняет жизнь. Огромное спасибо Bookline!</p>
+            <div class="stars">★★★★★</div>
+            <div class="reviewer">Елена Морозова<br><small>Читательница, вчера</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">Нашла здесь редкие издания, которых нигде больше нет. Bookline — настоящая находка для библиофила!</p>
+            <div class="stars">★★★★★</div>
+            <div class="reviewer">София Петрова<br><small>Читательница, 5 дней назад</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">Рекомендации попадают в точку каждый раз. Уже прочитала 7 книг по совету сайта — все в восторге!</p>
+            <div class="stars">★★★★★</div>
+            <div class="reviewer">Артём Лебедев<br><small>Читатель, 12 дней назад</small></div>
+        </div>
+
+        <div class="review-card">
+            <p class="quote">Удобный интерфейс, быстрая загрузка, приятные цены. Для фантастики и психологии — лучшее место.</p>
+            <div class="stars">★★★★☆</div>
+            <div class="reviewer">Кира Смирнова<br><small>Читательница, 1 неделю назад</small></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="about-section">
+            <h2>О Нас</h2>
+            <p>
+            
+                    Bookline — это сообщество увлеченных людей, где литература оживает. 
+                    Мы помогаем читателям найти свою следующую любимую книгу с помощью тщательно подобранных коллекций и персонализированных рекомендаций. 
+                    Наша миссия — сделать поиск замечательных книг простым, приятным и вдохновляющим для читателей любого уровня.
+            </p>
         </div>
 
         <footer class="footer">
             <div class="footer-content container">
                 <div class="footer-section">
-                    <h4>© 2025 Bookline. Все права защищены</h4>
-                    <p>Ваш надежный источник знаний и вдохновения</p>
+                    <h4>© 2026 Bookline. Все права защищены</h4>
+                    <p>Ваш надежный источник знаний и вдохновения!</p>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Контакты</h4>
                     <p>Email: info@bookline.com</p>
-                    <p>Телефон: +7(980) 750-01-00</p>
-                    <p>Адрес: г.Владимир, пр-кт Строителей, 7Г</p>
+                    <p>Разработчики: Филиппова Ю.C.</p>
+                    <p>              Давидянц Д.Р.</p>
                 </div>
             </div>
         </footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
