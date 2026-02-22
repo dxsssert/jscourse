@@ -100,20 +100,6 @@ header nav ul li a {
     color: #fff;
 }
 
-/* Убираем конфликтующий ховер
-header nav ul li:not(.active) a:hover {
-    border-bottom: none; /* убираем подчеркивание 
-    display: inline-block; возвращаем нормальное отображение 
-} 
-
-/* header nav ul li.active::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 5px;
-    background: #FA9021;
-    border-radius: 10px;
-} */
 
 /* Кнопка каталога */
 .catalog-btn a {
@@ -131,7 +117,7 @@ header nav ul li:not(.active) a:hover {
 .catalog-btn a:hover {
     background-color: #DC7000;
     transform: none;
-    border-bottom: none; /* убираем возможное подчеркивание */
+    border-bottom: none; 
     background-color: #DC7000;
     transform: none;
     border-bottom: none;
@@ -303,9 +289,9 @@ header nav ul {
 /* Карусель */
 .hero-carousel {
     position: relative;
-    width: 70%; /* относительно родителя */
-    min-width: 300px; /* минимальный размер */
-    max-width: 650px; /* максимальный размер */
+    width: 70%; 
+    min-width: 300px; 
+    max-width: 650px; 
     aspect-ratio: 4/3;
     overflow: hidden;
     border-radius: 15px;
@@ -467,11 +453,11 @@ header nav ul {
 
 .trending .Books {
     display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 50px 0;
+    justify-content: flex-start;
     gap: 30px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; 
+    transition: transform 0.5s ease-out;
+    padding: 20px 0;
 }
 
 .trending .Books span {
@@ -611,20 +597,66 @@ header nav ul {
     padding: 20px;
     border-radius: 10px;
     background: rgba(37, 33, 29, 0.7);
-    flex: 1;
-    min-width: 250px;
-    max-width: calc(25% - 30px);
+    flex: 0 0 calc((100% - (30px * 3)) / 4); 
+    max-width: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
 }
-
 .trending .Block:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(250, 144, 33, 0.3);
     background: rgba(37, 33, 29, 0.9);
     border: 1px solid #FA9021;
+}
+
+.trending-slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.books-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 55px; 
+}
+
+
+.trending-prev, .trending-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FA9021;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.trending-prev:hover, .trending-next:hover {
+    background: #DC7000;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.trending-prev { left: 0; } 
+.trending-next { right: 0; } 
+
+
+.trending-controls {
+    display: none;
 }
 
 .book-image-container {
@@ -818,7 +850,7 @@ header nav ul {
     }
 }
 
-/* Текст внутри карточек (без изменений) */
+
 .quote {
     font-size: 18px;
     line-height: 1.55;
