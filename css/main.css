@@ -402,7 +402,12 @@ header nav ul {
     z-index: 1;
 }
 
-
+.trending-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
 .trending h3 {
     font-weight: 600;
     font-size: 31px;
@@ -425,6 +430,40 @@ header nav ul {
 .trending .see-all:hover {
     transform: scale(1.1);
 }
+/* Кнопки переключения */
+/* Заголовок с кнопками по краям */
+.trending-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.trending-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.trending-prev, .trending-next {
+    width: 50px;
+    height: 50px;
+    background-color: #FA9021;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    color: white;
+    font-size: 24px;
+}
+
+.trending-prev:hover, .trending-next:hover {
+    background-color: #DC7000;
+}
+
 
 .trending .Books {
     display: flex;
@@ -449,25 +488,113 @@ header nav ul {
     border-bottom: 1px solid #eee;
 }
 
+/* Секция О нас */
 .about-section {
-    text-align: center;
+    padding: 80px 0;
     margin: 50px 0;
-    padding: 30px 0;
-    position: relative;
+    width: 100%;
+}
+
+.about-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .about-section h2 {
-    color: #ffffff;
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    font-weight: 600;
+    color: #FA9021;
+    font-size: 42px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.about-section p {
-    max-width: 600px;
-    margin: 0 auto;
-    color: #ffffff;
-    font-size: 29px;
+.about-content {
+    display: flex;
+    justify-content: center;
+}
+
+.about-text {
+    max-width: 900px;
+    text-align: center;
+}
+
+.about-main {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.about-secondary {
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: #FA9021;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px rgba(250, 144, 33, 0.3);
+}
+
+.stat-label {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 50px 0;
+    }
+    
+    .about-section h2 {
+        font-size: 32px;
+    }
+    
+    .about-main {
+        font-size: 20px;
+    }
+    
+    .about-secondary {
+        font-size: 16px;
+    }
+    
+    .stat-number {
+        font-size: 36px;
+    }
+    
+    .stat-label {
+        font-size: 14px;
+    }
+    
+    .about-stats {
+        gap: 20px;
+    }
 }
 
 .divider {
@@ -626,7 +753,7 @@ header nav ul {
     display: flex;
     gap: 32px;
     width: max-content;                   
-    animation: scrollReviews 30s linear infinite;   
+    animation: scrollReviews 90s linear infinite;   
     will-change: transform;
     padding: 20px 0 40px;
 }
