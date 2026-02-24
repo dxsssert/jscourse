@@ -947,3 +947,67 @@ header nav ul {
     display: block;
     margin-top: 4px;
 }
+
+/* РЕАЛИЗАЦИЯ КАТАЛОГА С ВЫПАДАЮЩИМСЯ СПИСКОМ*/
+.catalog-wrapper {
+    position: relative; 
+    display: inline-block;
+}
+
+.catalog-dropdown {
+    position: absolute;
+    top: calc(100% + 10px); 
+    left: 0;               
+    width: 280px;
+    
+    
+    background: #0a0a0a; 
+    
+    list-style: none;
+    padding: 15px 0;
+    margin: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(250, 144, 33, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    
+   
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+
+.catalog-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.catalog-dropdown li a {
+    display: block;
+    padding: 12px 25px;
+    color: #fff;
+    
+    
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px; 
+    font-weight: 500;
+    
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: left; 
+}
+
+.catalog-dropdown li a:hover {
+    background: rgba(250, 144, 33, 0.1);
+    color: #FA9021;
+    padding-left: 35px; 
+}
+
+
+header.container {
+    overflow: visible !important;
+}

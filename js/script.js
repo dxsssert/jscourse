@@ -111,3 +111,19 @@ if (booksTrack && nextBooksBtn && prevBooksBtn && booksWrapper) {
 }
 
 }); 
+document.addEventListener('DOMContentLoaded', function() {
+    const catalogBtn = document.getElementById('catalogTrigger');
+    const catalogMenu = document.getElementById('catalogMenu');
+
+    catalogBtn.addEventListener('click', function(e) {
+        e.preventDefault(); // Чтобы страница не перезагружалась
+        catalogMenu.classList.toggle('active');
+    });
+
+    // Закрытие меню, если кликнули в любое другое место сайта
+    document.addEventListener('click', function(e) {
+        if (!catalogBtn.contains(e.target) && !catalogMenu.contains(e.target)) {
+            catalogMenu.classList.remove('active');
+        }
+    });
+});
