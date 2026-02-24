@@ -732,36 +732,94 @@ header nav ul {
     opacity: 0.3;
 }
 
-/* Стили для подвала */
+/* Обновленный подвал */
+/* Основной подвал */
 .footer {
     background-color: #1a0e01;
-    padding: 50px 0;
+    padding: 60px 0 30px;
     color: #fff;
-    font-size: 16px;
+    border-top: 2px solid #FA9021;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 40px;
 }
 
 .footer-section {
     flex: 1;
     min-width: 250px;
-    padding: 0 15px;
 }
 
 .footer-section h4 {
     color: #FA9021;
-    margin-bottom: 20px;
-    font-size: 18px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
-.footer-section p {
-    margin: 10px 0;
-    line-height: 1.6;
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #FA9021;
+}
+
+/* Стильные кнопки соцсетей вместо битых картинок */
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 1px solid #FA9021;
+    color: #FA9021;
+}
+
+.social-btn:hover {
+    background-color: #FA9021;
+    color: #1a0e01;
+}
+
+/* Нижняя плашка */
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(250, 144, 33, 0.1);
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-links {
+        justify-content: center;
+    }
 }
 /* ====================== ОТЗЫВЫ — автоматическая медленная прокрутка */
 .reviews-section {
