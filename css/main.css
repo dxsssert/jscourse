@@ -109,7 +109,7 @@ header nav ul li a {
 
 .top-links a {
     font-size: 17px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.897);
     transition: color 0.3s;
 }
 
@@ -866,130 +866,92 @@ header nav ul {
 }
 
 /* ====================== ОТЗЫВЫ — автоматическая медленная прокрутка */
+/* 1. Внешняя секция — фон и отступы */
 .reviews-section {
-    padding: 40px 0 60px;
-    margin: 25px 0 35px;
+    width: 100%;
+    overflow: hidden; /* Скрываем лишнее, чтобы не было горизонтального скролла */
     background: rgba(26, 14, 1, 0.45);
     border-top: 1px solid rgba(250, 144, 33, 0.3);
     border-bottom: 1px solid rgba(250, 144, 33, 0.3);
-    overflow: hidden;                    
+    padding: 60px 0;
+    margin: 40px 0;
 }
 
+/* Заголовок (оставляем внутри контейнера для выравнивания по сетке) */
 .reviews-section h3 {
-    font-size: 28px;
-    font-weight: 600;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
     text-align: center;
-    margin: 0 0 30px;
+    font-size: 32px;
     color: #fff;
+}
+
+/* 2. Контейнер-рельс (самый важный блок) */
+.reviews-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    /* Добавляем маску затухания по краям (по желанию, для красоты) */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .reviews {
     display: flex;
-    gap: 32px;
-    width: max-content;                   
-    animation: scrollReviews 90s linear infinite;   
-    will-change: transform;
-    padding: 20px 0 40px;
+    gap: 30px;
+    padding: 20px 0;
+    width: max-content; /* Позволяет контенту растягиваться в одну линию */
+    animation: marquee 30s linear infinite;
 }
 
-
+/* Остановка при наведении */
 .reviews:hover {
     animation-play-state: paused;
 }
 
-/* Сама анимация */
-@keyframes scrollReviews {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);      
-    }
-}
-
-
-.reviews {
-    overflow-x: hidden !important;
-    scrollbar-width: none;               
-    -ms-overflow-style: none;            
-}
-
-.reviews::-webkit-scrollbar {
-    display: none;                       
-}
-
-/* Карточки */
+/* 3. Сама карточка отзыва */
 .review-card {
+    flex: 0 0 350px; /* Фиксированная ширина карточки, чтобы flex не сжимал её */
     background: rgba(37, 33, 29, 0.8);
-    border-radius: 10px;
-    padding: 22px 20px;
-    min-width: 320px;
-    max-width: 340px;
-    flex: 0 0 auto;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.35);
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(250, 144, 33, 0.1);
+    transition: 0.3s ease;
 }
 
 .review-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(250, 144, 33, 0.28);
-    background: rgba(37, 33, 29, 0.95);
-    border: 1px solid #FA9021;
+    border-color: #FA9021;
+    transform: translateY(-5px);
+    background: rgba(37, 33, 29, 1);
 }
-
-/* Медиа-запросы (адаптивность) */
-@media (max-width: 1100px) {
-    .review-card {
-        min-width: 300px;
-        max-width: 320px;
-    }
-}
-
-@media (max-width: 760px) {
-    .review-card {
-        min-width: 85vw;
-        max-width: 340px;
-    }
-}
-
 
 .quote {
-    font-size: 18px;
-    line-height: 1.55;
     font-style: italic;
-    color: #fff;
-    margin-bottom: 16px;
-    position: relative;
-}
-
-.quote:before {
-    content: '«';
-    font-size: 45px;
-    color: #FA9021;
-    opacity: 0.25;
-    position: absolute;
-    left: -12px;
-    top: -14px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 .stars {
     color: #FA9021;
-    font-size: 24px;
-    letter-spacing: 3px;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .reviewer {
-    font-weight: 500;
-    color: #d9c9b5;
-    font-size: 16px;
+    font-weight: bold;
+    color: #FA9021;
 }
 
-.reviewer small {
-    color: #999;
-    font-size: 14px;
-    display: block;
-    margin-top: 4px;
+/* 4. Магия анимации */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Мы перемещаемся ровно на половину длины (на одну полную копию отзывов) */
+        transform: translateX(-50%);
+    }
 }
 
 /* РЕАЛИЗАЦИЯ КАТАЛОГА С ВЫПАДАЮЩИМСЯ СПИСКОМ*/
