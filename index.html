@@ -10,12 +10,71 @@
 <body>
     <div class="wrapper">
         <header class="container">
-            <div class="header-left">
-                <div class="logo">
-                    <div class="logo-image">
-                        <img src="images/logo.png" alt="" class="logo-image">
-                    </div>
-                    <span class="name">Bookline</span>  
+    <div class="header-left">
+        <div class="logo">
+            <div class="logo-image">
+                <img src="images/logo.png" alt="" class="logo-image">
+            </div>
+            <span class="name">Bookline</span>  
+        </div>
+        
+        <div class="catalog-wrapper">
+    <div class="catalog-btn">
+        <a href="#" id="catalogTrigger">Каталог</a>
+    </div>
+    <ul class="catalog-dropdown" id="catalogMenu">
+        <li><a href="#">Классика</a></li>
+        <li><a href="#">Саморазвитие</a></li>
+        <li><a href="#">Фантастика</a></li>
+        <li><a href="#">Детективы</a></li>
+        <li><a href="#">Психология</a></li>
+        <li><a href="#">Программирование</a></li>
+        <li><a href="#">Детские книги</a></li>
+    </ul>
+</div>
+    </div>
+    
+    <nav>
+        <div class="top-links">
+            <a href="#">Доставка и оплата</a>
+            <a href="#">Акции</a>
+            <a href="#">Контакты</a>
+        </div>
+        <ul>
+            <li class="search-item">
+                <form class="search-form" action="#" method="get">
+                    <input type="text" placeholder="Поиск книг..." class="search-input">
+                    <button type="submit" class="search-btn">
+                        <img src="images/search-icon.png" alt="Поиск">
+                    </button>
+                </form>
+            </li>
+
+            <li class="icon-item">
+                <a href="#">
+                    <img src="images/basket-icon.png" alt="Корзина" class="nav-icon">
+                </a>
+            </li>
+            <li class="icon-item">
+                <a href="#">
+                    <img src="images/profile-icon.png" alt="Личный кабинет" class="nav-icon">
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+        
+       <div class="hero container">
+    <div class="hero-content">
+        <div class="hero--info">
+            <h2>Bookline – книги, которые вдохновляют</h2>
+            <p>Добро пожаловать на Bookline - вашу личную онлайн библиотеку! Откройте для себя тысячи книг на любой вкус: от классики до современных бестселлеров, от научной фантастики до психологии.</p>
+        </div>
+        
+        <div class="hero-carousel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="images/banner1.jpg" alt="Акция 1">
                 </div>
                 
                 <div class="catalog-wrapper">
@@ -272,7 +331,32 @@
             <div class="footer-bottom container">
                 <p>© 2025-2026 Bookline. Все права защищены.</p>
             </div>
-        </footer>
+        </div>
+
+        <div class="footer-section">
+            <h4>Разделы</h4>
+            <ul>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Новинки</a></li>
+                <li><a href="#">Распродажа</a></li>
+                <li><a href="#">Доставка и оплата</a></li>
+                <li><a href="#">О нас</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Связь с нами</h4>
+            <button type="button">Написать обращение</button>
+            <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
+            <p>Тел: +7 (999) 000-00-00</p>
+            <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom container">
+        <p>© 2025-2026 Bookline. Все права защищены.</p>
+    </div>
+</footer>
     </div>
     <script src="js/script.js"></script>
 </body>

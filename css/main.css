@@ -29,19 +29,17 @@ a {
 }
 
 header.container {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin: 0 auto;
-    max-width: 1200px;
     display: flex;
+    align-items: flex-end; /* Выравнивает логотип и кнопку каталога по нижней линии навигации */
     justify-content: space-between;
-    align-items: center;
-
+    gap: 20px;
+    padding: 30px 20px;
 }
 .header-left {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
+    flex-shrink: 0; /* Чтобы каталог не сжимался */
 }
 
 .logo {
@@ -76,19 +74,21 @@ header.container {
 }
 
 nav {
-    width: auto;
-    flex: 1;
-    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует top-links относительно поиска */
+    gap: 15px; /* Расстояние между верхним и нижним рядом */
+    flex-grow: 1; /* Позволяет навигации занимать свободное место */
 }
-
-header nav ul {
-    list-style: none;
+ header nav ul {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 20px;
+    justify-content: flex-end; /* Прижимает иконки к правому краю */
+    gap: 25px;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 header nav ul li {
@@ -100,6 +100,22 @@ header nav ul li a {
     color: #fff;
 }
 
+/* Верхние ссылки */ 
+.top-links {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.top-links a {
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s;
+}
+
+.top-links a:hover {
+    color: #FA9021;
+}
 
 /* Кнопка каталога */
 .catalog-btn a {
@@ -126,17 +142,16 @@ header nav ul li a {
 
 /* Поисковая строка */
 .search-item {
-    flex: 3;
-    min-width: 200px;
-    margin: 0 20px;
-}
+    flex-grow: 1; 
+    max-width: 500px;
+} 
 
 .search-form {
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50px;
-    border: 1px solid rgba(250, 144, 33, 0.3);
+    border: 2px solid rgba(250, 144, 33, 0.3);
     overflow: hidden;
     transition: all 0.3s ease;
     width: 100%;
@@ -151,7 +166,7 @@ header nav ul li a {
     flex: 1;
     background: transparent;
     border: none;
-    padding: 12px 20px;
+    padding: 14px 20px;
     color: white;
     font-size: 16px;
     outline: none;
@@ -778,6 +793,34 @@ header nav ul {
 .footer-section ul li a:hover {
     color: #FA9021;
 }
+/* Кнопка "Написать обращение" */
+.footer-section button {
+    display: block; /* Чтобы кнопка была на отдельной строке */
+    margin-bottom: 20px; /* Отступ до Email и Телефона */
+    background-color: transparent; /* Прозрачный фон для более легкого вида */
+    color: #FA9021; /* Оранжевый текст */
+    border: 2px solid #FA9021; /* Оранжевая рамка */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit; /* Чтобы шрифт наследовался от body */
+}
+
+/* Эффект при наведении */
+.footer-section button:hover {
+    background-color: #FA9021; /* Закрашиваем кнопку */
+    color: #1a0e01; /* Темный текст на оранжевом фоне */
+    box-shadow: 0 0 15px rgba(250, 144, 33, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Эффект при нажатии */
+.footer-section button:active {
+    transform: translateY(0);
+}
 
 /* Стильные кнопки соцсетей вместо битых картинок */
 .social-links {
@@ -802,7 +845,7 @@ header nav ul {
     color: #1a0e01;
 }
 
-/* Нижняя плашка */
+/* Подвал */
 .footer-bottom {
     text-align: center;
     margin-top: 50px;
@@ -821,6 +864,7 @@ header nav ul {
         justify-content: center;
     }
 }
+
 /* ====================== ОТЗЫВЫ — автоматическая медленная прокрутка */
 .reviews-section {
     padding: 40px 0 60px;
