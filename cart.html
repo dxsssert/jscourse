@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/cart.css" type="text/css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <title>Корзина | Bookline</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-image">
+                        <img src="images/logo.png" alt="" class="logo-image">
+                    </div>
+                    <span class="name">Bookline</span>  
+                </div>
+                
+                <div class="catalog-wrapper">
+                    <div class="catalog-btn">
+                        <a href="#" id="catalogTrigger">Каталог</a>
+                    </div>
+                    <ul class="catalog-dropdown" id="catalogMenu">
+                        <li><a href="#">Классика</a></li>
+                        <li><a href="#">Саморазвитие</a></li>
+                        <li><a href="#">Фантастика</a></li>
+                        <li><a href="#">Детективы</a></li>
+                        <li><a href="#">Психология</a></li>
+                        <li><a href="#">Программирование</a></li>
+                        <li><a href="#">Детские книги</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li class="search-item">
+                        <form class="search-form" action="#" method="get">
+                            <input type="text" placeholder="Поиск книг..." class="search-input">
+                            <button type="submit" class="search-btn">
+                                <img src="images/search-icon.png" alt="Поиск">
+                            </button>
+                        </form>
+                    </li>
+                    <li class="icon-item">
+                        <a href="cart.html">
+                            <img src="images/basket-icon.png" alt="Корзина" class="nav-icon">
+                        </a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="#">
+                            <img src="images/profile-icon.png" alt="Личный кабинет" class="nav-icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container cart-page">
+    <h2 class="cart-title">Ваша корзина</h2>
+    
+    <div class="cart-container">
+        <div class="cart-items" id="cartItems">
+            
+            <div class="cart-item">
+                <div class="cart-item-left">
+                    <img src="images/1.jpeg" alt="Книга" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <h4>Я переиграю тебя</h4>
+                        <p>Тони Майрон</p>
+                    </div>
+                </div>
+
+                <div class="cart-item-right">
+                    <div class="cart-item-count">
+                        <button class="count-btn minus">−</button>
+                        <span class="count-num">1</span>
+                        <button class="count-btn plus">+</button>
+                    </div>
+                    <div class="cart-item-price" data-price="850">850 ₽</div>
+                    
+                    <button class="remove-item-btn" title="Удалить">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+                            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="cart-item">
+                <div class="cart-item-left">
+                    <img src="images/2.jpeg" alt="Книга" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <h4>Герой нашего времени</h4>
+                        <p>Михаил Лермонтов</p>
+                    </div>
+                </div>
+
+                <div class="cart-item-right">
+                    <div class="cart-item-count">
+                        <button class="count-btn minus">−</button>
+                        <span class="count-num">1</span>
+                        <button class="count-btn plus">+</button>
+                    </div>
+                    <div class="cart-item-price" data-price="550">550 ₽</div>
+                    
+                    <button class="remove-item-btn" title="Удалить">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+                            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <aside class="cart-summary">
+            <h3>Итог заказа</h3>
+            <div class="summary-details">
+                <div class="summary-row">
+                    <span>Товары:</span>
+                    <span id="itemsTotal">0 ₽</span>
+                </div>
+                <div class="summary-row total">
+                    <span>К оплате:</span>
+                    <span id="finalTotal">0 ₽</span>
+                </div>
+            </div>
+            <button class="checkout-btn">Оформить заказ</button>
+        </aside>
+    </div>
+</main>
+
+        <footer class="footer">
+            <div class="footer-content container">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="name" style="color: #FA9021; font-weight: bold; font-size: 24px;">Bookline</span>
+                    </div>
+                    <p>Ваш надежный источник знаний и вдохновения. Читайте лучшие книги вместе с нами.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-btn tg">Telegram</a>
+                        <a href="#" class="social-btn vk">Вконтакте</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="#">Каталог книг</a></li>
+                        <li><a href="#">Хиты продаж</a></li>
+                        <li><a href="#">Новинки</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Связь с нами</h4>
+                    <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
+                    <p>Тел: +7 (999) 000-00-00</p>
+                    <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom container">
+                <p>© 2025-2026 Bookline. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1011,3 +1011,10 @@ header nav ul {
 header.container {
     overflow: visible !important;
 }
+.price-tag {
+    color: #FA9021;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
