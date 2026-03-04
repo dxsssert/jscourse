@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,71 +10,12 @@
 <body>
     <div class="wrapper">
         <header class="container">
-    <div class="header-left">
-        <div class="logo">
-            <div class="logo-image">
-                <img src="images/logo.png" alt="" class="logo-image">
-            </div>
-            <span class="name">Bookline</span>  
-        </div>
-        
-        <div class="catalog-wrapper">
-    <div class="catalog-btn">
-        <a href="#" id="catalogTrigger">Каталог</a>
-    </div>
-    <ul class="catalog-dropdown" id="catalogMenu">
-        <li><a href="#">Классика</a></li>
-        <li><a href="#">Саморазвитие</a></li>
-        <li><a href="#">Фантастика</a></li>
-        <li><a href="#">Детективы</a></li>
-        <li><a href="#">Психология</a></li>
-        <li><a href="#">Программирование</a></li>
-        <li><a href="#">Детские книги</a></li>
-    </ul>
-</div>
-    </div>
-    
-    <nav>
-        <div class="top-links">
-            <a href="#">Доставка и оплата</a>
-            <a href="#">Акции</a>
-            <a href="#">Контакты</a>
-        </div>
-        <ul>
-            <li class="search-item">
-                <form class="search-form" action="#" method="get">
-                    <input type="text" placeholder="Поиск книг..." class="search-input">
-                    <button type="submit" class="search-btn">
-                        <img src="images/search-icon.png" alt="Поиск">
-                    </button>
-                </form>
-            </li>
-
-            <li class="icon-item">
-                <a href="#">
-                    <img src="images/basket-icon.png" alt="Корзина" class="nav-icon">
-                </a>
-            </li>
-            <li class="icon-item">
-                <a href="#">
-                    <img src="images/profile-icon.png" alt="Личный кабинет" class="nav-icon">
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-        
-       <div class="hero container">
-    <div class="hero-content">
-        <div class="hero--info">
-            <h2>Bookline – книги, которые вдохновляют</h2>
-            <p>Добро пожаловать на Bookline - вашу личную онлайн библиотеку! Откройте для себя тысячи книг на любой вкус: от классики до современных бестселлеров, от научной фантастики до психологии.</p>
-        </div>
-        
-        <div class="hero-carousel">
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <img src="images/banner1.jpg" alt="Акция 1">
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-image">
+                        <img src="images/logo.png" alt="Logo" class="logo-image">
+                    </div>
+                    <span class="name">Bookline</span>  
                 </div>
                 
                 <div class="catalog-wrapper">
@@ -94,6 +35,11 @@
             </div>
             
             <nav>
+                <div class="top-links">
+                    <a href="#">Доставка и оплата</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Контакты</a>
+                </div>
                 <ul>
                     <li class="search-item">
                         <form class="search-form" action="#" method="get">
@@ -103,7 +49,6 @@
                             </button>
                         </form>
                     </li>
-
                     <li class="icon-item">
                         <a href="cart.html">
                             <img src="images/basket-icon.png" alt="Корзина" class="nav-icon">
@@ -117,189 +62,124 @@
                 </ul>
             </nav>
         </header>
-        
-        <div class="hero container">
-            <div class="hero-content">
-                <div class="hero--info">
-                    <h2>Bookline – книги, которые вдохновляют</h2>
-                    <p>Добро пожаловать на Bookline - вашу личную онлайн библиотеку! Откройте для себя тысячи книг на любой вкус.</p>
-                </div>
-                
-                <div class="hero-carousel">
-                    <div class="carousel-container">
-                        <div class="carousel-slide"><img src="images/banner1.jpg" alt="Акция 1"></div>
-                        <div class="carousel-slide"><img src="images/banner2.jpg" alt="Акция 2"></div>
-                        <div class="carousel-slide"><img src="images/banner3.jpg" alt="Акция 3"></div>
+
+        <main>
+            <section class="hero container">
+                <div class="hero-content">
+                    <div class="hero--info">
+                        <h2>Bookline – книги, которые вдохновляют</h2>
+                        <p>Добро пожаловать на Bookline - вашу личную онлайн библиотеку! Откройте для себя тысячи книг на любой вкус: от классики до современных бестселлеров, от научной фантастики до психологии.</p>
                     </div>
-                    <button class="carousel-prev">❮</button>
-                    <button class="carousel-next">❯</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="container trending">
-            <div class="trending-header">
-                <h3>Хиты продаж</h3>
-            </div>
-
-            <div class="trending-slider-container">
-                <button class="trending-prev">❮</button>
-
-                <div class="books-slider-wrapper">
-                    <div class="Books">
-                        <div class="Block">
-                            <div class="book-image-container">
-                                <img src="images/1.jpeg" alt="" class="book-image">
-                            </div>
-                            <span>Я переиграю тебя<br> Тони Майрон</span>
-                            <div class="price-tag">850 ₽</div>
-                            <button class="add-to-cart-btn" 
-                                    data-id="1" 
-                                    data-title="Я переиграю тебя" 
-                                    data-author="Тони Майрон" 
-                                    data-price="850" 
-                                    data-image="images/1.jpeg">
-                                Добавить в корзину
-                            </button>
+                    
+                    <div class="hero-carousel">
+                        <div class="carousel-container">
+                            <div class="carousel-slide"><img src="images/banner1.jpg" alt="Акция 1"></div>
+                            <div class="carousel-slide"><img src="images/banner2.jpg" alt="Акция 2"></div>
+                            <div class="carousel-slide"><img src="images/banner3.jpg" alt="Акция 3"></div>
                         </div>
-                        
-                        <div class="Block">
-                            <div class="book-image-container">
-                                <img src="images/2.jpeg" alt="" class="book-image">
-                            </div>
-                            <span>Герой нашего времени<br>Михаил Лермонтов</span>
-                            <div class="price-tag">550 ₽</div>
-                            <button class="add-to-cart-btn" 
-                                    data-id="2" 
-                                    data-title="Герой нашего времени" 
-                                    data-author="Михаил Лермонтов" 
-                                    data-price="550" 
-                                    data-image="images/2.jpeg">
-                                Добавить в корзину
-                            </button>
-                        </div>
-                        
-                        <div class="Block">
-                            <div class="book-image-container">
-                                <img src="images/3.jpeg" alt="" class="book-image">
-                            </div>
-                            <span>Нейросети могут всё<br>Дамир Халилов</span>
-                            <div class="price-tag">990 ₽</div>
-                            <button class="add-to-cart-btn" 
-                                    data-id="3" 
-                                    data-title="Нейросети могут всё" 
-                                    data-author="Дамир Халилов" 
-                                    data-price="990" 
-                                    data-image="images/3.jpeg">
-                                Добавить в корзину
-                            </button>
-                        </div>
-                        
-                        <div class="Block">
-                            <div class="book-image-container">
-                                <img src="images/4.jpeg" alt="" class="book-image">
-                            </div>
-                            <span>Как укротить свой мозг?<br>Нобелевский лауреат</span>
-                            <div class="price-tag">1200 ₽</div>
-                            <button class="add-to-cart-btn" 
-                                    data-id="4" 
-                                    data-title="Как укротить свой мозг" 
-                                    data-author="Даниэль Канеман" 
-                                    data-price="1200" 
-                                    data-image="images/4.jpeg">
-                                Добавить в корзину
-                            </button>
-                        </div>
+                        <button class="carousel-prev">❮</button>
+                        <button class="carousel-next">❯</button>
                     </div>
                 </div>
-                <button class="trending-next">❯</button>
-            </div>
-        </div>
+            </section>
 
-        <div class="reviews-section">
-    <h3>Что говорят наши читатели</h3>
-    <div class="reviews">
-        <div class="review-card">
-            <p class="quote">«Я переиграю тебя» — одна из лучших книг года!</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Максим Сидоров</div>
-        </div>
-        <div class="review-card">
-            <p class="quote">Классика в новом прочтении. Лермонтов звучит свежо.</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Анна Ковалёва</div>
-        </div>
-        <div class="review-card">
-            <p class="quote">Доставка очень быстрая, книги пришли в идеальном состоянии.</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Дмитрий П.</div>
-        </div>
+            <section class="container trending">
+                <div class="trending-header">
+                    <h3>Хиты продаж</h3>
+                </div>
 
-        <div class="review-card">
-            <p class="quote">«Я переиграю тебя» — одна из лучших книг года!</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Максим Сидоров</div>
-        </div>
-        <div class="review-card">
-            <p class="quote">Классика в новом прочтении. Лермонтов звучит свежо.</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Анна Ковалёва</div>
-        </div>
-        <div class="review-card">
-            <p class="quote">Доставка очень быстрая, книги пришли в идеальном состоянии.</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Дмитрий П.</div>
-        </div>
-        <div class="review-card">
-            <p class="quote">«Я переиграю тебя» — одна из лучших книг года!</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Максим Сидоров</div>
-        </div>
-        <div class="review-card">
-            <p class="quote">Классика в новом прочтении. Лермонтов звучит свежо.</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Анна Ковалёва</div>
-        </div>
-        <div class="review-card">
-            <p class="quote">Доставка очень быстрая, книги пришли в идеальном состоянии.</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Дмитрий П.</div>
-        </div>
+                <div class="trending-slider-container">
+                    <button class="trending-prev">❮</button>
+                    <div class="books-slider-wrapper">
+                        <div class="Books">
+                            <div class="Block">
+                                <div class="book-image-container">
+                                    <img src="images/1.jpeg" alt="Я переиграю тебя" class="book-image">
+                                </div>
+                                <span>Я переиграю тебя<br> Тони Майрон</span>
+                                <div class="price-tag">850 ₽</div>
+                                <button class="add-to-cart-btn" data-id="1" data-title="Я переиграю тебя" data-author="Тони Майрон" data-price="850" data-image="images/1.jpeg">Добавить в корзину</button>
+                            </div>
+                            <div class="Block">
+                                <div class="book-image-container">
+                                    <img src="images/2.jpeg" alt="Герой нашего времени" class="book-image">
+                                </div>
+                                <span>Герой нашего времени<br>Михаил Лермонтов</span>
+                                <div class="price-tag">550 ₽</div>
+                                <button class="add-to-cart-btn" data-id="2" data-title="Герой нашего времени" data-author="Михаил Лермонтов" data-price="550" data-image="images/2.jpeg">Добавить в корзину</button>
+                            </div>
+                            <div class="Block">
+                                <div class="book-image-container">
+                                    <img src="images/3.jpeg" alt="Нейросети могут всё" class="book-image">
+                                </div>
+                                <span>Нейросети могут всё<br>Дамир Халилов</span>
+                                <div class="price-tag">990 ₽</div>
+                                <button class="add-to-cart-btn" data-id="3" data-title="Нейросети могут всё" data-author="Дамир Халилов" data-price="990" data-image="images/3.jpeg">Добавить в корзину</button>
+                            </div>
+                            <div class="Block">
+                                <div class="book-image-container">
+                                    <img src="images/4.jpeg" alt="Как укротить свой мозг" class="book-image">
+                                </div>
+                                <span>Как укротить свой мозг?<br>Даниэль Канеман</span>
+                                <div class="price-tag">1200 ₽</div>
+                                <button class="add-to-cart-btn" data-id="4" data-title="Как укротить свой мозг" data-author="Даниэль Канеман" data-price="1200" data-image="images/4.jpeg">Добавить в корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="trending-next">❯</button>
+                </div>
+            </section>
 
-        <div class="review-card">
-            <p class="quote">«Я переиграю тебя» — одна из лучших книг года!</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Максим Сидоров</div>
-        </div>
-        <div class="review-card">
-            <p class="quote">Классика в новом прочтении. Лермонтов звучит свежо.</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Анна Ковалёва</div>
-        </div>
-        <div class="review-card">
-            <p class="quote">Доставка очень быстрая, книги пришли в идеальном состоянии.</p>
-            <div class="stars">★★★★★</div>
-            <div class="reviewer">Дмитрий П.</div>
-        </div>
-    </div>
-    </div>
+            <section class="reviews-section">
+                <div class="container">
+                    <h3>Что говорят наши читатели</h3>
+                    <div class="reviews">
+                        <div class="review-card">
+                            <p class="quote">«Я переиграю тебя» — одна из лучших книг года!</p>
+                            <div class="stars">★★★★★</div>
+                            <div class="reviewer">Максим Сидоров</div>
+                        </div>
+                        <div class="review-card">
+                            <p class="quote">Классика в новом прочтении. Лермонтов звучит свежо.</p>
+                            <div class="stars">★★★★★</div>
+                            <div class="reviewer">Анна Ковалёва</div>
+                        </div>
+                        <div class="review-card">
+                            <p class="quote">Доставка очень быстрая, книги пришли в идеальном состоянии.</p>
+                            <div class="stars">★★★★★</div>
+                            <div class="reviewer">Дмитрий П.</div>
+                        </div>
+                        <div class="review-card"><p class="quote">«Я переиграю тебя» — одна из лучших книг года!</p><div class="stars">★★★★★</div><div class="reviewer">Максим Сидоров</div></div>
+                        <div class="review-card"><p class="quote">Классика в новом прочтении. Лермонтов звучит свежо.</p><div class="stars">★★★★★</div><div class="reviewer">Анна Ковалёва</div></div>
+                        <div class="review-card"><p class="quote">Доставка очень быстрая, книги пришли в идеальном состоянии.</p><div class="stars">★★★★★</div><div class="reviewer">Дмитрий П.</div></div>
+                        <div class="review-card"><p class="quote">«Я переиграю тебя» — одна из лучших книг года!</p><div class="stars">★★★★★</div><div class="reviewer">Максим Сидоров</div></div>
+                        <div class="review-card"><p class="quote">Классика в новом прочтении. Лермонтов звучит свежо.</p><div class="stars">★★★★★</div><div class="reviewer">Анна Ковалёва</div></div>
+                        <div class="review-card"><p class="quote">Доставка очень быстрая, книги пришли в идеальном состоянии.</p><div class="stars">★★★★★</div><div class="reviewer">Дмитрий П.</div></div>
+                        <div class="review-card"><p class="quote">«Я переиграю тебя» — одна из лучших книг года!</p><div class="stars">★★★★★</div><div class="reviewer">Максим Сидоров</div></div>
+                        <div class="review-card"><p class="quote">Классика в новом прочтении. Лермонтов звучит свежо.</p><div class="stars">★★★★★</div><div class="reviewer">Анна Ковалёва</div></div>
+                        <div class="review-card"><p class="quote">Доставка очень быстрая, книги пришли в идеальном состоянии.</p><div class="stars">★★★★★</div><div class="reviewer">Дмитрий П.</div></div>
+                        
+                    </div>
+                </div>
+            </section>
 
-        <div class="about-section">
-            <div class="container">
-                <h2>О Нас</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p class="about-main">Bookline — это сообщество увлеченных людей, где литература оживает. Мы помогаем читателям найти свою следующую любимую книгу с помощью тщательно подобранных коллекций и персонализированных рекомендаций.<br>
-                            <br>Наша миссия — сделать поиск замечательных книг простым, приятным и вдохновляющим для читателей любого уровня. Мы тщательно отбираем каждую книгу в нашем каталоге, чтобы вы могли быть уверены в качестве.</p>
-                        <div class="about-stats">
-                            <div class="stat-item"><span class="stat-number">5000+</span><span class="stat-label">книг</span></div>
-                            <div class="stat-item"><span class="stat-number">1000+</span><span class="stat-label">читателей</span></div>
-                            <div class="stat-item"><span class="stat-number">1 год</span><span class="stat-label">на рынке</span></div>
+            <section class="about-section">
+                <div class="container">
+                    <h2>О Нас</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p class="about-main">Bookline — это сообщество увлеченных людей, где литература оживает. Мы помогаем читателям найти свою следующую любимую книгу с помощью тщательно подобранных коллекций и персонализированных рекомендаций.<br><br>
+                            Наша миссия — сделать поиск замечательных книг простым, приятным и вдохновляющим для читателей любого уровня. Мы тщательно отбираем каждую книгу в нашем каталоге, чтобы вы могли быть уверены в качестве.</p>
+                            <div class="about-stats">
+                                <div class="stat-item"><span class="stat-number">5000+</span><span class="stat-label">книг</span></div>
+                                <div class="stat-item"><span class="stat-number">1000+</span><span class="stat-label">читателей</span></div>
+                                <div class="stat-item"><span class="stat-number">1 год</span><span class="stat-label">на рынке</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </section>
+        </main>
 
         <footer class="footer">
             <div class="footer-content container">
@@ -316,47 +196,25 @@
                 <div class="footer-section">
                     <h4>Разделы</h4>
                     <ul>
-                        <li><a href="#">Каталог книг</a></li>
-                        <li><a href="#">Хиты продаж</a></li>
+                        <li><a href="#">Акции</a></li>
                         <li><a href="#">Новинки</a></li>
+                        <li><a href="#">Распродажа</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
                         <li><a href="#">О нас</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Связь</h4>
+                    <h4>Связь с нами</h4>
+                    <button type="button" class="contact-btn">Написать обращение</button>
                     <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
+                    <p>Тел: +7 (999) 000-00-00</p>
                     <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
                 </div>
             </div>
             <div class="footer-bottom container">
                 <p>© 2025-2026 Bookline. Все права защищены.</p>
             </div>
-        </div>
-
-        <div class="footer-section">
-            <h4>Разделы</h4>
-            <ul>
-                <li><a href="#">Акции</a></li>
-                <li><a href="#">Новинки</a></li>
-                <li><a href="#">Распродажа</a></li>
-                <li><a href="#">Доставка и оплата</a></li>
-                <li><a href="#">О нас</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section">
-            <h4>Связь с нами</h4>
-            <button type="button">Написать обращение</button>
-            <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
-            <p>Тел: +7 (999) 000-00-00</p>
-            <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
-        </div>
-    </div>
-
-    <div class="footer-bottom container">
-        <p>© 2025-2026 Bookline. Все права защищены.</p>
-    </div>
-</footer>
+        </footer>
     </div>
     <script src="js/script.js"></script>
 </body>
