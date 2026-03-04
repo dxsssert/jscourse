@@ -477,9 +477,10 @@ header nav ul {
 
 .trending .Books span {
     display: block;
-    text-align: center;
-    margin-top: 20px;
-    font-size: 25px;
+    text-align:initial;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: 23px;
 }
 
 .Books-image {
@@ -489,6 +490,197 @@ header nav ul {
     border-bottom: 1px solid #eee;
 }
 
+
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #d4b483;
+    margin: 40px auto;
+    width: 50%;
+}
+
+.trending .Block {
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(37, 33, 29, 0.7);
+    flex: 0 0 calc((100% - (30px * 3)) / 4); 
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.trending .Block:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(250, 144, 33, 0.3);
+    background: rgba(37, 33, 29, 0.9);
+    border: 1px solid #FA9021;
+}
+
+.trending-slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.books-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 55px; 
+}
+
+
+.trending-prev, .trending-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FA9021;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.trending-prev:hover, .trending-next:hover {
+    background: #DC7000;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.trending-prev { left: 0; } 
+.trending-next { right: 0; } 
+
+
+.trending-controls {
+    display: none;
+}
+
+.book-image-container {
+
+    width: 100%;
+    height: 350px; /* Фиксированная высота для всех обложек */
+    display: flex;
+    align-items: flex-end; /* ПРИБИВАЕМ КАРТИНКИ К НИЖНЕМУ КРАЮ */
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.book-image {
+    max-width: 100%;
+    max-height: 100%; /* Картинка не выйдет за пределы 350px */
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.Block:hover .book-image {
+    transform: scale(1.05);
+}
+
+.Block:hover span {
+    color: #FA9021;
+}
+
+.Block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #FA9021;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.Block:hover::before {
+    transform: scaleX(1);
+}
+.add-to-cart-btn {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #FA9021;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    width: 80%;
+    align-self: center;
+    margin-top: auto;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #DC7000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #FA9021;
+    margin: 40px auto;
+    width: 80%;
+    opacity: 0.3;
+}
+/* Контейнер для текста внутри карточки */
+.book-info {
+    width: 100%;
+    padding: 0 15px; /* Отступы от краев карточки */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* ВСЁ выравниваем по левому краю */
+    margin-top: 15px;
+    flex-grow: 1; /* Чтобы кнопки всегда были внизу, если названия разной длины */
+}
+
+/* Название книги */
+.book-title {
+    font-size: 19px;
+    font-weight: 600;
+    color: #fff;
+    text-align: left;
+    display: block;
+}
+
+/* Автор книги — меньше и светлее */
+.book-author {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5); /* 50% прозрачности */
+    margin-top: auto;
+    margin-bottom: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Цена книги */
+.price-tag {
+    font-size: 23px;
+    font-weight: 700;
+    color: #FA9021; /* Оранжевый акцент */
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 15px;
+}
+
+/* Кнопка */
+.add-to-cart-btn {
+    width: calc(100% - 30px); /* Кнопка по ширине инфо-блока */
+    margin-bottom: 15px;
+}
 /* Секция О нас */
 .about-section {
     padding: 80px 0;
@@ -597,156 +789,6 @@ header nav ul {
         gap: 20px;
     }
 }
-
-.divider {
-    border: none;
-    height: 1px;
-    background-color: #d4b483;
-    margin: 40px auto;
-    width: 50%;
-}
-
-.trending .Block {
-    position: relative;
-    transition: all 0.3s ease;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(37, 33, 29, 0.7);
-    flex: 0 0 calc((100% - (30px * 3)) / 4); 
-    max-width: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
-.trending .Block:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(250, 144, 33, 0.3);
-    background: rgba(37, 33, 29, 0.9);
-    border: 1px solid #FA9021;
-}
-
-.trending-slider-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-
-.books-slider-wrapper {
-    overflow: hidden;
-    width: 100%;
-    margin: 0 55px; 
-}
-
-
-.trending-prev, .trending-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #FA9021;
-    color: white;
-    border: none;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.trending-prev:hover, .trending-next:hover {
-    background: #DC7000;
-    transform: translateY(-50%) scale(1.1);
-}
-
-.trending-prev { left: 0; } 
-.trending-next { right: 0; } 
-
-
-.trending-controls {
-    display: none;
-}
-
-.book-image-container {
-    width: 100%;
-    height: auto;
-    min-height: 300px;
-    overflow: hidden;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.book-image {
-    width: 100%;
-    height: auto;
-    max-height: 350px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.Block:hover .book-image {
-    transform: scale(1.05);
-}
-
-.Block:hover span {
-    color: #FA9021;
-}
-
-.Block::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: #FA9021;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.Block:hover::before {
-    transform: scaleX(1);
-}
-
-.add-to-cart-btn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #FA9021;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    width: 80%;
-    align-self: center;
-    margin-top: auto;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #DC7000;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.divider {
-    border: none;
-    height: 1px;
-    background-color: #FA9021;
-    margin: 40px auto;
-    width: 80%;
-    opacity: 0.3;
-}
-
 /* Обновленный подвал */
 /* Основной подвал */
 .footer {
@@ -1016,11 +1058,4 @@ header nav ul {
 
 header.container {
     overflow: visible !important;
-}
-.price-tag {
-    color: #FA9021;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin: 10px 0;
-    font-family: 'Josefin Sans', sans-serif;
 }
