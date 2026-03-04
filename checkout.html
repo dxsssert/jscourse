@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/checkout.css" type="text/css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <title>Оформление заказа | Bookline</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-image">
+                        <img src="images/logo.png" alt="Logo">
+                    </div>
+                    <span class="name">Bookline</span>  
+                </div>
+                <div class="catalog-wrapper">
+                    <div class="catalog-btn"><a href="#" id="catalogTrigger">Каталог</a></div>
+                    <ul class="catalog-dropdown" id="catalogMenu">
+                        <li><a href="#">Классика</a></li>
+                        <li><a href="#">Саморазвитие</a></li>
+                        <li><a href="#">Фантастика</a></li>
+                        <li><a href="#">Детективы</a></li>
+                        <li><a href="#">Психология</a></li>
+                        <li><a href="#">Программирование</a></li>
+                        <li><a href="#">Детские книги</a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav>
+                <div class="top-links">
+                    <a href="#">Доставка и оплата</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <ul>
+                    <li class="search-item">
+                        <form class="search-form" action="#" method="get">
+                            <input type="text" placeholder="Поиск книг..." class="search-input">
+                            <button type="submit" class="search-btn">
+                                <img src="images/search-icon.png" alt="Поиск">
+                            </button>
+                        </form>
+                    </li>
+                    <li class="icon-item">
+                        <a href="checkout.html">
+                            <img src="images/basket-icon.png" alt="Корзина" class="nav-icon">
+                        </a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="#">
+                            <img src="images/profile-icon.png" alt="Личный кабинет" class="nav-icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container main-content">
+            <h2 class="page-title">Оформление заказа</h2>
+            
+            <div class="checkout-vertical-stack">
+                <section class="checkout-form-section">
+                    <h3>Данные получателя</h3>
+                    <form id="orderForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>ФИО</label>
+                                <input type="text" id="userName" placeholder="Иван Иванов" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Телефон</label>
+                                <input type="tel" id="userPhone" placeholder="+7 (999) 000-00-00" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Адрес доставки</label>
+                            <textarea id="userAddress" rows="2" placeholder="Город, улица, дом, квартира" required></textarea>
+                        </div>
+                        
+                        <div class="payment-selection">
+                            <span>Способ оплаты:</span>
+                            <label><input type="radio" name="pay" checked> Картой онлайн</label>
+                            <label><input type="radio" name="pay"> При получении</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-order-btn">Оформить покупку</button>
+                    </form>
+                </section>
+
+                <section class="order-summary-wide">
+                    <h3>Ваш заказ</h3>
+                    <div id="checkout-items-list">
+                        </div>
+                    <div class="total-bar">
+                        <div class="total-info">
+                            <span class="total-label">Итого к оплате:</span>
+                            <span id="checkout-total">0 ₽</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content container">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="name" style="color: #FA9021; font-weight: bold; font-size: 24px;">Bookline</span>
+                    </div>
+                    <p>Ваш надежный источник знаний и вдохновения.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn tg">Telegram</a>
+                        <a href="#" class="social-btn vk">Вконтакте</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Новинки</a></li>
+                        <li><a href="#">Распродажа</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Связь с нами</h4>
+                    <button type="button" class="contact-btn">Написать обращение</button>
+                    <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
+                    <p>Тел: +7 (999) 000-00-00</p>
+                    <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
+                </div>
+            </div>
+            <div class="footer-bottom container">
+                <p>© 2025-2026 Bookline. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
