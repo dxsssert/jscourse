@@ -1057,3 +1057,128 @@ header nav ul {
 header.container {
     overflow: visible !important;
 }
+
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+
+.contact-modal {
+    background: #000000;
+    border: 1px solid #FA9021;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 480px;
+    color: white;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.contact-modal h2 {
+    color: #FA9021;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.modal-subtitle {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.contact-modal .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.contact-modal label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+}
+
+.contact-modal input, 
+.contact-modal textarea {
+    padding: 15px;
+    background: transparent;
+    border: 1px solid rgba(250, 144, 33, 0.5);
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.contact-modal input:focus, 
+.contact-modal textarea:focus {
+    outline: none;
+    border-color: #FA9021;
+    box-shadow: 0 0 10px rgba(250, 144, 33, 0.2);
+}
+
+.contact-modal input::placeholder, 
+.contact-modal textarea::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.submit-contact-btn {
+    background: #FA9021;
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.submit-contact-btn:hover {
+    background: #e67e17;
+    transform: translateY(-2px);
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #FA9021;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 0;
+    width: auto;
+    height: auto;
+}
+
+.close-modal-btn:hover {
+    color: white;
+    transform: rotate(90deg);
+}

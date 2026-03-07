@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // ========== 1. ГЛАВНАЯ КАРУСЕЛЬ (БАННЕРЫ) ==========
     const carouselContainer = document.querySelector('.carousel-container');
     const slides = document.querySelectorAll('.carousel-slide');
     const prevBtn = document.querySelector('.carousel-prev');
@@ -10,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (carouselContainer && slides.length && heroCarousel) {
         let currentIndex = 0;
         const totalSlides = slides.length;
-
-        // Создаем точки (dots)
         const dotsContainer = document.createElement('div');
         dotsContainer.className = 'carousel-dots';
         
@@ -45,14 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCarousel();
         });
         
-        // Автопрокрутка баннеров
         setInterval(() => {
             currentIndex = (currentIndex + 1) % totalSlides;
             updateCarousel();
         }, 5000);
     }
 
-    // ========== 2. КАРУСЕЛЬ ХИТОВ ПРОДАЖ (КНИГИ) ==========
     const booksTrack = document.querySelector('.trending .Books');
     const nextBooksBtn = document.querySelector('.trending-next');
     const prevBooksBtn = document.querySelector('.trending-prev');
@@ -90,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ========== 3. КАТАЛОГ (ВЫПАДАЮЩЕЕ МЕНЮ) ==========
     const catalogTrigger = document.getElementById('catalogTrigger');
     const catalogMenu = document.getElementById('catalogMenu');
 
@@ -100,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
             catalogMenu.classList.toggle('active');
         });
 
-        
         document.addEventListener('click', (e) => {
             if (!catalogTrigger.contains(e.target) && !catalogMenu.contains(e.target)) {
                 catalogMenu.classList.remove('active');
@@ -108,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ========== 4. ЛОГИКА КОРЗИНЫ (LOCAL STORAGE) ==========
     const addButtons = document.querySelectorAll('.add-to-cart-btn');
 
     addButtons.forEach(btn => {
@@ -133,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             localStorage.setItem('bookline_cart', JSON.stringify(cart));
 
-            // Визуальный фидбек
             const originalText = btn.innerText;
             btn.innerText = 'Добавлено! ✓';
             btn.style.backgroundColor = '#28a745'; 
@@ -146,15 +136,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1000);
         });
     });
+
+    const contactModal = document.getElementById('contactModal');
+    const writeBtn = document.getElementById('writeUsBtn');
+    const closeBtn = document.getElementById('closeContact');
+    const contactForm = document.getElementById('contactForm');
+
+    if (writeBtn) {
+        writeBtn.addEventListener('click', () => {
+            contactModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+            contactModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    if (contactModal) {
+        contactModal.addEventListener('click', (e) => {
+            if (e.target === contactModal) {
+                contactModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value;
+            alert(`Спасибо, ${name}! Ваше сообщение получено. Мы ответим на почту в течение 24 часов.`);
+            contactModal.classList.remove('active');
+            contactForm.reset();
+            document.body.style.overflow = 'auto';
+        });
+    }
 });
 
 const reviewsContainer = document.querySelector('.reviews');
-
 if (reviewsContainer) {
-    
     const cards = reviewsContainer.innerHTML;
-    
-    
     reviewsContainer.innerHTML = cards + cards;
-    
 }

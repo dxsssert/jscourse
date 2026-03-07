@@ -261,7 +261,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>Связь с нами</h4>
-                    <button type="button" class="contact-btn">Написать обращение</button>
+                    <button type="button" id="writeUsBtn" class="contact-btn">Написать обращение</button>
                     <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
                     <p>Тел: +7 (999) 000-00-00</p>
                     <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
@@ -271,6 +271,32 @@
                 <p>© 2025-2026 Bookline. Все права защищены.</p>
             </div>
         </footer>
+    </div>
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content contact-modal">
+            <button id="closeContact" class="close-modal-btn">&times;</button>
+            <h2>Написать нам</h2>
+            <p class="modal-subtitle">Есть вопросы или предложения? Мы всегда на связи!</p>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" id="contactName" placeholder="Иван Иванов" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Электронная почта</label>
+                    <input type="email" id="contactEmail" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Сообщение</label>
+                    <textarea id="contactMessage" rows="4" placeholder="Ваш текст..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-contact-btn">Отправить сообщение</button>
+            </form>
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
