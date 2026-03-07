@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
     <title>Оформление заказа | Bookline</title>
 </head>
+
 <body>
     <div class="wrapper">
         <header class="container">
@@ -16,7 +18,7 @@
                     <div class="logo-image">
                         <img src="images/logo.png" alt="Logo">
                     </div>
-                    <span class="name">Bookline</span>  
+                    <span class="name">Bookline</span>
                 </div>
                 <div class="catalog-wrapper">
                     <div class="catalog-btn"><a href="#" id="catalogTrigger">Каталог</a></div>
@@ -62,7 +64,7 @@
 
         <main class="container main-content">
             <h2 class="page-title">Оформление заказа</h2>
-            
+
             <div class="checkout-vertical-stack">
                 <section class="checkout-form-section">
                     <h3>Данные получателя</h3>
@@ -76,18 +78,41 @@
                                 <label>Телефон</label>
                                 <input type="tel" id="userPhone" placeholder="+7 (999) 000-00-00" required>
                             </div>
+                            <div class="form-group">
+                                <label>Электронная почта</label>
+                                <input type="email" id="userEmail" placeholder="example@mail.com" required>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label>Адрес доставки</label>
-                            <textarea id="userAddress" rows="2" placeholder="Город, улица, дом, квартира" required></textarea>
+                            <textarea id="userAddress" rows="2" placeholder="Город, улица, дом, квартира"
+                                required></textarea>
                         </div>
-                        
+
                         <div class="payment-selection">
                             <span>Способ оплаты:</span>
-                            <label><input type="radio" name="pay" checked> Картой онлайн</label>
-                            <label><input type="radio" name="pay"> При получении</label>
+                            <label><input type="radio" name="pay" value="online" checked> Картой онлайн</label>
+                            <label><input type="radio" name="pay" value="cash"> При получении</label>
                         </div>
-                        
+
+
+                        <div id="card-details" class="card-form">
+                            <div class="form-group">
+                                <label>Номер карты</label>
+                                <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Срок действия</label>
+                                    <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5">
+                                </div>
+                                <div class="form-group">
+                                    <label>CVV</label>
+                                    <input type="password" id="cardCvv" placeholder="***" maxlength="3">
+                                </div>
+                            </div>
+                        </div>
+
                         <button type="submit" class="submit-order-btn">Оформить покупку</button>
                     </form>
                 </section>
@@ -95,7 +120,7 @@
                 <section class="order-summary-wide">
                     <h3>Ваш заказ</h3>
                     <div id="checkout-items-list">
-                        </div>
+                    </div>
                     <div class="total-bar">
                         <div class="total-info">
                             <span class="total-label">Итого к оплате:</span>
@@ -141,7 +166,16 @@
             </div>
         </footer>
     </div>
+    <div id="thanksModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="success-icon">✓</div>
+            <h2>Спасибо за заказ!</h2>
+            <p>Ваш заказ успешно оформлен. Мы свяжемся с вами в ближайшее время для уточнения деталей доставки.</p>
+            <button id="closeModal" class="modal-btn">Вернуться на главную</button>
+        </div>
+    </div>
     <script src="js/script.js"></script>
     <script src="js/checkout.js"></script>
 </body>
+
 </html>
