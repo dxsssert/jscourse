@@ -30,7 +30,7 @@ a {
 
 header.container {
     display: flex;
-    align-items: flex-end; /* Выравнивает логотип и кнопку каталога по нижней линии навигации */
+    align-items: flex-end; 
     justify-content: space-between;
     gap: 20px;
     padding: 30px 20px;
@@ -39,7 +39,7 @@ header.container {
     display: flex;
     align-items: center;
     gap: 20px;
-    flex-shrink: 0; /* Чтобы каталог не сжимался */
+    flex-shrink: 0; 
 }
 
 .logo {
@@ -76,15 +76,15 @@ header.container {
 nav {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Центрирует top-links относительно поиска */
-    gap: 15px; /* Расстояние между верхним и нижним рядом */
-    flex-grow: 1; /* Позволяет навигации занимать свободное место */
+    align-items: center; 
+    gap: 15px; 
+    flex-grow: 1; 
 }
  header nav ul {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Прижимает иконки к правому краю */
+    justify-content: flex-end; 
     gap: 25px;
     margin: 0;
     padding: 0;
@@ -198,7 +198,7 @@ header nav ul li a {
     transform: scale(1.1);
 }
 
-/* Обновляем стили для списка навигации */
+
 header nav ul {
     list-style: none;
     display: flex;
@@ -215,7 +215,7 @@ header nav ul {
     height: 100%;
 }
 
-/* Общие стили для всех иконок в навигации */
+
 .nav-icon {
     width: 35px;
     height: 35px;
@@ -224,13 +224,13 @@ header nav ul {
     display: block;
 }
 
-/* Ховер эффект для всех иконок */
+
 .icon-item:hover .nav-icon {
     filter: invert(47%) sepia(71%) saturate(2461%) hue-rotate(350deg) brightness(101%) contrast(101%);
     transform: scale(1.1);
 }
 
-/* Убираем подчеркивание у ссылок с иконками */
+
 .icon-item a {
     border-bottom: none !important;
 }
@@ -301,7 +301,7 @@ header nav ul {
     transform: scale(1.1);
 }
 
-/* Карусель */
+
 .hero-carousel {
     position: relative;
     width: 70%; 
@@ -332,7 +332,7 @@ header nav ul {
     object-fit: cover;
 }
 
-/* Кнопки навигации */
+
 .carousel-prev, .carousel-next {
     position: absolute;
     top: 50%;
@@ -431,8 +431,7 @@ header nav ul {
 .trending .see-all:hover {
     transform: scale(1.1);
 }
-/* Кнопки переключения */
-/* Заголовок с кнопками по краям */
+
 .trending-header {
     display: flex;
     justify-content: space-between;
@@ -571,9 +570,9 @@ header nav ul {
 .book-image-container {
 
     width: 100%;
-    height: 350px; /* Фиксированная высота для всех обложек */
+    height: 350px; 
     display: flex;
-    align-items: flex-end; /* ПРИБИВАЕМ КАРТИНКИ К НИЖНЕМУ КРАЮ */
+    align-items: flex-end; 
     justify-content: center;
     overflow: hidden;
     margin-bottom: 15px;
@@ -581,7 +580,7 @@ header nav ul {
 
 .book-image {
     max-width: 100%;
-    max-height: 100%; /* Картинка не выйдет за пределы 350px */
+    max-height: 100%; 
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -638,15 +637,15 @@ header nav ul {
     width: 80%;
     opacity: 0.3;
 }
-/* Контейнер для текста внутри карточки */
+
 .book-info {
     width: 100%;
-    padding: 0 15px; /* Отступы от краев карточки */
+    padding: 0 15px; 
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* ВСЁ выравниваем по левому краю */
+    align-items: flex-start; 
     margin-top: 15px;
-    flex-grow: 1; /* Чтобы кнопки всегда были внизу, если названия разной длины */
+    flex-grow: 1; 
 }
 
 /* Название книги */
@@ -658,10 +657,9 @@ header nav ul {
     display: block;
 }
 
-/* Автор книги — меньше и светлее */
 .book-author {
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.5); /* 50% прозрачности */
+    color: rgba(255, 255, 255, 0.5); 
     margin-top: auto;
     margin-bottom: 1rem;
     font-family: 'Josefin Sans', sans-serif;
@@ -671,14 +669,14 @@ header nav ul {
 .price-tag {
     font-size: 23px;
     font-weight: 700;
-    color: #FA9021; /* Оранжевый акцент */
+    color: #FA9021; 
     font-family: 'Josefin Sans', sans-serif;
     margin-bottom: 15px;
 }
 
-/* Кнопка */
+
 .add-to-cart-btn {
-    width: calc(100% - 30px); /* Кнопка по ширине инфо-блока */
+    width: calc(100% - 30px); 
     margin-bottom: 15px;
 }
 /* Секция О нас */
@@ -789,8 +787,7 @@ header nav ul {
         gap: 20px;
     }
 }
-/* Обновленный подвал */
-/* Основной подвал */
+
 .footer {
     background-color: #1a0e01;
     padding: 60px 0 30px;
@@ -835,36 +832,36 @@ header nav ul {
 .footer-section ul li a:hover {
     color: #FA9021;
 }
-/* Кнопка "Написать обращение" */
+
 .footer-section button {
-    display: block; /* Чтобы кнопка была на отдельной строке */
-    margin-bottom: 20px; /* Отступ до Email и Телефона */
-    background-color: transparent; /* Прозрачный фон для более легкого вида */
-    color: #FA9021; /* Оранжевый текст */
-    border: 2px solid #FA9021; /* Оранжевая рамка */
+    display: block; 
+    margin-bottom: 20px; 
+    background-color: transparent; 
+    color: #FA9021; 
+    border: 2px solid #FA9021; 
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-family: inherit; /* Чтобы шрифт наследовался от body */
+    font-family: inherit;
 }
 
-/* Эффект при наведении */
+
 .footer-section button:hover {
-    background-color: #FA9021; /* Закрашиваем кнопку */
-    color: #1a0e01; /* Темный текст на оранжевом фоне */
+    background-color: #FA9021; 
+    color: #1a0e01; 
     box-shadow: 0 0 15px rgba(250, 144, 33, 0.4);
     transform: translateY(-2px);
 }
 
-/* Эффект при нажатии */
+
 .footer-section button:active {
     transform: translateY(0);
 }
 
-/* Стильные кнопки соцсетей вместо битых картинок */
+
 .social-links {
     display: flex;
     gap: 10px;
@@ -908,10 +905,10 @@ header nav ul {
 }
 
 /* ====================== ОТЗЫВЫ — автоматическая медленная прокрутка */
-/* 1. Внешняя секция — фон и отступы */
+
 .reviews-section {
     width: 100%;
-    overflow: hidden; /* Скрываем лишнее, чтобы не было горизонтального скролла */
+    overflow: hidden; 
     background: rgba(26, 14, 1, 0.45);
     border-top: 1px solid rgba(250, 144, 33, 0.3);
     border-bottom: 1px solid rgba(250, 144, 33, 0.3);
@@ -919,7 +916,7 @@ header nav ul {
     margin: 40px 0;
 }
 
-/* Заголовок (оставляем внутри контейнера для выравнивания по сетке) */
+
 .reviews-section h3 {
     max-width: 1200px;
     margin: 0 auto 40px;
@@ -929,12 +926,12 @@ header nav ul {
     color: #fff;
 }
 
-/* 2. Контейнер-рельс (самый важный блок) */
+
 .reviews-wrapper {
     display: flex;
     overflow: hidden;
     width: 100%;
-    /* Добавляем маску затухания по краям (по желанию, для красоты) */
+    
     mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
@@ -942,7 +939,7 @@ header nav ul {
     display: flex;
     gap: 30px;
     padding: 20px 0;
-    width: max-content; /* Позволяет контенту растягиваться в одну линию */
+    width: max-content; 
     animation: marquee 30s linear infinite;
 }
 
@@ -953,7 +950,7 @@ header nav ul {
 
 /* 3. Сама карточка отзыва */
 .review-card {
-    flex: 0 0 350px; /* Фиксированная ширина карточки, чтобы flex не сжимал её */
+    flex: 0 0 350px; 
     background: rgba(37, 33, 29, 0.8);
     border-radius: 15px;
     padding: 25px;
@@ -986,13 +983,13 @@ header nav ul {
     font-size: 16px;
 }
 
-/* 4. Магия анимации */
+
 @keyframes marquee {
     0% {
         transform: translateX(0);
     }
     100% {
-        /* Мы перемещаемся ровно на половину длины (на одну полную копию отзывов) */
+        
         transform: translateX(-50%);
     }
 }

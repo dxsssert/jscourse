@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             catalogMenu.classList.toggle('active');
         });
 
-        // Закрытие при клике вне меню
+        
         document.addEventListener('click', (e) => {
             if (!catalogTrigger.contains(e.target) && !catalogMenu.contains(e.target)) {
                 catalogMenu.classList.remove('active');
@@ -151,12 +151,10 @@ document.addEventListener('DOMContentLoaded', () => {
 const reviewsContainer = document.querySelector('.reviews');
 
 if (reviewsContainer) {
-    // Копируем все карточки, которые уже есть в HTML
+    
     const cards = reviewsContainer.innerHTML;
     
-    // Добавляем их в конец еще раз, чтобы создать "вторую порцию"
+    
     reviewsContainer.innerHTML = cards + cards;
     
-    // Если отзывов очень мало (всего 2-3), можно добавить еще раз:
-    // reviewsContainer.innerHTML += cards;
 }
