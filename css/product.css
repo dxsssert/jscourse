@@ -1,0 +1,139 @@
+.product-page {
+    padding-bottom: 80px;
+}
+
+/* Навигация "Хлебные крошки" */
+.breadcrumbs {
+    display: flex ;       
+    flex-direction: row ; 
+    flex-wrap: nowrap;              
+    align-items: center;          
+    gap: 8px;                      
+    margin: 20px 0;
+    padding: 0;
+
+}
+
+.breadcrumbs a {
+    color: #888;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.breadcrumbs a:hover {
+    color: #FA9021;
+}
+.breadcrumbs span {
+    color: #fff; /* Последний элемент (текущая страница) обычно ярче */
+}
+
+/* Основной контейнер */
+.product-container {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+/* Изображение книги */
+.product-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(250, 144, 33, 0.1);
+}
+
+/* Заголовок и цена */
+.product-title {
+    font-family: 'Alegreya SC', serif;
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.product-author {
+    font-size: 20px;
+    color: #FA9021;
+    margin-bottom: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.product-price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Блоки текста */
+.product-description h3, .product-specs h3 {
+    font-family: 'Alegreya SC', serif;
+    color: #FA9021;
+    font-size: 22px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.product-description p {
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Список характеристик */
+.product-specs ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.product-specs li {
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+.product-specs li span {
+    color: #888;
+}
+
+/* Большая кнопка */
+.add-to-cart-btn {
+    background: #FA9021;
+    color: #fff;
+    border: none;
+    padding: 20px 60px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.add-to-cart-btn:hover {
+    background: #DC7000;
+    box-shadow: 0 0 25px rgba(250, 144, 33, 0.5);
+    transform: translateY(-3px);
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 992px) {
+    .product-container {
+        grid-template-columns: 1fr;
+    }
+    .product-image {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    .product-title {
+        font-size: 32px;
+    }
+}

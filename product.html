@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Купить книгу | Bookline</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-image">
+                        <img src="images/logo.png" alt="Logo" class="logo-image">
+                    </div>
+                    <span class="name">Bookline</span>
+                </div>
+
+                <div class="catalog-wrapper">
+                    <div class="catalog-btn">
+                        <a href="#" id="catalogTrigger">Каталог</a>
+                    </div>
+                    <ul class="catalog-dropdown" id="catalogMenu">
+                        <li><a href="#">Классика</a></li>
+                        <li><a href="#">Саморазвитие</a></li>
+                        <li><a href="#">Фантастика</a></li>
+                        <li><a href="#">Детективы</a></li>
+                        <li><a href="#">Психология</a></li>
+                        <li><a href="#">Программирование</a></li>
+                        <li><a href="#">Детские книги</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav>
+                <div class="top-links">
+                    <a href="delivery-payment.html">Доставка и оплата</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <ul>
+                    <li class="search-item">
+                        <form class="search-form" action="#" method="get">
+                            <input type="text" placeholder="Поиск книг..." class="search-input">
+                            <button type="submit" class="search-btn">
+                                <img src="images/search-icon.png" alt="Поиск">
+                            </button>
+                        </form>
+                    </li>
+                    <li class="icon-item">
+                        <a href="cart.html">
+                            <img src="images/basket-icon.png" alt="Корзина" class="nav-icon">
+                        </a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="#">
+                            <img src="images/profile-icon.png" alt="Личный кабинет" class="nav-icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container product-page">
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span class="separator">/</span>
+                <a href="index.html#catalog">Каталог</a>
+                <span class="separator">/</span>
+                <span>Я переиграю тебя</span>
+            </nav>
+
+            <div class="product-container">
+                <div class="product-image">
+                    <img src="images/1.jpeg" alt="Обложка книги">
+                </div>
+
+                <div class="product-info">
+                    <h1 class="product-title">Я переиграю тебя</h1>
+                    <p class="product-author">Тони Майрон</p>
+                    
+                    <div class="product-price">850 ₽</div>
+
+                    <div class="product-description">
+                        <h3>Описание</h3>
+                        <p>Захватывающая история о противостоянии интеллектов и неожиданных поворотах судьбы. Эта книга заставит вас пересмотреть свои взгляды на стратегию и успех. Идеально подойдет для любителей психологических триллеров и современной прозы.</p>
+                    </div>
+
+                    <div class="product-specs">
+                        <h3>Характеристики</h3>
+                        <ul>
+                            <li><span>Издательство:</span> BookLine Press</li>
+                            <li><span>Год издания:</span> 2024</li>
+                            <li><span>Переплет:</span> Твердый</li>
+                            <li><span>Страниц:</span> 432</li>
+                            <li><span>Язык:</span> Русский</li>
+                        </ul>
+                    </div>
+
+                    <button class="add-to-cart-btn">Добавить в корзину</button>
+                </div>
+            </div>
+        </main>
+
+       <footer class="footer">
+            <div class="footer-content container">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="name" style="color: #FA9021; font-weight: bold; font-size: 24px;">Bookline</span>
+                    </div>
+                    <p>Ваш надежный источник знаний и вдохновения.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn tg">Telegram</a>
+                        <a href="#" class="social-btn vk">Вконтакте</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Новинки</a></li>
+                        <li><a href="#">Распродажа</a></li>
+                        <li><a href="delivery-payment.html">Доставка и оплата</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Связь с нами</h4>
+                    <button type="button" id="writeUsBtn" class="contact-btn">Написать обращение</button>
+                    <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
+                    <p>Тел: +7 (999) 000-00-00</p>
+                    <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
+                </div>
+            </div>
+            <div class="footer-bottom container">
+                <p>© 2025-2026 Bookline. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+    <script scr="script.js"></script>
+</body>
+</html>
