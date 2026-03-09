@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка и оплата | Bookline</title>
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .delivery-container {
+            padding-top: 30px; 
+            padding-bottom: 100px;
+            min-height: 80vh;
+        }
+
+        .info-title {
+            font-family: 'Alegreya SC', serif;
+            color: #fff;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(250, 144, 33, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: 0.3s;
+        }
+
+        .info-card:hover {
+            border-color: rgba(250, 144, 33, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .info-card h3 {
+            font-family: 'Alegreya SC', serif;
+            color: #FA9021;
+            font-size: 28px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid rgba(250, 144, 33, 0.2);
+            padding-bottom: 15px;
+        }
+
+        .method-item {
+            margin-bottom: 30px;
+        }
+
+        .method-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .method-item h4 {
+            font-family: 'Josefin Sans', sans-serif;
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .method-item p {
+            color: #aaa;
+            font-family: 'Josefin Sans', sans-serif;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .price-tag-delivery {
+            display: inline-block;
+            margin-top: 8px;
+            color: #FA9021;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 850px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+            }
+            .info-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <div class="header-left">
+                <div class="logo">
+                    <div class="logo-image">
+                        <img src="images/logo.png" alt="Logo" class="logo-image">
+                    </div>
+                    <span class="name">Bookline</span>
+                </div>
+
+                <div class="catalog-wrapper">
+                    <div class="catalog-btn">
+                        <a href="#" id="catalogTrigger">Каталог</a>
+                    </div>
+                    <ul class="catalog-dropdown" id="catalogMenu">
+                        <li><a href="#">Классика</a></li>
+                        <li><a href="#">Саморазвитие</a></li>
+                        <li><a href="#">Фантастика</a></li>
+                        <li><a href="#">Детективы</a></li>
+                        <li><a href="#">Психология</a></li>
+                        <li><a href="#">Программирование</a></li>
+                        <li><a href="#">Детские книги</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav>
+                <div class="top-links">
+                    <a href="#">Доставка и оплата</a>
+                    <a href="#">Акции</a>
+                    <a href="#">Контакты</a>
+                </div>
+                <ul>
+                    <li class="search-item">
+                        <form class="search-form" action="#" method="get">
+                            <input type="text" placeholder="Поиск книг..." class="search-input">
+                            <button type="submit" class="search-btn">
+                                <img src="images/search-icon.png" alt="Поиск">
+                            </button>
+                        </form>
+                    </li>
+                    <li class="icon-item">
+                        <a href="cart.html">
+                            <img src="images/basket-icon.png" alt="Корзина" class="nav-icon">
+                        </a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="#">
+                            <img src="images/profile-icon.png" alt="Личный кабинет" class="nav-icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="container delivery-container">
+            <h1 class="info-title">Доставка и оплата</h1>
+
+            <div class="info-grid">
+                <section class="info-card">
+                    <span class="card-icon">🚚</span>
+                    <h3>Варианты доставки</h3>
+                    
+                    <div class="method-item">
+                        <h4>Курьерская служба</h4>
+                        <p>Доставка до вашей двери в удобное время. Курьер свяжется с вами за 1 час до прибытия.</p>
+                        <span class="price-tag-delivery">Срок: 1-2 дня | от 350 ₽</span>
+                    </div>
+
+                    <div class="method-item">
+                        <h4>Почта России</h4>
+                        <p>Отправка ценной бандеролью во все регионы РФ. Трек-номер предоставляется сразу после отправки.</p>
+                        <span class="price-tag-delivery">Срок: 5-10 дней | от 250 ₽</span>
+                    </div>
+                </section>
+
+                <section class="info-card">
+                    <span class="card-icon">💳</span>
+                    <h3>Способы оплаты</h3>
+                    
+                    <div class="method-item">
+                        <h4>Оплата онлайн</h4>
+                        <p>Безопасный платеж банковской картой прямо на сайте. Принимаем МИР, Visa, Mastercard.</p>
+                    </div>
+
+                    <div class="method-item">
+                        <h4>При получении</h4>
+                        <p>Вы можете оплатить заказ наличными или картой курьеру, либо в отделении почты при выдаче.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content container">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="name" style="color: #FA9021; font-weight: bold; font-size: 24px;">Bookline</span>
+                    </div>
+                    <p>Ваш надежный источник знаний и вдохновения.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn tg">Telegram</a>
+                        <a href="#" class="social-btn vk">Вконтакте</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Новинки</a></li>
+                        <li><a href="#">Распродажа</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Связь с нами</h4>
+                    <button type="button" id="writeUsBtn" class="contact-btn">Написать обращение</button>
+                    <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
+                    <p>Тел: +7 (999) 000-00-00</p>
+                    <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
+                </div>
+            </div>
+            <div class="footer-bottom container">
+                <p>© 2025-2026 Bookline. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
