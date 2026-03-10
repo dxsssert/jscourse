@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/contacts.css" type="text/css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <title>Контакты | Bookline</title>
+</head>
+<body>
+    <wrapper>
+      <header class="container">
+            <div class="header-left">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-image">
+                            <img src="images/logo.png" alt="Logo">
+                        </div>
+                        <span class="name">Bookline</span>
+                    </a>
+                </div>
+
+                <div class="catalog-wrapper">
+                    <div class="catalog-btn">
+                        <a href="catalog.html" id="catalogTrigger">Каталог</a>
+                    </div>
+                    <ul class="catalog-dropdown" id="catalogMenu">
+                        <li><a href="category.html">Классика</a></li>
+                        <li><a href="#">Саморазвитие</a></li>
+                        <li><a href="#">Фантастика</a></li>
+                        <li><a href="#">Детективы</a></li>
+                        <li><a href="#">Психология</a></li>
+                        <li><a href="#">Программирование</a></li>
+                        <li><a href="#">Детские книги</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav>
+                <div class="top-links">
+                    <a href="delivery-payment.html">Доставка и оплата</a>
+                    <a href="#">Акции</a>
+                    <a href="">Контакты</a>
+
+                </div>
+                <ul>
+                    <li class="search-item">
+                        <form class="search-form" action="#" method="get">
+                            <input type="text" placeholder="Поиск книг..." class="search-input">
+                            <button type="submit" class="search-btn">
+                                <img src="images/search-icon.png" alt="Поиск">
+                            </button>
+                        </form>
+                    </li>
+                    <li class="icon-item">
+                        <a href="cart.html">
+                            <img src="images/basket-icon.png" alt="Корзина" class="nav-icon">
+                        </a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="#">
+                            <img src="images/profile-icon.png" alt="Личный кабинет" class="nav-icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>  
+        <main class="container contact-page">
+    <h1 class="page-title">Контакты</h1>
+
+    <div class="contact-grid">
+        <div class="contact-card-main">
+            <div class="contact-info-group">
+                <div class="method-item">
+                    <span class="method-label">Напишите нам</span>
+                    <h3>Обратная связь</h3>
+                    <p>Расскажите о вашей проблеме или предложении. Мы на связи с 9:00 до 21:00.</p>
+                    <button class="contact-action-btn" onclick="toggleContactForm()">Отправить обращение</button>
+                </div>
+
+                <div class="method-item">
+                    <span class="method-label">Позвоните нам</span>
+                    <h3>Горячая линия</h3>
+                    <p>Для срочных вопросов мы доступны круглосуточно.</p>
+                    <a href="tel:+74954248444" class="contact-phone">8 495 424-84-44</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-card-secondary">
+            <div class="secondary-item">
+                <h4>Корпоративным клиентам</h4>
+                <p>Оптовые заказы, библиотеки и спецпредложения.</p>
+                <a href="mailto:corp@bookline.ru" class="contact-email">corp@bookline.ru</a>
+            </div>
+            <div class="secondary-item">
+                <h4>Сотрудничество</h4>
+                <p>Для издательств и авторов.</p>
+                <a href="mailto:partners@bookline.ru" class="contact-email">partners@bookline.ru</a>
+            </div>
+        </div>
+    </div>
+<section class="map-section">
+    <div class="map-header">
+        <span class="method-label">Наш адрес</span>
+        <p class="address-text">г. Владимир, ул. Горького, д. 87, офис 313 (3 этаж)</p>
+    </div>
+
+    <div class="map-container">
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=40.375545%2C56.150410&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjY2MzE4MBJC0KDQvtGB0YHQuNGPLCDQktC70LDQtNC40LzQuNGALCDRg9C70LjRhtCwINCT0L7RgNGM0LrQvtCz0L4sIDg3IgoNd89VQhVvS1xC&z=17" 
+                width="100%" height="450" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+    </div>
+    
+    <div class="route-info">
+        <div class="route-item">
+            <span class="method-label">Общественный транспорт</span>
+            <p>Остановка <strong>«Площадь Ленина»</strong> или <strong>«ВлГУ»</strong>. Наш бизнес-центр находится прямо на перекрестке. Вход через центральные двери, далее на 3 этаж.</p>
+        </div>
+        <div class="route-item">
+            <span class="method-label">Для автомобилистов</span>
+            <p>Заезд со стороны улицы Горького. Перед зданием есть бесплатная парковка для посетителей БЦ.</p>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+            <div class="footer-content container">
+                <div class="footer-section">
+                    <div class="logo">
+                        <span class="name" style="color: #FA9021; font-weight: bold; font-size: 24px;">Bookline</span>
+                    </div>
+                    <p>Ваш надежный источник знаний и вдохновения.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn tg">Telegram</a>
+                        <a href="#" class="social-btn vk">Вконтакте</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Новинки</a></li>
+                        <li><a href="#">Распродажа</a></li>
+                        <li><a href="delivery-payment.html">Доставка и оплата</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Связь с нами</h4>
+                    <button type="button" id="writeUsBtn" class="contact-btn">Написать обращение</button>
+                    <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
+                    <p>Тел: +7 (999) 000-00-00</p>
+                    <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
+                </div>
+            </div>
+            <div class="footer-bottom container">
+                <p>© 2025-2026 Bookline. Все права защищены.</p>
+            </div>
+        </footer>
+    </div>
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content contact-modal">
+            <button id="closeContact" class="close-modal-btn">&times;</button>
+            <h2>Написать нам</h2>
+            <p class="modal-subtitle">Есть вопросы или предложения? Мы всегда на связи!</p>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" id="contactName" placeholder="Иван Иванов" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Электронная почта</label>
+                    <input type="email" id="contactEmail" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Сообщение</label>
+                    <textarea id="contactMessage" rows="4" placeholder="Ваш текст..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-contact-btn">Отправить сообщение</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    </wrapper>
+
+</body>
+</html>
