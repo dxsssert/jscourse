@@ -1,118 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Доставка и оплата | Bookline</title>
     <link rel="stylesheet" href="css/main.css">
-    <style>
-        .delivery-container {
-            padding-top: 30px; 
-            padding-bottom: 100px;
-            min-height: 80vh;
-        }
+    <link rel="stylesheet" href="css/devivery-payment.css">
 
-        .info-title {
-            font-family: 'Alegreya SC', serif;
-            color: #fff;
-            font-size: 42px;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .info-card {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(250, 144, 33, 0.1);
-            border-radius: 20px;
-            padding: 40px;
-            transition: 0.3s;
-        }
-
-        .info-card:hover {
-            border-color: rgba(250, 144, 33, 0.4);
-            background: rgba(255, 255, 255, 0.05);
-            transform: translateY(-5px);
-        }
-
-        .card-icon {
-            font-size: 45px;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .info-card h3 {
-            font-family: 'Alegreya SC', serif;
-            color: #FA9021;
-            font-size: 28px;
-            margin-bottom: 25px;
-            border-bottom: 1px solid rgba(250, 144, 33, 0.2);
-            padding-bottom: 15px;
-        }
-
-        .method-item {
-            margin-bottom: 30px;
-        }
-
-        .method-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .method-item h4 {
-            font-family: 'Josefin Sans', sans-serif;
-            color: #fff;
-            font-size: 20px;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .method-item p {
-            color: #aaa;
-            font-family: 'Josefin Sans', sans-serif;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-
-        .price-tag-delivery {
-            display: inline-block;
-            margin-top: 8px;
-            color: #FA9021;
-            font-weight: bold;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Адаптивность */
-        @media (max-width: 850px) {
-            .info-grid {
-                grid-template-columns: 1fr;
-                padding: 0 20px;
-            }
-            .info-title {
-                font-size: 32px;
-            }
-        }
-    </style>
 </head>
+
 <body>
     <div class="wrapper">
         <header class="container">
             <div class="header-left">
                 <div class="logo">
-                    <div class="logo-image">
-                        <img src="images/logo.png" alt="Logo" class="logo-image">
-                    </div>
-                    <span class="name">Bookline</span>
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-image">
+                            <img src="images/logo.png" alt="Logo">
+                        </div>
+                        <span class="name">Bookline</span>
+                    </a>
                 </div>
 
                 <div class="catalog-wrapper">
@@ -167,7 +75,7 @@
                 <section class="info-card">
                     <span class="card-icon">🚚</span>
                     <h3>Варианты доставки</h3>
-                    
+
                     <div class="method-item">
                         <h4>Курьерская служба</h4>
                         <p>Доставка до вашей двери в удобное время. Курьер свяжется с вами за 1 час до прибытия.</p>
@@ -176,7 +84,8 @@
 
                     <div class="method-item">
                         <h4>Почта России</h4>
-                        <p>Отправка ценной бандеролью во все регионы РФ. Трек-номер предоставляется сразу после отправки.</p>
+                        <p>Отправка ценной бандеролью во все регионы РФ. Трек-номер предоставляется сразу после
+                            отправки.</p>
                         <span class="price-tag-delivery">Срок: 5-10 дней | от 250 ₽</span>
                     </div>
                 </section>
@@ -184,7 +93,7 @@
                 <section class="info-card">
                     <span class="card-icon">💳</span>
                     <h3>Способы оплаты</h3>
-                    
+
                     <div class="method-item">
                         <h4>Оплата онлайн</h4>
                         <p>Безопасный платеж банковской картой прямо на сайте. Принимаем МИР, Visa, Mastercard.</p>
@@ -234,4 +143,5 @@
         </footer>
     </div>
 </body>
+
 </html>

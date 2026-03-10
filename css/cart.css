@@ -185,3 +185,10 @@
 .checkout-btn:active {
     transform: translateY(-1px);
 }
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    color: inherit; 
+}

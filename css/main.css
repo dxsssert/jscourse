@@ -139,6 +139,9 @@ header nav ul li a {
     border-bottom: none;
     box-shadow: 0 0 25px #FA9021;
 }
+.catalog-wrapper:hover .catalog-dropdown {
+    display: block;
+}
 
 /* Поисковая строка */
 .search-item {
@@ -996,18 +999,15 @@ header nav ul {
 /* РЕАЛИЗАЦИЯ КАТАЛОГА С ВЫПАДАЮЩИМСЯ СПИСКОМ*/
 .catalog-wrapper {
     position: relative; 
-    display: inline-block;
+    display: inline-block; 
 }
 
 .catalog-dropdown {
     position: absolute;
-    top: calc(100% + 10px); 
+    top: calc(100% + 5px); 
     left: 0;               
     width: 280px;
-    
-    
     background: #0a0a0a; 
-    
     list-style: none;
     padding: 15px 0;
     margin: 0;
@@ -1016,18 +1016,20 @@ header nav ul {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
     z-index: 10000;
     
-   
+    
     opacity: 0;
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s ease;
+    pointer-events: none; 
 }
 
 
-.catalog-dropdown.active {
+.catalog-wrapper:hover .catalog-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    pointer-events: auto; 
 }
 
 
@@ -1035,12 +1037,9 @@ header nav ul {
     display: block;
     padding: 12px 25px;
     color: #fff;
-    
-    
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px; 
+    font-size: 18px; 
     font-weight: 500;
-    
     text-decoration: none;
     transition: all 0.3s ease;
     text-align: left; 
@@ -1051,7 +1050,6 @@ header nav ul {
     color: #FA9021;
     padding-left: 35px; 
 }
-
 
 header.container {
     overflow: visible !important;
@@ -1180,4 +1178,11 @@ header.container {
 .close-modal-btn:hover {
     color: white;
     transform: rotate(90deg);
+}
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    color: inherit; 
 }

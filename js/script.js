@@ -84,21 +84,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const catalogTrigger = document.getElementById('catalogTrigger');
-    const catalogMenu = document.getElementById('catalogMenu');
+    // const catalogTrigger = document.getElementById('catalogTrigger');
+    // const catalogMenu = document.getElementById('catalogMenu');
 
-    if (catalogTrigger && catalogMenu) {
-        catalogTrigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            catalogMenu.classList.toggle('active');
-        });
+    // if (catalogTrigger && catalogMenu) {
+    //     catalogTrigger.addEventListener('click', (e) => {
+    //         e.preventDefault();
+    //         catalogMenu.classList.toggle('active');
+    //     });
 
-        document.addEventListener('click', (e) => {
-            if (!catalogTrigger.contains(e.target) && !catalogMenu.contains(e.target)) {
-                catalogMenu.classList.remove('active');
-            }
-        });
-    }
+    //     document.addEventListener('click', (e) => {
+    //         if (!catalogTrigger.contains(e.target) && !catalogMenu.contains(e.target)) {
+    //             catalogMenu.classList.remove('active');
+    //         }
+    //     });
+    // }
 
     const addButtons = document.querySelectorAll('.add-to-cart-btn');
 

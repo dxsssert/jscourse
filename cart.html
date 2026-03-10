@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,19 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
     <title>Корзина | Bookline</title>
 </head>
+
 <body>
     <div class="wrapper">
         <header class="container">
             <div class="header-left">
                 <div class="logo">
-                    <div class="logo-image">
-                        <img src="images/logo.png" alt="Logo" class="logo-image">
-                    </div>
-                    <span class="name">Bookline</span>
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-image">
+                            <img src="images/logo.png" alt="Logo">
+                        </div>
+                        <span class="name">Bookline</span>
+                    </a>
                 </div>
-
                 <div class="catalog-wrapper">
                     <div class="catalog-btn">
                         <a href="#" id="catalogTrigger">Каталог</a>
@@ -65,79 +68,81 @@
         </header>
 
         <main class="container cart-page">
-    <h2 class="cart-title">Ваша корзина</h2>
-    
-    <div class="cart-container">
-        <div class="cart-items" id="cartItems">
-            
-            <div class="cart-item">
-                <div class="cart-item-left">
-                    <img src="images/1.jpeg" alt="Книга" class="cart-item-img">
-                    <div class="cart-item-info">
-                        <h4>Я переиграю тебя</h4>
-                        <p>Тони Майрон</p>
+            <h2 class="cart-title">Ваша корзина</h2>
+
+            <div class="cart-container">
+                <div class="cart-items" id="cartItems">
+
+                    <div class="cart-item">
+                        <div class="cart-item-left">
+                            <img src="images/1.jpeg" alt="Книга" class="cart-item-img">
+                            <div class="cart-item-info">
+                                <h4>Я переиграю тебя</h4>
+                                <p>Тони Майрон</p>
+                            </div>
+                        </div>
+
+                        <div class="cart-item-right">
+                            <div class="cart-item-count">
+                                <button class="count-btn minus">−</button>
+                                <span class="count-num">1</span>
+                                <button class="count-btn plus">+</button>
+                            </div>
+                            <div class="cart-item-price" data-price="850">850 ₽</div>
+
+                            <button class="remove-item-btn" title="Удалить">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+                                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                        </div>
                     </div>
+
+                    <div class="cart-item">
+                        <div class="cart-item-left">
+                            <img src="images/2.jpeg" alt="Книга" class="cart-item-img">
+                            <div class="cart-item-info">
+                                <h4>Герой нашего времени</h4>
+                                <p>Михаил Лермонтов</p>
+                            </div>
+                        </div>
+
+                        <div class="cart-item-right">
+                            <div class="cart-item-count">
+                                <button class="count-btn minus">−</button>
+                                <span class="count-num">1</span>
+                                <button class="count-btn plus">+</button>
+                            </div>
+                            <div class="cart-item-price" data-price="550">550 ₽</div>
+
+                            <button class="remove-item-btn" title="Удалить">
+                                <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
+                                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="cart-item-right">
-                    <div class="cart-item-count">
-                        <button class="count-btn minus">−</button>
-                        <span class="count-num">1</span>
-                        <button class="count-btn plus">+</button>
+                <aside class="cart-summary">
+                    <h3>Итог заказа</h3>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Товары:</span>
+                            <span id="itemsTotal">0 ₽</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>К оплате:</span>
+                            <span id="finalTotal">0 ₽</span>
+                        </div>
                     </div>
-                    <div class="cart-item-price" data-price="850">850 ₽</div>
-                    
-                    <button class="remove-item-btn" title="Удалить">
-                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
-                            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                </div>
+                    <button class="checkout-btn" id="goToCheckout">Оформить заказ</button>
+                </aside>
             </div>
-
-            <div class="cart-item">
-                <div class="cart-item-left">
-                    <img src="images/2.jpeg" alt="Книга" class="cart-item-img">
-                    <div class="cart-item-info">
-                        <h4>Герой нашего времени</h4>
-                        <p>Михаил Лермонтов</p>
-                    </div>
-                </div>
-
-                <div class="cart-item-right">
-                    <div class="cart-item-count">
-                        <button class="count-btn minus">−</button>
-                        <span class="count-num">1</span>
-                        <button class="count-btn plus">+</button>
-                    </div>
-                    <div class="cart-item-price" data-price="550">550 ₽</div>
-                    
-                    <button class="remove-item-btn" title="Удалить">
-                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none">
-                            <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-        </div>
-
-        <aside class="cart-summary">
-            <h3>Итог заказа</h3>
-            <div class="summary-details">
-                <div class="summary-row">
-                    <span>Товары:</span>
-                    <span id="itemsTotal">0 ₽</span>
-                </div>
-                <div class="summary-row total">
-                    <span>К оплате:</span>
-                    <span id="finalTotal">0 ₽</span>
-                </div>
-            </div>
-            <button class="checkout-btn" id="goToCheckout">Оформить заказ</button>
-        </aside>
-    </div>
-</main>
+        </main>
 
         <footer class="footer">
             <div class="footer-content container">
@@ -146,7 +151,7 @@
                         <span class="name" style="color: #FA9021; font-weight: bold; font-size: 24px;">Bookline</span>
                     </div>
                     <p>Ваш надежный источник знаний и вдохновения. Читайте лучшие книги вместе с нами.</p>
-                    
+
                     <div class="social-links">
                         <a href="#" class="social-btn tg">Telegram</a>
                         <a href="#" class="social-btn vk">Вконтакте</a>
@@ -178,29 +183,30 @@
         </footer>
     </div>
     <div id="contactModal" class="modal-overlay">
-    <div class="modal-content contact-modal">
-        <button id="closeContact" class="close-modal-btn">&times;</button>
-        <h2>Написать нам</h2>
-        <p class="modal-subtitle">Есть вопросы или предложения? Мы всегда на связи!</p>
-        <form id="contactForm">
-            <div class="form-group">
-                <label>Ваше имя</label>
-                <input type="text" id="contactName" placeholder="Иван Иванов" required>
-            </div>
-            <div class="form-group">
-                <label>Электронная почта</label>
-                <input type="email" id="contactEmail" placeholder="example@mail.com" required>
-            </div>
-            <div class="form-group">
-                <label>Сообщение</label>
-                <textarea id="contactMessage" rows="4" placeholder="Ваш текст..." required></textarea>
-            </div>
-            <button type="submit" class="submit-contact-btn">Отправить сообщение</button>
-        </form>
+        <div class="modal-content contact-modal">
+            <button id="closeContact" class="close-modal-btn">&times;</button>
+            <h2>Написать нам</h2>
+            <p class="modal-subtitle">Есть вопросы или предложения? Мы всегда на связи!</p>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" id="contactName" placeholder="Иван Иванов" required>
+                </div>
+                <div class="form-group">
+                    <label>Электронная почта</label>
+                    <input type="email" id="contactEmail" placeholder="example@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Сообщение</label>
+                    <textarea id="contactMessage" rows="4" placeholder="Ваш текст..." required></textarea>
+                </div>
+                <button type="submit" class="submit-contact-btn">Отправить сообщение</button>
+            </form>
+        </div>
     </div>
-</div>
     <script src="js/script.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/scprit.js"></script>
 </body>
+
 </html>

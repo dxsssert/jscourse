@@ -321,3 +321,10 @@ h3 {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    color: inherit; 
+}
