@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог — Книжный магазин</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/catalog.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="container">
+            <div class="header-left">
+                <div class="logo">
+                    <a href="index.html" class="logo-link">
+                        <div class="logo-image">
+                            <img src="images/logo.png" alt="Logo">
+                        </div>
+                        <span class="name">Bookline</span>
+                    </a>
+                </div>
+
+                <div class="catalog-wrapper">
+                    <div class="catalog-btn">
+                        <a href="#" id="catalogTrigger">Каталог</a>
+                    </div>
+                    <ul class="catalog-dropdown" id="catalogMenu">
+                        <li><a href="#">Классика</a></li>
+                        <li><a href="#">Саморазвитие</a></li>
+                        <li><a href="#">Фантастика</a></li>
+                        <li><a href="#">Детективы</a></li>
+                        <li><a href="#">Психология</a></li>
+                        <li><a href="#">Программирование</a></li>
+                        <li><a href="#">Детские книги</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav>
+                <div class="top-links">
+                    <a href="delivery-payment.html">Доставка и оплата</a>
+                    <a href="#">Акции</a>
+                    <a href="">Контакты</a>
+
+                </div>
+                <ul>
+                    <li class="search-item">
+                        <form class="search-form" action="#" method="get">
+                            <input type="text" placeholder="Поиск книг..." class="search-input">
+                            <button type="submit" class="search-btn">
+                                <img src="images/search-icon.png" alt="Поиск">
+                            </button>
+                        </form>
+                    </li>
+                    <li class="icon-item">
+                        <a href="cart.html">
+                            <img src="images/basket-icon.png" alt="Корзина" class="nav-icon">
+                        </a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="#">
+                            <img src="images/profile-icon.png" alt="Личный кабинет" class="nav-icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+
+            <h2 class="category-title">Классика</h2>
+            <div class="catalog-grid-system">
+                <script>
+                    for (let i = 0; i < 10; i++) {
+                        document.write(`
+                <div class="Block">
+                    <a href="product.html">
+                        <div class="book-image-container">
+                            <img src="images/1.jpeg" alt="Я переиграю тебя" class="book-image">
+                        </div>
+                    </a>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div>
+                        <a href="product.html"><span class="book-title">Я переиграю тебя</span></a>
+                        <p class="book-author">Тони Майрон</p>
+                    </div>
+                    <button class="add-to-cart-btn" 
+                            data-id="book_1_${i}" 
+                            data-title="Я переиграю тебя"
+                            data-author="Тони Майрон" 
+                            data-price="850" 
+                            data-image="images/1.jpeg">
+                        В корзину
+                    </button>
+                </div>
+            `);
+                    }
+                </script>
+            </div>
+
+    </div>
+
+    <h2 class="category-title">Саморазвитие</h2>
+    <div class="catalog-grid-system">
+        <script>
+            for (let i = 0; i < 10; i++) {
+                document.write(`
+                <div class="Block">
+                    <div class="book-image-container">
+                        <img src="img/book2.png" alt="Саморазвитие" class="book-image">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-title">Книга по саморазвитию # ${i + 1}</span>
+                        <span class="book-author">Брайан Трейси</span>
+                        <div class="price-tag">790 ₽</div>
+                    </div>
+                    <button class="add-to-cart-btn">В корзину</button>
+                </div>`);
+            }
+        </script>
+    </div>
+
+    <h2 class="category-title">Фантастика</h2>
+    <div class="catalog-grid-system">
+        <script>
+            for (let i = 0; i < 10; i++) {
+                document.write(`
+                <div class="Block">
+                    <div class="book-image-container">
+                        <img src="img/book3.png" alt="Фантастика" class="book-image">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-title">Миры будущего # ${i + 1}</span>
+                        <span class="book-author">Айзек Азимов</span>
+                        <div class="price-tag">990 ₽</div>
+                    </div>
+                    <button class="add-to-cart-btn">В корзину</button>
+                </div>`);
+            }
+        </script>
+    </div>
+
+    <h2 class="category-title">Программирование</h2>
+    <div class="catalog-grid-system">
+        <script>
+            for (let i = 0; i < 10; i++) {
+                document.write(`
+                <div class="Block">
+                    <div class="book-image-container">
+                        <img src="img/book6.png" alt="Код" class="book-image">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-title">Основы разработки # ${i + 1}</span>
+                        <span class="book-author">Роберт Мартин</span>
+                        <div class="price-tag">1200 ₽</div>
+                    </div>
+                    <button class="add-to-cart-btn">В корзину</button>
+                </div>`);
+            }
+        </script>
+    </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="footer-section">
+                <div class="logo">
+                    <span class="name" style="color: #FA9021; font-weight: bold; font-size: 24px;">Bookline</span>
+                </div>
+                <p>Ваш надежный источник знаний и вдохновения.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn tg">Telegram</a>
+                    <a href="#" class="social-btn vk">Вконтакте</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Разделы</h4>
+                <ul>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Новинки</a></li>
+                    <li><a href="#">Распродажа</a></li>
+                    <li><a href="delivery-payment.html">Доставка и оплата</a></li>
+                    <li><a href="#">О нас</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Связь с нами</h4>
+                <button type="button" id="writeUsBtn" class="contact-btn">Написать обращение</button>
+                <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
+                <p>Тел: +7 (999) 000-00-00</p>
+                <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2025-2026 Bookline. Все права защищены.</p>
+        </div>
+    </footer>
+    </div>
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content contact-modal">
+            <button id="closeContact" class="close-modal-btn">&times;</button>
+            <h2>Написать нам</h2>
+            <p class="modal-subtitle">Есть вопросы или предложения? Мы всегда на связи!</p>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" id="contactName" placeholder="Иван Иванов" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Электронная почта</label>
+                    <input type="email" id="contactEmail" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Сообщение</label>
+                    <textarea id="contactMessage" rows="4" placeholder="Ваш текст..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-contact-btn">Отправить сообщение</button>
+            </form>
+        </div>
+
+    </div>
+</body>
+
+</html>
