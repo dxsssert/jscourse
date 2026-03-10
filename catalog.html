@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Каталог — Книжный магазин</title>
+    <title>Каталог | Bookline</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/product.css">
+    
 </head>
 
 <body>
@@ -26,7 +28,7 @@
                         <a href="#" id="catalogTrigger">Каталог</a>
                     </div>
                     <ul class="catalog-dropdown" id="catalogMenu">
-                        <li><a href="#">Классика</a></li>
+                        <li><a href="category.html">Классика</a></li>
                         <li><a href="#">Саморазвитие</a></li>
                         <li><a href="#">Фантастика</a></li>
                         <li><a href="#">Детективы</a></li>
@@ -67,6 +69,71 @@
             </nav>
         </header>
         <main class="container">
+             <nav class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span class="separator">/</span>
+                <a href="catalog.html">Каталог</a>
+            </nav>  
+
+            <h2 class="category-title">Новинки</h2>
+            <div class="catalog-grid-system">
+                <script>
+                    for (let i = 0; i < 4; i++) {
+                        document.write(`
+                <div class="Block">
+                    <a href="product.html">
+                        <div class="book-image-container">
+                            <img src="images/1.jpeg" alt="Новинки" class="book-image">
+                        </div>
+                    </a>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div>
+                        <a href="product.html"><span class="book-title">Я переиграю тебя</span></a>
+                        <p class="book-author">Тони Майрон</p>
+                    </div>
+                    <button class="add-to-cart-btn" 
+                            data-id="book_1_${i}" 
+                            data-title="Я переиграю тебя"
+                            data-author="Тони Майрон" 
+                            data-price="850" 
+                            data-image="images/1.jpeg">
+                        В корзину
+                    </button>
+                </div>
+            `);
+                    }
+                </script>
+            </div>
+
+            <h2 class="category-title">Распродажа</h2>
+            <div class="catalog-grid-system">
+                <script>
+                    for (let i = 0; i < 4; i++) {
+                        document.write(`
+                <div class="Block">
+                    <a href="product.html">
+                        <div class="book-image-container">
+                            <img src="images/1.jpeg" alt="Распродажа" class="book-image">
+                        </div>
+                    </a>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div>
+                        <a href="product.html"><span class="book-title">Я переиграю тебя</span></a>
+                        <p class="book-author">Тони Майрон</p>
+                    </div>
+                    <button class="add-to-cart-btn" 
+                            data-id="book_1_${i}" 
+                            data-title="Я переиграю тебя"
+                            data-author="Тони Майрон" 
+                            data-price="850" 
+                            data-image="images/1.jpeg">
+                        В корзину
+                    </button>
+                </div>
+            `);
+                    }
+                </script>
+            </div>
 
             <h2 class="category-title">Классика</h2>
             <div class="catalog-grid-system">
@@ -110,8 +177,8 @@
                         <img src="img/book2.png" alt="Саморазвитие" class="book-image">
                     </div>
                     <div class="book-info">
-                        <span class="book-title">Книга по саморазвитию # ${i + 1}</span>
-                        <span class="book-author">Брайан Трейси</span>
+                        <span class="book-title">Как укротить свой мозг? # ${i + 1}</span>
+                        <span class="book-author">Даниэль Канеман</span>
                         <div class="price-tag">790 ₽</div>
                     </div>
                     <button class="add-to-cart-btn">В корзину</button>
@@ -139,6 +206,44 @@
             }
         </script>
     </div>
+    <h2 class="category-title">Детективы</h2>
+    <div class="catalog-grid-system">
+        <script>
+            for (let i = 0; i < 10; i++) {
+                document.write(`
+                <div class="Block">
+                    <div class="book-image-container">
+                        <img src="img/book6.png" alt="Детективы" class="book-image">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-title">Убийство в Восточном экспрессе # ${i + 1}</span>
+                        <span class="book-author">Агата Кристи</span>
+                        <div class="price-tag">1000 ₽</div>
+                    </div>
+                    <button class="add-to-cart-btn">В корзину</button>
+                </div>`);
+            }
+        </script>
+    </div>
+    <h2 class="category-title">Психология</h2>
+    <div class="catalog-grid-system">
+        <script>
+            for (let i = 0; i < 10; i++) {
+                document.write(`
+                <div class="Block">
+                    <div class="book-image-container">
+                        <img src="img/book6.png" alt="Психология" class="book-image">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-title">Психология влияния # ${i + 1}</span>
+                        <span class="book-author">Роберт Чалдини</span>
+                        <div class="price-tag">1500 ₽</div>
+                    </div>
+                    <button class="add-to-cart-btn">В корзину</button>
+                </div>`);
+            }
+        </script>
+    </div>
 
     <h2 class="category-title">Программирование</h2>
     <div class="catalog-grid-system">
@@ -153,6 +258,25 @@
                         <span class="book-title">Основы разработки # ${i + 1}</span>
                         <span class="book-author">Роберт Мартин</span>
                         <div class="price-tag">1200 ₽</div>
+                    </div>
+                    <button class="add-to-cart-btn">В корзину</button>
+                </div>`);
+            }
+        </script>
+    </div>
+    <h2 class="category-title">Детские книги</h2>
+    <div class="catalog-grid-system">
+        <script>
+            for (let i = 0; i < 10; i++) {
+                document.write(`
+                <div class="Block">
+                    <div class="book-image-container">
+                        <img src="img/book6.png" alt="Детские книги" class="book-image">
+                    </div>
+                    <div class="book-info">
+                        <span class="book-title">Маленький принц # ${i + 1}</span>
+                        <span class="book-author">Антуан де Сент-Экзюпери</span>
+                        <div class="price-tag">900 ₽</div>
                     </div>
                     <button class="add-to-cart-btn">В корзину</button>
                 </div>`);
@@ -223,6 +347,7 @@
         </div>
 
     </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1004,7 +1004,7 @@ header nav ul {
 
 .catalog-dropdown {
     position: absolute;
-    top: calc(100% + 5px); 
+    top: 100%; 
     left: 0;               
     width: 280px;
     background: #0a0a0a; 

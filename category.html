@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Доставка и оплата | Bookline</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/devivery-payment.css">
-
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/catalog.css" type="text/css">
+    <link rel="stylesheet" href="css/product.css" type="text/css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <title>Категория товаров</title>
 </head>
-
 <body>
     <div class="wrapper">
         <header class="container">
@@ -28,7 +27,7 @@
                         <a href="catalog.html" id="catalogTrigger">Каталог</a>
                     </div>
                     <ul class="catalog-dropdown" id="catalogMenu">
-                        <li><a href="category.html">Классика</a></li>
+                        <li><a href="#">Классика</a></li>
                         <li><a href="#">Саморазвитие</a></li>
                         <li><a href="#">Фантастика</a></li>
                         <li><a href="#">Детективы</a></li>
@@ -41,9 +40,10 @@
 
             <nav>
                 <div class="top-links">
-                    <a href="#">Доставка и оплата</a>
+                    <a href="delivery-payment.html">Доставка и оплата</a>
                     <a href="#">Акции</a>
-                    <a href="#">Контакты</a>
+                    <a href="">Контакты</a>
+
                 </div>
                 <ul>
                     <li class="search-item">
@@ -68,45 +68,46 @@
             </nav>
         </header>
 
-        <main class="container delivery-container">
-            <h1 class="info-title">Доставка и оплата</h1>
+        <main>
+            <main class="container category-page">
+            <nav class="breadcrumbs">
+                <a href="index.html">Главная</a>
+                <span class="separator">/</span>
+                <a href="catalog.html">Каталог</a>
+                <span class="separator">/</span>
+                <span>Классика</span>
+            </nav>
 
-            <div class="info-grid">
-                <section class="info-card">
-                    <span class="card-icon">🚚</span>
-                    <h3>Варианты доставки</h3>
-
-                    <div class="method-item">
-                        <h4>Курьерская служба</h4>
-                        <p>Доставка до вашей двери в удобное время. Курьер свяжется с вами за 1 час до прибытия.</p>
-                        <span class="price-tag-delivery">Срок: 1-2 дня | от 350 ₽</span>
+             <h2 class="category-title">Классика</h2>
+            <div class="catalog-grid-system">
+                <script>
+                    for (let i = 0; i < 10; i++) {
+                        document.write(`
+                <div class="Block">
+                    <a href="product.html">
+                        <div class="book-image-container">
+                            <img src="images/1.jpeg" alt="Я переиграю тебя" class="book-image">
+                        </div>
+                    </a>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div>
+                        <a href="product.html"><span class="book-title">Я переиграю тебя</span></a>
+                        <p class="book-author">Тони Майрон</p>
                     </div>
-
-                    <div class="method-item">
-                        <h4>Почта России</h4>
-                        <p>Отправка ценной бандеролью во все регионы РФ. Трек-номер предоставляется сразу после
-                            отправки.</p>
-                        <span class="price-tag-delivery">Срок: 5-10 дней | от 250 ₽</span>
-                    </div>
-                </section>
-
-                <section class="info-card">
-                    <span class="card-icon">💳</span>
-                    <h3>Способы оплаты</h3>
-
-                    <div class="method-item">
-                        <h4>Оплата онлайн</h4>
-                        <p>Безопасный платеж банковской картой прямо на сайте. Принимаем МИР, Visa, Mastercard.</p>
-                    </div>
-
-                    <div class="method-item">
-                        <h4>При получении</h4>
-                        <p>Вы можете оплатить заказ наличными или картой курьеру, либо в отделении почты при выдаче.</p>
-                    </div>
-                </section>
+                    <button class="add-to-cart-btn" 
+                            data-id="book_1_${i}" 
+                            data-title="Я переиграю тебя"
+                            data-author="Тони Майрон" 
+                            data-price="850" 
+                            data-image="images/1.jpeg">
+                        В корзину
+                    </button>
+                </div>
+            `);
+                    }
+                </script>
             </div>
         </main>
-
         <footer class="footer">
             <div class="footer-content container">
                 <div class="footer-section">
@@ -125,7 +126,7 @@
                         <li><a href="#">Акции</a></li>
                         <li><a href="#">Новинки</a></li>
                         <li><a href="#">Распродажа</a></li>
-                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="delivery-payment.html">Доставка и оплата</a></li>
                         <li><a href="#">О нас</a></li>
                     </ul>
                 </div>
@@ -141,7 +142,6 @@
                 <p>© 2025-2026 Bookline. Все права защищены.</p>
             </div>
         </footer>
-    </div>
+        <script src="js/script.js"></script>
 </body>
-
 </html>
