@@ -332,3 +332,94 @@ h3 {
     gap: 10px; 
     color: inherit; 
 }
+@media (max-width: 750px) {
+    .main-content {
+        padding: 20px 10px;
+    }
+
+    .page-title {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .checkout-vertical-stack {
+        padding: 0 10px;
+        gap: 20px;
+    }
+
+    .checkout-form-section, 
+    .order-summary-wide {
+        padding: 20px;
+        border-radius: 15px;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr; 
+        gap: 0;
+    }
+
+    .checkout-item {
+        padding: 15px 0;
+        position: relative;
+    }
+
+    .checkout-item-image {
+        width: 60px;
+        height: 85px;
+        margin-right: 15px;
+    }
+
+    .checkout-item-info h4 {
+        font-size: 16px;
+        padding-right: 30px;
+    }
+
+    .checkout-item-price {
+        font-size: 18px;
+        margin-left: 0;
+        margin-top: 5px;
+        display: block;
+    }
+
+    .remove-item-btn {
+        position: absolute;
+        top: 15px;
+        right: 0;
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .total-info {
+        font-size: 22px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .submit-order-btn {
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+    .modal-content {
+        padding: 30px 20px;
+    }
+
+    .modal-content h2 {
+        font-size: 24px;
+    }
+}
