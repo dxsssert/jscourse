@@ -122,7 +122,7 @@ header nav ul li a {
     color: #FA9021;
 }
 
-/* Кнопка каталога */
+
 .catalog-btn a {
     display: inline-block;
     background-color: #FA9021;
@@ -139,16 +139,13 @@ header nav ul li a {
     background-color: #DC7000;
     transform: none;
     border-bottom: none; 
-    background-color: #DC7000;
-    transform: none;
-    border-bottom: none;
     box-shadow: 0 0 25px #FA9021;
 }
 .catalog-wrapper:hover .catalog-dropdown {
     display: block;
 }
 
-/* Поисковая строка */
+
 .search-item {
     flex-grow: 1; 
     max-width: 500px;
@@ -252,26 +249,19 @@ header nav ul {
     position: relative;
     min-height: 600px;
 }
+
 .hero-content {
     display: flex;
     gap: 60px;
     align-items: center;
     width: 100%;
-}
-
-
-.hero img {
-    max-width: 100%;
-    width: 540px;
-    height: 540px;
-    position: absolute;
-    top: 250px;
-    right: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .hero--info {
     width: 450px;
-    padding-top: 0;
+    flex-shrink: 0;
 }
 
 .hero--info h2 {
@@ -279,66 +269,62 @@ header nav ul {
     font-weight: 600;
     user-select: none;
     pointer-events: none;
-    cursor: none !important;
 }
 
 .hero--info p {
     line-height: 170%;
     font-weight: 500;
-    margin-top: 30px; 
+    margin-top: 30px;
     user-select: none;
     pointer-events: none;
-    cursor: none !important;
 }
 
 .hero--info .btn {
-    margin: 20px 20px;
+    margin: 20px 0;
     background: #FA9021;
     color: #fff;
     border-radius: 50px;
     padding: 15px 30px;
     border: 0;
-    transition: all 500ms ease;
+    transition: all 0.3s ease;
     display: inline-block;
 }
 
 .hero--info .btn:hover {
-    font-size: 20px;
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
-
 
 .hero-carousel {
     position: relative;
-    width: 70%; 
-    min-width: 300px; 
-    max-width: 650px; 
-    aspect-ratio: 4/3;
+    flex: 1;
+    max-width: 650px;
+    height: 450px; 
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(250, 144, 33, 0.3);
-    flex-shrink: 0;
-    margin-right: auto;
+    z-index: 5;
 }
 
 .carousel-container {
     display: flex;
     width: 100%;
     height: 100%;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
 }
 
 .carousel-slide {
     min-width: 100%;
     height: 100%;
+    flex-shrink: 0;
 }
+
 .carousel-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
-
 
 .carousel-prev, .carousel-next {
     position: absolute;
@@ -358,20 +344,15 @@ header nav ul {
     transition: all 0.3s ease;
     z-index: 10;
 }
-.carousel-prev {
-    left: 10px;
-}
 
-.carousel-next {
-    right: 10px;
-}
+.carousel-prev { left: 15px; }
+.carousel-next { right: 15px; }
 
 .carousel-prev:hover, .carousel-next:hover {
     background: #FA9021;
     transform: translateY(-50%) scale(1.1);
 }
 
-/* Индикаторы (точки) */
 .carousel-dots {
     position: absolute;
     bottom: 20px;
@@ -391,23 +372,13 @@ header nav ul {
     transition: all 0.3s ease;
 }
 
-.dot:hover {
-    background: white;
-}
-
 .active-dot {
     background: #FA9021;
     transform: scale(1.2);
 }
 
 .hero > img {
-    max-width: 100%;
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    z-index: 1;
+    display: none;
 }
 
 .trending-header {
@@ -1001,7 +972,6 @@ header nav ul {
     }
 }
 
-/* РЕАЛИЗАЦИЯ КАТАЛОГА С ВЫПАДАЮЩИМСЯ СПИСКОМ*/
 .catalog-wrapper {
     position: relative; 
     display: inline-block; 
@@ -1404,6 +1374,12 @@ header.container {
     .trending-next {
         display: none !important;
     }
+    .catalog-dropdown {
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-70%) !important;
+        min-width: 250px;
+    }
 }
 @media (max-width: 630px) {
     header.container {
@@ -1506,9 +1482,6 @@ header.container {
     .trending-next {
         display: none !important;
     }
-   
-
-    @media (max-width: 510px) {
     header.container {
         display: flex !important;
         flex-direction: column !important;
@@ -1577,4 +1550,109 @@ header.container {
         padding-bottom: 90px !important;
     }
 }
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-modal {
+    background: #110A03;
+    border: 1px solid rgba(250, 144, 33, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #888;
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-modal-btn:hover {
+    color: #FA9021;
+}
+
+.modal-overlay.success-active .contact-modal {
+    max-width: 340px;
+    padding: 50px 30px;
+    border-color: rgba(250, 144, 33, 0.4);
+}
+
+.modal-overlay.success-active .form-content {
+    display: none !important;
+}
+
+.success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.success-check-icon {
+    width: 80px;
+    height: 80px;
+    background: #FA9021;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.success-check-icon::after {
+    content: "✓";
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.success-title {
+    color: #FA9021;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.success-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+}
+
+.success-close-btn {
+    background: #FA9021;
+    color: #fff;
+    width: 100%;
+    padding: 18px;
+    border-radius: 40px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.success-close-btn:hover {
+    background: #DC7000;
 }

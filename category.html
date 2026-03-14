@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="icon" href="images/favicon.png" type="image/png">
     <title>Категория товаров</title>
 </head>
+
 <body>
     <div class="wrapper">
         <header class="container">
@@ -70,19 +72,19 @@
 
         <main>
             <main class="container category-page">
-            <nav class="breadcrumbs">
-                <a href="index.html">Главная</a>
-                <span class="separator">/</span>
-                <a href="catalog.html">Каталог</a>
-                <span class="separator">/</span>
-                <span>Классика</span>
-            </nav>
+                <nav class="breadcrumbs">
+                    <a href="index.html">Главная</a>
+                    <span class="separator">/</span>
+                    <a href="catalog.html">Каталог</a>
+                    <span class="separator">/</span>
+                    <span>Классика</span>
+                </nav>
 
-             <h2 class="category-title">Классика</h2>
-            <div class="catalog-grid-system">
-                <script>
-                    for (let i = 0; i < 10; i++) {
-                        document.write(`
+                <h2 class="category-title">Классика</h2>
+                <div class="catalog-grid-system">
+                    <script>
+                        for (let i = 0; i < 10; i++) {
+                            document.write(`
                 <div class="Block">
                     <a href="product.html">
                         <div class="book-image-container">
@@ -104,44 +106,78 @@
                     </button>
                 </div>
             `);
-                    }
-                </script>
-            </div>
-        </main>
-        <footer class="footer">
-            <div class="footer-content container">
-                <div class="footer-section">
-                    <div class="logo">
-                        <span class="name" style="color: #FA9021; font-weight: bold; font-size: 24px;">Bookline</span>
+                        }
+                    </script>
+                </div>
+            </main>
+            <footer class="footer">
+                <div class="footer-content container">
+                    <div class="footer-section">
+                        <div class="logo">
+                            <span class="name"
+                                style="color: #FA9021; font-weight: bold; font-size: 24px;">Bookline</span>
+                        </div>
+                        <p>Ваш надежный источник знаний и вдохновения.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-btn tg">Telegram</a>
+                            <a href="#" class="social-btn vk">Вконтакте</a>
+                        </div>
                     </div>
-                    <p>Ваш надежный источник знаний и вдохновения.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-btn tg">Telegram</a>
-                        <a href="#" class="social-btn vk">Вконтакте</a>
+                    <div class="footer-section">
+                        <h4>Разделы</h4>
+                        <ul>
+                            <li><a href="#">Акции</a></li>
+                            <li><a href="#">Новинки</a></li>
+                            <li><a href="#">Распродажа</a></li>
+                            <li><a href="delivery-payment.html">Доставка и оплата</a></li>
+                            <li><a href="#">О нас</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Связь с нами</h4>
+                        <button type="button" id="writeUsBtn" class="contact-btn">Написать обращение</button>
+                        <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
+                        <p>Тел: +7 (999) 000-00-00</p>
+                        <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Разделы</h4>
-                    <ul>
-                        <li><a href="#">Акции</a></li>
-                        <li><a href="#">Новинки</a></li>
-                        <li><a href="#">Распродажа</a></li>
-                        <li><a href="delivery-payment.html">Доставка и оплата</a></li>
-                        <li><a href="#">О нас</a></li>
-                    </ul>
+                <div class="footer-bottom container">
+                    <p>© 2025-2026 Bookline. Все права защищены.</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Связь с нами</h4>
-                    <button type="button" id="writeUsBtn" class="contact-btn">Написать обращение</button>
-                    <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
-                    <p>Тел: +7 (999) 000-00-00</p>
-                    <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
+            </footer>
+            <div id="contactModal" class="modal-overlay">
+                <div class="modal-content contact-modal">
+                    <button id="closeContact" class="close-modal-btn">&times;</button>
+
+                    <div class="form-content">
+                        <h2>Написать нам</h2>
+                        <p class="modal-subtitle">Есть вопросы или предложения? Мы всегда на связи!</p>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label>Ваше имя</label>
+                                <input type="text" id="contactName" placeholder="Иван Иванов" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Электронная почта</label>
+                                <input type="email" id="contactEmail" placeholder="example@mail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Сообщение</label>
+                                <textarea id="contactMessage" rows="4" placeholder="Ваш текст..." required></textarea>
+                            </div>
+                            <button type="submit" class="submit-contact-btn">Отправить сообщение</button>
+                        </form>
+                    </div>
+
+                    <div class="success-content" style="display: none;">
+                        <div class="success-check-icon"></div>
+                        <h3 class="success-title">Спасибо за обращение!</h3>
+                        <p class="success-text">Мы получили ваш вопрос и свяжемся с вами в ближайшее время.</p>
+                        <button type="button" class="success-close-btn" id="closeSuccessBtn">Закрыть</button>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom container">
-                <p>© 2025-2026 Bookline. Все права защищены.</p>
-            </div>
-        </footer>
-        <script src="js/script.js"></script>
+            <script src="js/script.js"></script>
 </body>
+
 </html>

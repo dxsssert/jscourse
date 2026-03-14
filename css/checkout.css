@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
 }
+
 header.container {
-    width: 100% ;
+    width: 100%;
 }
 
 .main-content {
@@ -69,7 +69,7 @@ h3 {
     font-size: 16px;
 }
 
-.form-group input, 
+.form-group input,
 .form-group textarea {
     width: 100%;
     padding: 18px;
@@ -82,7 +82,7 @@ h3 {
     font-size: 16px;
 }
 
-.form-group input:focus, 
+.form-group input:focus,
 .form-group textarea:focus {
     border-color: #FA9021;
     background: #1a1108;
@@ -209,24 +209,6 @@ h3 {
     transform: scale(1.2) rotate(90deg);
 }
 
-@media (max-width: 1200px) {
-    .checkout-vertical-stack {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .checkout-form-section {
-        position: static;
-        width: 100%;
-        min-width: 0;
-        order: 2;
-    }
-    
-    .order-summary-wide {
-        width: 100%;
-        order: 1;
-    }
-}
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -235,7 +217,7 @@ h3 {
     height: 100%;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(8px);
-    display: none; 
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -302,18 +284,12 @@ h3 {
     transition: 0.3s;
 }
 
-.modal-btn:hover {
-    filter: brightness(1.2);
-    box-shadow: 0 5px 15px rgba(250, 144, 33, 0.4);
-}
 .card-form {
     background: rgba(255, 255, 255, 0.03);
     padding: 20px;
     border-radius: 15px;
     border: 1px dashed rgba(250, 144, 33, 0.4);
     margin-bottom: 20px;
-    display: block; 
-    transition: all 0.3s ease;
 }
 
 .card-form.hidden {
@@ -325,13 +301,15 @@ h3 {
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
+
 .logo-link {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 10px; 
-    color: inherit; 
+    gap: 10px;
+    color: inherit;
 }
+
 @media (max-width: 750px) {
     .main-content {
         padding: 20px 10px;
@@ -343,11 +321,15 @@ h3 {
     }
 
     .checkout-vertical-stack {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        width: 100% !important;
         padding: 0 10px;
-        gap: 20px;
     }
 
-    .checkout-form-section, 
+    .checkout-form-section,
     .order-summary-wide {
         padding: 20px;
         border-radius: 15px;
@@ -355,19 +337,14 @@ h3 {
         box-sizing: border-box;
     }
 
-    h3 {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-
-    .form-group input, 
+    .form-group input,
     .form-group textarea {
         padding: 12px;
         font-size: 14px;
     }
 
     .form-row {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         gap: 0;
     }
 
@@ -379,7 +356,6 @@ h3 {
     .checkout-item-image {
         width: 60px;
         height: 85px;
-        margin-right: 15px;
     }
 
     .checkout-item-info h4 {
@@ -395,11 +371,10 @@ h3 {
     }
 
     .remove-item-btn {
-        position: absolute;
-        top: 15px;
-        right: 0;
-        font-size: 24px;
-        margin: 0;
+        position: absolute !important;
+        top: 15px !important;
+        right: 0 !important;
+        margin: 0 !important;
     }
 
     .total-info {
@@ -413,13 +388,5 @@ h3 {
         padding: 15px;
         font-size: 18px;
         border-radius: 10px;
-    }
-
-    .modal-content {
-        padding: 30px 20px;
-    }
-
-    .modal-content h2 {
-        font-size: 24px;
     }
 }

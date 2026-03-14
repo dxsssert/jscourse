@@ -145,7 +145,39 @@
             </div>
         </footer>
     </div>
-    <script scr="script.js"></script>
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content contact-modal">
+            <button id="closeContact" class="close-modal-btn">&times;</button>
+
+            <div class="form-content">
+                <h2>Написать нам</h2>
+                <p class="modal-subtitle">Есть вопросы или предложения? Мы всегда на связи!</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" id="contactName" placeholder="Иван Иванов" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Электронная почта</label>
+                        <input type="email" id="contactEmail" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Сообщение</label>
+                        <textarea id="contactMessage" rows="4" placeholder="Ваш текст..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-contact-btn">Отправить сообщение</button>
+                </form>
+            </div>
+
+            <div class="success-content" style="display: none;">
+                <div class="success-check-icon"></div>
+                <h3 class="success-title">Спасибо за обращение!</h3>
+                <p class="success-text">Мы получили ваш вопрос и свяжемся с вами в ближайшее время.</p>
+                <button type="button" class="success-close-btn" id="closeSuccessBtn">Закрыть</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

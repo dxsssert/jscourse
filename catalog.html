@@ -3,11 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог | Bookline</title>
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/catalog.css">
-    <link rel="stylesheet" href="css/product.css">
-    
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -22,7 +21,6 @@
                         <span class="name">Bookline</span>
                     </a>
                 </div>
-
                 <div class="catalog-wrapper">
                     <div class="catalog-btn">
                         <a href="#" id="catalogTrigger">Каталог</a>
@@ -38,314 +36,766 @@
                     </ul>
                 </div>
             </div>
-
             <nav>
                 <div class="top-links">
                     <a href="delivery-payment.html">Доставка и оплата</a>
                     <a href="#">Акции</a>
                     <a href="contacts.html">Контакты</a>
-
                 </div>
                 <ul>
                     <li class="search-item">
-                        <form class="search-form" action="#" method="get">
+                        <form class="search-form">
                             <input type="text" placeholder="Поиск книг..." class="search-input">
                             <button type="submit" class="search-btn">
                                 <img src="images/search-icon.png" alt="Поиск">
                             </button>
                         </form>
                     </li>
-                    <li class="icon-item">
-                        <a href="cart.html">
-                            <img src="images/basket-icon.png" alt="Корзина" class="nav-icon">
-                        </a>
-                    </li>
-                    <li class="icon-item">
-                        <a href="profile.html">
-                            <img src="images/profile-icon.png" alt="Личный кабинет" class="nav-icon">
-                        </a>
-                    </li>
+                    <li class="icon-item"><a href="cart.html"><img src="images/basket-icon.png" alt="Корзина"
+                                class="nav-icon"></a></li>
+                    <li class="icon-item"><a href="profile.html"><img src="images/profile-icon.png" alt="Профиль"
+                                class="nav-icon"></a></li>
                 </ul>
             </nav>
         </header>
+
         <main class="container">
-             <nav class="breadcrumbs">
+            <nav class="breadcrumbs">
                 <a href="index.html">Главная</a>
                 <span class="separator">/</span>
-                <a href="catalog.html">Каталог</a>
-            </nav>  
+                <span>Каталог</span>
+            </nav>
 
             <h2 class="category-title">Новинки</h2>
             <div class="catalog-grid-system">
-                <script>
-                    for (let i = 0; i < 4; i++) {
-                        document.write(`
                 <div class="Block">
-                    <a href="product.html">
-                        <div class="book-image-container">
-                            <img src="images/1.jpeg" alt="Новинки" class="book-image">
-                        </div>
-                    </a>
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
                     <div class="book-info">
-                        <div class="price-tag">850 ₽</div>
-                        <a href="product.html"><span class="book-title">Я переиграю тебя</span></a>
+                        <div class="price-tag">850 ₽</div><span class="book-title">Я переиграю тебя</span>
                         <p class="book-author">Тони Майрон</p>
-                    </div>
-                    <button class="add-to-cart-btn" 
-                            data-id="book_1_${i}" 
-                            data-title="Я переиграю тебя"
-                            data-author="Тони Майрон" 
-                            data-price="850" 
-                            data-image="images/1.jpeg">
-                        В корзину
-                    </button>
+                    </div><button class="add-to-cart-btn">В корзину</button>
                 </div>
-            `);
-                    }
-                </script>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div><span class="book-title">Я переиграю тебя</span>
+                        <p class="book-author">Тони Майрон</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div><span class="book-title">Я переиграю тебя</span>
+                        <p class="book-author">Тони Майрон</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div><span class="book-title">Я переиграю тебя</span>
+                        <p class="book-author">Тони Майрон</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div><span class="book-title">Я переиграю тебя</span>
+                        <p class="book-author">Тони Майрон</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div><span class="book-title">Я переиграю тебя</span>
+                        <p class="book-author">Тони Майрон</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div><span class="book-title">Я переиграю тебя</span>
+                        <p class="book-author">Тони Майрон</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div><span class="book-title">Я переиграю тебя</span>
+                        <p class="book-author">Тони Майрон</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div><span class="book-title">Я переиграю тебя</span>
+                        <p class="book-author">Тони Майрон</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">850 ₽</div><span class="book-title">Я переиграю тебя</span>
+                        <p class="book-author">Тони Майрон</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
             </div>
 
             <h2 class="category-title">Распродажа</h2>
             <div class="catalog-grid-system">
-                <script>
-                    for (let i = 0; i < 4; i++) {
-                        document.write(`
                 <div class="Block">
-                    <a href="product.html">
-                        <div class="book-image-container">
-                            <img src="images/1.jpeg" alt="Распродажа" class="book-image">
-                        </div>
-                    </a>
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
                     <div class="book-info">
-                        <div class="price-tag">850 ₽</div>
-                        <a href="product.html"><span class="book-title">Я переиграю тебя</span></a>
-                        <p class="book-author">Тони Майрон</p>
-                    </div>
-                    <button class="add-to-cart-btn" 
-                            data-id="book_1_${i}" 
-                            data-title="Я переиграю тебя"
-                            data-author="Тони Майрон" 
-                            data-price="850" 
-                            data-image="images/1.jpeg">
-                        В корзину
-                    </button>
+                        <div class="price-tag">550 ₽</div><span class="book-title">Старая цена</span>
+                        <p class="book-author">Автор Скидок</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
                 </div>
-            `);
-                    }
-                </script>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">550 ₽</div><span class="book-title">Старая цена</span>
+                        <p class="book-author">Автор Скидок</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">550 ₽</div><span class="book-title">Старая цена</span>
+                        <p class="book-author">Автор Скидок</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">550 ₽</div><span class="book-title">Старая цена</span>
+                        <p class="book-author">Автор Скидок</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">550 ₽</div><span class="book-title">Старая цена</span>
+                        <p class="book-author">Автор Скидок</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">550 ₽</div><span class="book-title">Старая цена</span>
+                        <p class="book-author">Автор Скидок</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">550 ₽</div><span class="book-title">Старая цена</span>
+                        <p class="book-author">Автор Скидок</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">550 ₽</div><span class="book-title">Старая цена</span>
+                        <p class="book-author">Автор Скидок</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">550 ₽</div><span class="book-title">Старая цена</span>
+                        <p class="book-author">Автор Скидок</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">550 ₽</div><span class="book-title">Старая цена</span>
+                        <p class="book-author">Автор Скидок</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
             </div>
 
             <h2 class="category-title">Классика</h2>
             <div class="catalog-grid-system">
-                <script>
-                    for (let i = 0; i < 10; i++) {
-                        document.write(`
                 <div class="Block">
-                    <a href="product.html">
-                        <div class="book-image-container">
-                            <img src="images/1.jpeg" alt="Я переиграю тебя" class="book-image">
-                        </div>
-                    </a>
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
                     <div class="book-info">
-                        <div class="price-tag">850 ₽</div>
-                        <a href="product.html"><span class="book-title">Я переиграю тебя</span></a>
-                        <p class="book-author">Тони Майрон</p>
-                    </div>
-                    <button class="add-to-cart-btn" 
-                            data-id="book_1_${i}" 
-                            data-title="Я переиграю тебя"
-                            data-author="Тони Майрон" 
-                            data-price="850" 
-                            data-image="images/1.jpeg">
-                        В корзину
-                    </button>
+                        <div class="price-tag">900 ₽</div><span class="book-title">Преступление и наказание</span>
+                        <p class="book-author">Ф. Достоевский</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
                 </div>
-            `);
-                    }
-                </script>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Преступление и наказание</span>
+                        <p class="book-author">Ф. Достоевский</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Преступление и наказание</span>
+                        <p class="book-author">Ф. Достоевский</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Преступление и наказание</span>
+                        <p class="book-author">Ф. Достоевский</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Преступление и наказание</span>
+                        <p class="book-author">Ф. Достоевский</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Преступление и наказание</span>
+                        <p class="book-author">Ф. Достоевский</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Преступление и наказание</span>
+                        <p class="book-author">Ф. Достоевский</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Преступление и наказание</span>
+                        <p class="book-author">Ф. Достоевский</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Преступление и наказание</span>
+                        <p class="book-author">Ф. Достоевский</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Преступление и наказание</span>
+                        <p class="book-author">Ф. Достоевский</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
             </div>
 
-    </div>
+            <h2 class="category-title">Саморазвитие</h2>
+            <div class="catalog-grid-system">
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">790 ₽</div><span class="book-title">Как укротить мозг</span>
+                        <p class="book-author">Даниэль Канеман</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">790 ₽</div><span class="book-title">Как укротить мозг</span>
+                        <p class="book-author">Даниэль Канеман</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">790 ₽</div><span class="book-title">Как укротить мозг</span>
+                        <p class="book-author">Даниэль Канеман</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">790 ₽</div><span class="book-title">Как укротить мозг</span>
+                        <p class="book-author">Даниэль Канеман</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">790 ₽</div><span class="book-title">Как укротить мозг</span>
+                        <p class="book-author">Даниэль Канеман</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">790 ₽</div><span class="book-title">Как укротить мозг</span>
+                        <p class="book-author">Даниэль Канеман</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">790 ₽</div><span class="book-title">Как укротить мозг</span>
+                        <p class="book-author">Даниэль Канеман</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">790 ₽</div><span class="book-title">Как укротить мозг</span>
+                        <p class="book-author">Даниэль Канеман</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">790 ₽</div><span class="book-title">Как укротить мозг</span>
+                        <p class="book-author">Даниэль Канеман</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">790 ₽</div><span class="book-title">Как укротить мозг</span>
+                        <p class="book-author">Даниэль Канеман</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+            </div>
 
-    <h2 class="category-title">Саморазвитие</h2>
-    <div class="catalog-grid-system">
-        <script>
-            for (let i = 0; i < 10; i++) {
-                document.write(`
+            <h2 class="category-title">Фантастика</h2>
+            <div class="catalog-grid-system">
                 <div class="Block">
-                    <div class="book-image-container">
-                        <img src="img/book2.png" alt="Саморазвитие" class="book-image">
-                    </div>
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
                     <div class="book-info">
-                        <span class="book-title">Как укротить свой мозг? # ${i + 1}</span>
-                        <span class="book-author">Даниэль Канеман</span>
-                        <div class="price-tag">790 ₽</div>
-                    </div>
-                    <button class="add-to-cart-btn">В корзину</button>
-                </div>`);
-            }
-        </script>
-    </div>
+                        <div class="price-tag">990 ₽</div><span class="book-title">Миры будущего</span>
+                        <p class="book-author">Айзек Азимов</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">990 ₽</div><span class="book-title">Миры будущего</span>
+                        <p class="book-author">Айзек Азимов</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">990 ₽</div><span class="book-title">Миры будущего</span>
+                        <p class="book-author">Айзек Азимов</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">990 ₽</div><span class="book-title">Миры будущего</span>
+                        <p class="book-author">Айзек Азимов</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">990 ₽</div><span class="book-title">Миры будущего</span>
+                        <p class="book-author">Айзек Азимов</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">990 ₽</div><span class="book-title">Миры будущего</span>
+                        <p class="book-author">Айзек Азимов</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">990 ₽</div><span class="book-title">Миры будущего</span>
+                        <p class="book-author">Айзек Азимов</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">990 ₽</div><span class="book-title">Миры будущего</span>
+                        <p class="book-author">Айзек Азимов</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">990 ₽</div><span class="book-title">Миры будущего</span>
+                        <p class="book-author">Айзек Азимов</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">990 ₽</div><span class="book-title">Миры будущего</span>
+                        <p class="book-author">Айзек Азимов</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+            </div>
 
-    <h2 class="category-title">Фантастика</h2>
-    <div class="catalog-grid-system">
-        <script>
-            for (let i = 0; i < 10; i++) {
-                document.write(`
+            <h2 class="category-title">Детективы</h2>
+            <div class="catalog-grid-system">
                 <div class="Block">
-                    <div class="book-image-container">
-                        <img src="img/book3.png" alt="Фантастика" class="book-image">
-                    </div>
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
                     <div class="book-info">
-                        <span class="book-title">Миры будущего # ${i + 1}</span>
-                        <span class="book-author">Айзек Азимов</span>
-                        <div class="price-tag">990 ₽</div>
-                    </div>
-                    <button class="add-to-cart-btn">В корзину</button>
-                </div>`);
-            }
-        </script>
-    </div>
-    <h2 class="category-title">Детективы</h2>
-    <div class="catalog-grid-system">
-        <script>
-            for (let i = 0; i < 10; i++) {
-                document.write(`
+                        <div class="price-tag">1000 ₽</div><span class="book-title">Убийство в экспрессе</span>
+                        <p class="book-author">Агата Кристи</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
                 <div class="Block">
-                    <div class="book-image-container">
-                        <img src="img/book6.png" alt="Детективы" class="book-image">
-                    </div>
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
                     <div class="book-info">
-                        <span class="book-title">Убийство в Восточном экспрессе # ${i + 1}</span>
-                        <span class="book-author">Агата Кристи</span>
-                        <div class="price-tag">1000 ₽</div>
-                    </div>
-                    <button class="add-to-cart-btn">В корзину</button>
-                </div>`);
-            }
-        </script>
-    </div>
-    <h2 class="category-title">Психология</h2>
-    <div class="catalog-grid-system">
-        <script>
-            for (let i = 0; i < 10; i++) {
-                document.write(`
+                        <div class="price-tag">1000 ₽</div><span class="book-title">Убийство в экспрессе</span>
+                        <p class="book-author">Агата Кристи</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
                 <div class="Block">
-                    <div class="book-image-container">
-                        <img src="img/book6.png" alt="Психология" class="book-image">
-                    </div>
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
                     <div class="book-info">
-                        <span class="book-title">Психология влияния # ${i + 1}</span>
-                        <span class="book-author">Роберт Чалдини</span>
-                        <div class="price-tag">1500 ₽</div>
-                    </div>
-                    <button class="add-to-cart-btn">В корзину</button>
-                </div>`);
-            }
-        </script>
-    </div>
+                        <div class="price-tag">1000 ₽</div><span class="book-title">Убийство в экспрессе</span>
+                        <p class="book-author">Агата Кристи</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1000 ₽</div><span class="book-title">Убийство в экспрессе</span>
+                        <p class="book-author">Агата Кристи</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1000 ₽</div><span class="book-title">Убийство в экспрессе</span>
+                        <p class="book-author">Агата Кристи</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1000 ₽</div><span class="book-title">Убийство в экспрессе</span>
+                        <p class="book-author">Агата Кристи</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1000 ₽</div><span class="book-title">Убийство в экспрессе</span>
+                        <p class="book-author">Агата Кристи</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1000 ₽</div><span class="book-title">Убийство в экспрессе</span>
+                        <p class="book-author">Агата Кристи</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1000 ₽</div><span class="book-title">Убийство в экспрессе</span>
+                        <p class="book-author">Агата Кристи</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1000 ₽</div><span class="book-title">Убийство в экспрессе</span>
+                        <p class="book-author">Агата Кристи</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+            </div>
 
-    <h2 class="category-title">Программирование</h2>
-    <div class="catalog-grid-system">
-        <script>
-            for (let i = 0; i < 10; i++) {
-                document.write(`
+            <h2 class="category-title">Психология</h2>
+            <div class="catalog-grid-system">
                 <div class="Block">
-                    <div class="book-image-container">
-                        <img src="img/book6.png" alt="Код" class="book-image">
-                    </div>
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
                     <div class="book-info">
-                        <span class="book-title">Основы разработки # ${i + 1}</span>
-                        <span class="book-author">Роберт Мартин</span>
-                        <div class="price-tag">1200 ₽</div>
-                    </div>
-                    <button class="add-to-cart-btn">В корзину</button>
-                </div>`);
-            }
-        </script>
-    </div>
-    <h2 class="category-title">Детские книги</h2>
-    <div class="catalog-grid-system">
-        <script>
-            for (let i = 0; i < 10; i++) {
-                document.write(`
+                        <div class="price-tag">1500 ₽</div><span class="book-title">Психология влияния</span>
+                        <p class="book-author">Роберт Чалдини</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
                 <div class="Block">
-                    <div class="book-image-container">
-                        <img src="img/book6.png" alt="Детские книги" class="book-image">
-                    </div>
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
                     <div class="book-info">
-                        <span class="book-title">Маленький принц # ${i + 1}</span>
-                        <span class="book-author">Антуан де Сент-Экзюпери</span>
-                        <div class="price-tag">900 ₽</div>
-                    </div>
-                    <button class="add-to-cart-btn">В корзину</button>
-                </div>`);
-            }
-        </script>
-    </div>
-    </main>
+                        <div class="price-tag">1500 ₽</div><span class="book-title">Психология влияния</span>
+                        <p class="book-author">Роберт Чалдини</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1500 ₽</div><span class="book-title">Психология влияния</span>
+                        <p class="book-author">Роберт Чалдини</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1500 ₽</div><span class="book-title">Психология влияния</span>
+                        <p class="book-author">Роберт Чалдини</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1500 ₽</div><span class="book-title">Психология влияния</span>
+                        <p class="book-author">Роберт Чалдини</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1500 ₽</div><span class="book-title">Психология влияния</span>
+                        <p class="book-author">Роберт Чалдини</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1500 ₽</div><span class="book-title">Психология влияния</span>
+                        <p class="book-author">Роберт Чалдини</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1500 ₽</div><span class="book-title">Психология влияния</span>
+                        <p class="book-author">Роберт Чалдини</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1500 ₽</div><span class="book-title">Психология влияния</span>
+                        <p class="book-author">Роберт Чалдини</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1500 ₽</div><span class="book-title">Психология влияния</span>
+                        <p class="book-author">Роберт Чалдини</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+            </div>
 
-    <footer class="footer">
-        <div class="footer-content container">
-            <div class="footer-section">
-                <div class="logo">
+            <h2 class="category-title">Программирование</h2>
+            <div class="catalog-grid-system">
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1200 ₽</div><span class="book-title">Чистый код</span>
+                        <p class="book-author">Роберт Мартин</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1200 ₽</div><span class="book-title">Чистый код</span>
+                        <p class="book-author">Роберт Мартин</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1200 ₽</div><span class="book-title">Чистый код</span>
+                        <p class="book-author">Роберт Мартин</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1200 ₽</div><span class="book-title">Чистый код</span>
+                        <p class="book-author">Роберт Мартин</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1200 ₽</div><span class="book-title">Чистый код</span>
+                        <p class="book-author">Роберт Мартин</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1200 ₽</div><span class="book-title">Чистый код</span>
+                        <p class="book-author">Роберт Мартин</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1200 ₽</div><span class="book-title">Чистый код</span>
+                        <p class="book-author">Роберт Мартин</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1200 ₽</div><span class="book-title">Чистый код</span>
+                        <p class="book-author">Роберт Мартин</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1200 ₽</div><span class="book-title">Чистый код</span>
+                        <p class="book-author">Роберт Мартин</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">1200 ₽</div><span class="book-title">Чистый код</span>
+                        <p class="book-author">Роберт Мартин</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+            </div>
+
+            <h2 class="category-title">Детские книги</h2>
+            <div class="catalog-grid-system">
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Маленький принц</span>
+                        <p class="book-author">Экзюпери</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Маленький принц</span>
+                        <p class="book-author">Экзюпери</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Маленький принц</span>
+                        <p class="book-author">Экзюпери</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Маленький принц</span>
+                        <p class="book-author">Экзюпери</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Маленький принц</span>
+                        <p class="book-author">Экзюпери</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Маленький принц</span>
+                        <p class="book-author">Экзюпери</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Маленький принц</span>
+                        <p class="book-author">Экзюпери</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Маленький принц</span>
+                        <p class="book-author">Экзюпери</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Маленький принц</span>
+                        <p class="book-author">Экзюпери</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+                <div class="Block">
+                    <div class="book-image-container"><img src="images/1.jpeg" class="book-image"></div>
+                    <div class="book-info">
+                        <div class="price-tag">900 ₽</div><span class="book-title">Маленький принц</span>
+                        <p class="book-author">Экзюпери</p>
+                    </div><button class="add-to-cart-btn">В корзину</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content container">
+                <div class="footer-section">
                     <span class="name" style="color: #FA9021; font-weight: bold; font-size: 24px;">Bookline</span>
+                    <p>Ваш надежный источник знаний и вдохновения.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn tg">Telegram</a>
+                        <a href="#" class="social-btn vk">Вконтакте</a>
+                    </div>
                 </div>
-                <p>Ваш надежный источник знаний и вдохновения.</p>
-                <div class="social-links">
-                    <a href="#" class="social-btn tg">Telegram</a>
-                    <a href="#" class="social-btn vk">Вконтакте</a>
+                <div class="footer-section">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Новинки</a></li>
+                        <li><a href="#">Распродажа</a></li>
+                        <li><a href="delivery-payment.html">Доставка и оплата</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Связь с нами</h4>
+                    <button type="button" id="writeUsBtn" class="contact-btn">Написать обращение</button>
+                    <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
+                    <p>Тел: +7 (999) 000-00-00</p>
                 </div>
             </div>
-            <div class="footer-section">
-                <h4>Разделы</h4>
-                <ul>
-                    <li><a href="#">Акции</a></li>
-                    <li><a href="#">Новинки</a></li>
-                    <li><a href="#">Распродажа</a></li>
-                    <li><a href="delivery-payment.html">Доставка и оплата</a></li>
-                    <li><a href="#">О нас</a></li>
-                </ul>
+            <div class="footer-bottom container">
+                <p>© 2025-2026 Bookline. Все права защищены.</p>
             </div>
-            <div class="footer-section">
-                <h4>Связь с нами</h4>
-                <button type="button" id="writeUsBtn" class="contact-btn">Написать обращение</button>
-                <p>Email: <a href="mailto:info@bookline.com" style="color: #FA9021;">info@bookline.com</a></p>
-                <p>Тел: +7 (999) 000-00-00</p>
-                <p>Разработчики: Филиппова Ю.C., Давидянц Д.Р.</p>
-            </div>
-        </div>
-        <div class="footer-bottom container">
-            <p>© 2025-2026 Bookline. Все права защищены.</p>
-        </div>
-    </footer>
+        </footer>
     </div>
+
     <div id="contactModal" class="modal-overlay">
         <div class="modal-content contact-modal">
             <button id="closeContact" class="close-modal-btn">&times;</button>
-            <h2>Написать нам</h2>
-            <p class="modal-subtitle">Есть вопросы или предложения? Мы всегда на связи!</p>
 
-            <form id="contactForm">
-                <div class="form-group">
-                    <label>Ваше имя</label>
-                    <input type="text" id="contactName" placeholder="Иван Иванов" required>
-                </div>
+            <div class="form-content">
+                <h2>Написать нам</h2>
+                <p class="modal-subtitle">Есть вопросы или предложения? Мы всегда на связи!</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label>Ваше имя</label>
+                        <input type="text" id="contactName" placeholder="Иван Иванов" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Электронная почта</label>
+                        <input type="email" id="contactEmail" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Сообщение</label>
+                        <textarea id="contactMessage" rows="4" placeholder="Ваш текст..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-contact-btn">Отправить сообщение</button>
+                </form>
+            </div>
 
-                <div class="form-group">
-                    <label>Электронная почта</label>
-                    <input type="email" id="contactEmail" placeholder="example@mail.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label>Сообщение</label>
-                    <textarea id="contactMessage" rows="4" placeholder="Ваш текст..." required></textarea>
-                </div>
-
-                <button type="submit" class="submit-contact-btn">Отправить сообщение</button>
-            </form>
+            <div class="success-content" style="display: none;">
+                <div class="success-check-icon"></div>
+                <h3 class="success-title">Спасибо за обращение!</h3>
+                <p class="success-text">Мы получили ваш вопрос и свяжемся с вами в ближайшее время.</p>
+                <button type="button" class="success-close-btn" id="closeSuccessBtn">Закрыть</button>
+            </div>
         </div>
-
     </div>
     <script src="js/script.js"></script>
 </body>

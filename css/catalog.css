@@ -1,183 +1,148 @@
-.catalog-grid-system {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    padding: 40px 0;
-    justify-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.catalog-grid-system .Block {
-    width: 100%;
-    max-width: 260px;
-    background: rgba(37, 33, 29, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s ease;
-    border: 1px solid transparent;
-    box-sizing: border-box;
-}
-
-.catalog-grid-system .Block:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(250, 144, 33, 0.3);
-    background: rgba(37, 33, 29, 0.9);
-    border: 1px solid #FA9021;
-}
-
-.catalog-grid-system .book-image-container {
-    width: 100%;
-    height: 350px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    margin-bottom: 15px;
-    overflow: hidden;
-}
-
-.catalog-grid-system .book-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.catalog-grid-system .book-info {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.catalog-grid-system .book-title {
-    font-size: 19px;
-    font-weight: 600;
-    color: #fff;
-    display: block;
-    margin-bottom: 5px;
-    text-decoration: none;
-}
-
-.catalog-grid-system .book-author {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 10px;
-}
-
-.catalog-grid-system .price-tag {
-    font-size: 23px;
-    font-weight: 700;
-    color: #FA9021;
-    margin-top: auto;
-    margin-bottom: 15px;
-}
-
-.catalog-grid-system .add-to-cart-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #FA9021;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.catalog-grid-system .add-to-cart-btn:hover {
-    background-color: #DC7000;
-    transform: translateY(-2px);
-}
-
-.category-title {
-    color: #FA9021;
-    font-size: 24px;
-    font-weight: 500;
-    text-align: left;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 60px auto 20px auto;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .breadcrumbs {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    gap: 10px !important;
-    margin: 20px 0 !important;
-    padding: 0 !important;
     list-style: none !important;
+    padding: 0 !important;
+    margin: 20px 0 35px 0 !important;
+    gap: 10px !important;
 }
 
-.breadcrumbs a, 
+.breadcrumbs a,
 .breadcrumbs span {
-    display: inline-block !important;
-    width: auto !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-size: 16px !important;
-    line-height: 1 !important;
-    text-decoration: none !important;
-    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    color: #FA9021;
+    transform: none;
 }
 
 .breadcrumbs .separator {
-    display: inline-block !important;
-    margin: 0 5px !important;
-    color: #FA9021 !important;
-    user-select: none !important;
+    color: #FA9021;
 }
 
-@media (max-width: 590px) {
-    .catalog-grid-system {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 10px !important;
-    }
 
-    .catalog-grid-system .Block {
-        padding: 10px !important;
-        max-width: none !important;
-    }
+.category-title {
+    color: #FA9021;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 60px 0 25px;
+    border-left: 4px solid #FA9021;
+    padding-left: 15px;
+}
 
-    .catalog-grid-system .book-image-container {
-        height: 220px !important;
-    }
+.catalog-grid-system {
+    display: grid;
 
-    .catalog-grid-system .book-title {
-        font-size: 15px !important;
-    }
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 60px;
+}
 
+
+.catalog-grid-system .Block {
+    background: rgba(37, 33, 29, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.catalog-grid-system .Block:hover {
+    transform: translateY(-8px);
+    border-color: #FA9021;
+    background: rgba(37, 33, 29, 0.95);
+    box-shadow: 0 10px 25px rgba(250, 144, 33, 0.2);
+}
+
+
+.book-image-container {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.book-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.catalog-grid-system .Block:hover .book-image {
+    transform: scale(1.05);
+}
+
+.book-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-tag {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FA9021;
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.book-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.book-author {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background: #FA9021;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #DC7000;
+}
+
+@media (max-width: 510px) {
     .breadcrumbs {
-        gap: 5px !important;
-        font-size: 14px !important;
-    }
-}
-
-@media (max-width: 490px) {
-    .catalog-grid-system {
-        grid-template-columns: 1fr !important;
-        padding: 10px 20px !important;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 15px 0 25px;
     }
 
-    .catalog-grid-system .Block {
-        max-width: 320px !important; 
-        margin: 0 auto !important;
-    }
-
-    .catalog-grid-system .book-image-container {
-        height: 400px !important; 
-    }
-
-    .catalog-grid-system .book-title {
-        font-size: 20px !important;
+    .breadcrumbs a,
+    .breadcrumbs span {
+        font-size: 14px;
     }
 }

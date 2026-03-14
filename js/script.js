@@ -84,22 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // const catalogTrigger = document.getElementById('catalogTrigger');
-    // const catalogMenu = document.getElementById('catalogMenu');
-
-    // if (catalogTrigger && catalogMenu) {
-    //     catalogTrigger.addEventListener('click', (e) => {
-    //         e.preventDefault();
-    //         catalogMenu.classList.toggle('active');
-    //     });
-
-    //     document.addEventListener('click', (e) => {
-    //         if (!catalogTrigger.contains(e.target) && !catalogMenu.contains(e.target)) {
-    //             catalogMenu.classList.remove('active');
-    //         }
-    //     });
-    // }
-
     const addButtons = document.querySelectorAll('.add-to-cart-btn');
 
     addButtons.forEach(btn => {
@@ -139,40 +123,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const contactModal = document.getElementById('contactModal');
     const writeBtn = document.getElementById('writeUsBtn');
+    const actionBtn = document.getElementById('contactActionBtn');
     const closeBtn = document.getElementById('closeContact');
+    const successCloseBtn = document.getElementById('closeSuccessBtn');
     const contactForm = document.getElementById('contactForm');
+    const successContent = document.querySelector('.success-content');
+    const formContent = document.querySelector('.form-content');
 
-    if (writeBtn) {
-        writeBtn.addEventListener('click', () => {
+    function openModal() {
+        if (contactModal) {
             contactModal.classList.add('active');
+            contactModal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
-        });
+        }
     }
 
-    if (closeBtn) {
-        closeBtn.addEventListener('click', () => {
+    function closeModal() {
+        if (contactModal) {
             contactModal.classList.remove('active');
+            contactModal.classList.remove('success-active');
+            contactModal.style.display = 'none';
             document.body.style.overflow = 'auto';
-        });
+            setTimeout(() => {
+                if (successContent) successContent.style.display = 'none';
+                if (formContent) formContent.style.display = 'block';
+                if (contactForm) contactForm.reset();
+            }, 300);
+        }
     }
+
+    if (writeBtn) writeBtn.addEventListener('click', openModal);
+    if (actionBtn) actionBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (successCloseBtn) successCloseBtn.addEventListener('click', closeModal);
 
     if (contactModal) {
         contactModal.addEventListener('click', (e) => {
-            if (e.target === contactModal) {
-                contactModal.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
+            if (e.target === contactModal) closeModal();
         });
     }
 
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const name = document.getElementById('contactName').value;
-            alert(`Спасибо, ${name}! Ваше сообщение получено. Мы ответим на почту в течение 24 часов.`);
-            contactModal.classList.remove('active');
-            contactForm.reset();
-            document.body.style.overflow = 'auto';
+            contactModal.classList.add('success-active');
+            if (formContent) formContent.style.display = 'none';
+            if (successContent) successContent.style.display = 'flex';
         });
     }
 });
