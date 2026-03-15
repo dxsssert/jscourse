@@ -139,6 +139,7 @@
     filter: grayscale(0.8) invert(0.9) hue-rotate(180deg) brightness(0.8);
     transition: 0.5s ease;
 }
+iframe { border: none; }
 
 .map-container:hover {
     filter: grayscale(0) invert(0) hue-rotate(0) brightness(1);
