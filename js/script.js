@@ -178,3 +178,4 @@ if (reviewsContainer) {
     const cards = reviewsContainer.innerHTML;
     reviewsContainer.innerHTML = cards + cards;
 }
+
