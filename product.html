@@ -108,6 +108,168 @@
                     <button class="add-to-cart-btn">Добавить в корзину</button>
                 </div>
             </div>
+            <section class="product-page. review container">
+                <h2 class="section-title">Отзывы покупателей</h2>
+            
+            
+            
+            <div class="rating-summary">
+        <div class="rating-big">
+            <span class="rating-number">4.4</span>
+            <div class="stars-row">★★★★☆</div>
+            <span class="rating-count">57 оценок</span>
+        </div>
+
+        <div class="rating-bars">
+            <div class="bar-item">
+                <span class="star-label">5 ★</span>
+                <div class="progress-line"><div class="progress-fill" style="width: 70%;"></div></div>
+                <span class="bar-count">40</span>
+            </div>
+            <div class="bar-item">
+                <span class="star-label">4 ★</span>
+                <div class="progress-line"><div class="progress-fill" style="width: 15%;"></div></div>
+                <span class="bar-count">6</span>
+            </div>
+            <div class="bar-item">
+                <span class="star-label">3 ★</span>
+                <div class="progress-line"><div class="progress-fill" style="width: 18%;"></div></div>
+                <span class="bar-count">7</span>
+            </div>
+            <div class="bar-item">
+                <span class="star-label">2 ★</span>
+                <div class="progress-line"><div class="progress-fill" style="width: 5%;"></div></div>
+                <span class="bar-count">2</span>
+            </div>
+            <div class="bar-item">
+                <span class="star-label">1 ★</span>
+                <div class="progress-line"><div class="progress-fill" style="width: 5%;"></div></div>
+                <span class="bar-count">2</span>
+            </div>
+        </div>
+    </div>
+    
+    <section class="add-review-container container">
+    <h3 class="section-title">Оставьте свой отзыв</h3>
+    <form id="reviewForm" class="review-form">
+        <div class="form-group">
+            <label>Ваша оценка *</label>
+            <div class="star-rating-input">
+                <input type="radio" name="rating" value="5" id="star5"><label for="star5">★</label>
+                <input type="radio" name="rating" value="4" id="star4"><label for="star4">★</label>
+                <input type="radio" name="rating" value="3" id="star3"><label for="star3">★</label>
+                <input type="radio" name="rating" value="2" id="star2"><label for="star2">★</label>
+                <input type="radio" name="rating" value="1" id="star1"><label for="star1">★</label>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Общие впечатления *</label>
+                <textarea id="reviewText" placeholder="Что вам понравилось или не понравилось?" required></textarea>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label>Плюсы</label>
+                <input type="text" id="pros" placeholder="Что больше всего понравилось">
+            </div>
+            <div class="form-group">
+                <label>Минусы</label>
+                <input type="text" id="cons" placeholder="Что расстроило">
+            </div>
+        </div>
+
+        <div class="form-footer">
+            <label class="checkbox-label">
+                <input type="checkbox" required> 
+                <span>Соглашаюсь с правилами публикации отзывов *</span>
+            </label>
+            <button type="submit" class="apply-btn">Опубликовать</button>
+        </div>
+    </form>
+</section>
+
+    <div class="reviews-container">
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="review-author">Александр В.</span>
+                    <div class="review-rating">★★★★★</div>
+                </div>
+                <p class="review-text">Потрясающее издание! Качество переплета на высоте, а содержание заставляет задуматься.</p>
+                <span class="review-date">12.04.2024</span>
+             </div>
+        
+        <div class="review-item">
+            <div class="review-header">
+                <span class="review-author">Мария К.</span>
+                <div class="review-rating">★★★★☆</div>
+            </div>
+            <p class="review-text">Книга пришла быстро. Упаковка отличная, ничего не помялось.</p>
+            <span class="review-date">10.04.2024</span>
+        </div>
+    </div>
+
+    
+<section class="similar-products container">
+    <h2 class="section-title">Похожие товары</h2>
+    
+                        <div class="Books">
+                            <div class="Block">
+                                <a href="product.html">
+                                    <div class="book-image-container">
+                                        <img src="images/1.jpeg" alt="Я переиграю тебя" class="book-image">
+                                    </div>
+                                </a>
+                                <div class="book-info">
+                                    <div class="price-tag">850 ₽</div>
+                                    <a href="product.html"><span class="book-title">Я переиграю тебя</span></a>
+                                    <p class="book-author">Тони Майрон</p>
+                                </div>
+                                <button class="add-to-cart-btn" data-id="book_1" data-title="Я переиграю тебя"
+                                    data-author="Тони Майрон" data-price="850" data-image="images/1.jpeg">
+                                    В корзину
+                                </button>
+                            </div>
+
+                            <div class="Block">
+                                <div class="book-image-container">
+                                    <img src="images/2.jpeg" alt="Герой нашего времени" class="book-image">
+                                </div>
+                                <div class="book-info">
+                                    <div class="price-tag">550 ₽</div>
+                                    <span class="book-title">Герой нашего времени</span>
+                                    <p class="book-author">Михаил Лермонтов</p>
+                                </div>
+                                <button class="add-to-cart-btn" data-id="book_2" data-title="Герой нашего времени"
+                                    data-author="Михаил Лермонтов" data-price="550" data-image="images/2.jpeg">
+                                    В корзину
+                                </button>
+                            </div>
+
+                            <div class="Block">
+                                <div class="book-image-container">
+                                    <img src="images/3.jpeg" alt="Нейросети могут всё" class="book-image">
+                                </div>
+                                <div class="book-info">
+                                    <div class="price-tag">990 ₽</div>
+                                    <span class="book-title">Нейросети могут всё</span>
+                                    <p class="book-author">Дамир Халилов</p>
+                                </div>
+                                <button class="add-to-cart-btn" data-id="book_3" data-title="Нейросети могут всё"
+                                    data-author="Дамир Халилов" data-price="990" data-image="images/3.jpeg">
+                                    В корзину
+                                </button>
+                            </div>
+
+                            
+                            
+                        </div>
+                    
+</section>
+
+
         </main>
 
         <footer class="footer">

@@ -64,6 +64,63 @@
                 <span class="separator">/</span>
                 <span>Каталог</span>
             </nav>
+            <section class="filters">
+                <div class="filter-group">
+                    <label>Категория</label>
+                    <select id="categoryFilter">
+                        <option value="all">Все категории</option>
+                        <option value="classic">Классика</option>
+                        <option value="self-dev">Саморазвитие</option>
+                        <option value="sci-fi">Фантастика</option>
+                        <option value="detective">Детективы</option>
+                        <option value="psychology">Психология</option>
+                        <option value="programming">Программирование</option>
+                        <option value="kids">Детские книги</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Цена</label>
+                    <div class="price-container-vertical">
+                        <div class="price-field">
+                            <span>от</span>
+                            <input type="number" id="priceMin" placeholder="0">
+                        </div>
+                        <div class="price-field">
+                            <span>до</span>
+                            <input type="number" id="priceMax" placeholder="100000">
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <div class="filter-group">
+                    <label>Переплет</label>
+                    <select id="coverFilter">
+                        <option value="all">Любой</option>
+                        <option value="hard">Твердый</option>
+                        <option value="soft">Мягкий</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Издательство</label>
+                    <select id="publisherFilter">
+                        <option value="all">Все</option>
+                        <option value="eksmo">Эксмо</option>
+                        <option value="ast">АСТ</option>
+                        <option value="mif">МИФ</option>
+                        <option value="piter">Питер</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <button id="applyFiltersBtn" class="apply-btn">ПРИМЕНИТЬ</button>
+                </div>
+                
+            </section>
+
 
             <h2 class="category-title">Новинки</h2>
             <div class="catalog-grid-system">
@@ -318,7 +375,6 @@
                 
             </div>
         </main>
-<<<<<<< HEAD
 
         <footer class="footer">
             <div class="footer-content container">
@@ -383,10 +439,9 @@
                 <button type="button" class="success-close-btn" id="closeSuccessBtn">Закрыть</button>
             </div>
         </div>
-=======
->>>>>>> 3ead5435ff10a42eee5ca1ac71a0724af535ee41
     </div>
     <script src="js/script.js"></script>
+    <script src="filters.js"></script>
 </body>
 
 </html>

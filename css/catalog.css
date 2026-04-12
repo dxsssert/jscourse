@@ -66,6 +66,118 @@
     box-shadow: 0 10px 25px rgba(250, 144, 33, 0.2);
 }
 
+/* Основной контейнер фильтров */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: flex-end;
+    background: rgba(26, 14, 1, 0.85); 
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-group label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #fa9021; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Стили селекторов */
+.filter-group select {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #251502; 
+    color: #fff;
+    font-size: 15px;
+    min-width: 190px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-group select:hover {
+    border-color: #fa9021;
+}
+
+
+.price-container {
+    display: flex;
+    gap: 12px; 
+    flex-wrap: nowrap; 
+}
+
+/* Поля ввода цены */
+.price-field {
+    display:inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05); 
+    padding: 10px 15px;
+    border-radius: 10px;
+    width: 140px;
+    border: 1px solid rgba(250, 144, 33, 0.2);
+    transition: all 0.3s ease;
+}
+
+.price-field:focus-within {
+    background: rgba(250, 144, 33, 0.1);
+    border-color: #fa9021;
+}
+
+.price-field span {
+    color: rgba(255, 255, 255, 0.5); 
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.price-field input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    background: transparent;
+}
+
+/* Скрытие стрелок ввода */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.apply-btn {
+    background-color: #fa9021; /* Фирменный оранжевый */
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    height: 46px; /* Чтобы высота совпадала с инпутами */
+    align-self: flex-end;
+}
+
+.apply-btn:hover {
+    background-color: #ff9d3a;
+    box-shadow: 0 0 15px rgba(250, 144, 33, 0.4);
+    transform: translateY(-2px);
+}
+
+.apply-btn:active {
+    transform: translateY(0);
+}
 
 .book-image-container {
     width: 100%;

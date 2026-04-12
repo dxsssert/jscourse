@@ -139,3 +139,305 @@
         padding: 18px 20px;
     }
 }
+/* Заголовки разделов */
+.section-title {
+    color: #fa9021; /* Оранжевый акцент */
+    margin: 30px 0px 30px 0px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+/* Общий контейнер рейтинга */
+.rating-summary {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 40px;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Левая часть с большой цифрой */
+.rating-big {
+    text-align: center;
+    min-width: 150px;
+}
+
+.rating-number {
+    font-size: 64px;
+    font-weight: bold;
+    color: #fff;
+    display: block;
+}
+
+.rating-big .stars-row {
+    color: #fa9021;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.rating-count {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Правая часть со шкалами */
+.rating-bars {
+    flex-grow: 1;
+    max-width: 500px;
+}
+
+.bar-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.star-label {
+    color: #fa9021;
+    font-size: 14px;
+    width: 30px;
+}
+
+.progress-line {
+    flex-grow: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #fa9021; /* Оранжевый из твоего дизайна */
+    border-radius: 3px;
+}
+
+.bar-count {
+    color: #fff;
+    font-size: 14px;
+    width: 25px;
+    text-align: right;
+}
+
+/* Адаптивность для телефонов */
+@media (max-width: 768px) {
+    .rating-summary {
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+    }
+}
+
+/* Стили для вашего отзыва*/
+.add-review-container {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(26, 14, 1, 0.5);
+    border-radius: 20px;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.form-group label {
+    color: #fa9021;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+.review-form input[type="text"], 
+.review-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(250, 144, 33, 0.2);
+    border-radius: 10px;
+    padding: 12px;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.review-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.review-form input:focus, 
+.review-form textarea:focus {
+    border-color: #fa9021;
+    background: rgba(250, 144, 33, 0.05);
+}
+
+/* Звездный рейтинг (реверсивный порядок для CSS-хака) */
+.star-rating-input {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.star-rating-input input { display: none; }
+
+.star-rating-input label {
+    font-size: 30px;
+    color: #444;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.star-rating-input label:hover,
+.star-rating-input label:hover ~ label,
+.star-rating-input input:checked ~ label {
+    color: #fa9021;
+}
+
+/* Футер формы */
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.checkbox-label {
+    color: #888;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+/* Кнопка Опубликовать */
+.apply-btn {
+    background-color: #fa9021; /* Твой фирменный оранжевый */
+    color: #ffffff;            /* Темный текст для контраста */
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Плавная анимация */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apply-btn:hover {
+    background-color: #ec841c;
+    box-shadow: 0 0 20px rgba(250, 144, 33, 0.4); /* Мягкое свечение */
+    transform: translateY(-2px); /* Легкий подъем при наведении */
+}
+
+.apply-btn:active {
+    transform: translateY(0); /* Эффект нажатия */
+}
+
+/* Если кнопка заблокирована (например, пока не заполнены 300 символов, как на скрине) */
+.apply-btn:disabled {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Стили отзывов */
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-item {
+    background: rgba(255, 255, 255, 0.05); 
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 4px solid #fa9021; 
+    
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-weight: bold;
+    color: #fff;
+}
+
+.review-rating {
+    color: #fa9021;
+}
+
+.review-text {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.review-date {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Кнопка отзыва */
+.add-review-btn {
+    
+    background-color: #fa9021 ;
+    border: 1px solid #f47e00;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 30px; 
+}
+
+.add-review-btn:hover {
+    background: #cb6900;
+    color: #ffffff;
+}
+
+/* Уникальные стили для секции похожих товаров */
+.similar-products {
+    margin-top: 60px; /* Отступ всей секции от отзывов */
+}
+
+.similar-products .Books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start; /* Выравнивание по левому краю, как в каталоге */
+    padding: 20px 0;
+}
+
+/* Если нужно, чтобы в похожих товарах карточки были чуть меньше */
+.similar-products .Block {
+    flex: 0 1 280px; /* Гибкость: не растут, но могут сжиматься до 280px */
+    margin-bottom: 10px;
+}
+
+/* Специфичный заголовок для этой страницы */
+.similar-products .section-title {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(250, 144, 33, 0.1);
+    padding-bottom: 15px;
+}
