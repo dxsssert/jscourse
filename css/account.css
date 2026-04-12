@@ -1,0 +1,106 @@
+/* Основной контейнер страницы аккаунта */
+.account-container {
+    display: flex;
+    gap: 60px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    align-items: flex-start;
+}
+
+/* ЛЕВОЕ МЕНЮ */
+.account-menu {
+    width: 280px;
+    position: sticky;
+    top: 20px;
+}
+
+/* Контейнер для навигации */
+.side-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 250px; /* Установи фиксированную ширину для всего меню */
+}
+
+/* Общие стили для всех кнопок-ссылок */
+.nav-link {
+    display: block;          /* Делает ссылку блоком, чтобы она занимала всю ширину */
+    width: 100%;             /* Растягивает на всю ширину .side-nav */
+    box-sizing: border-box;  /* Чтобы padding не увеличивал ширину сверх 100% */
+    padding: 12px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-align: left;        /* Выравнивание текста по левому краю */
+}
+
+/* Состояние при наведении и активная кнопка */
+.nav-link:hover, 
+.nav-link.active {
+    background: rgba(250, 144, 33, 0.1); /* Теперь фон будет одинаковой ширины у всех */
+    color: #FA9021;
+}
+
+/* Специальный стиль для кнопки "Выйти" */
+.logout-link:hover {
+    background: rgba(255, 94, 94, 0.1);
+    color: #FF5E5E;
+}
+
+
+/* ПРАВАЯ ЧАСТЬ (КОНТЕНТ) */
+.account-main {
+    flex: 1;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.account-section {
+    margin-bottom: 50px;
+}
+
+.sub-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FA9021;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Карточка с личными данными */
+.user-info-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.user-fullname {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.user-contacts {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Пустое состояние для заказов */
+.empty-state {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 16px;
+    padding: 20px 0;
+    border-top: 1px dotted rgba(255, 255, 255,)
+}

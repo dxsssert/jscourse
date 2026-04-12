@@ -179,3 +179,32 @@ if (reviewsContainer) {
     reviewsContainer.innerHTML = cards + cards;
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.books-slider-wrapper .books-grid');
+    const prevBtn = document.querySelector('.trending-prev');
+    const nextBtn = document.querySelector('.trending-next');
+    
+    if (!slider || !prevBtn || !nextBtn) return;
+
+    let scrollAmount = 0;
+    // Рассчитываем шаг: ширина одной карточки + gap
+    const step = 300; 
+
+    nextBtn.addEventListener('click', () => {
+        const maxScroll = slider.scrollWidth - slider.parentElement.clientWidth;
+        if (scrollAmount < maxScroll) {
+            scrollAmount += step;
+            // Проверка, чтобы не уехать слишком далеко
+            if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+            slider.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (scrollAmount > 0) {
+            scrollAmount -= step;
+            if (scrollAmount < 0) scrollAmount = 0;
+            slider.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+    });
+});

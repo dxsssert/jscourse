@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <link rel="stylesheet" href="css/catalog.css" type="text/css">
-    <link rel="stylesheet" href="css/product.css" type="text/css">
     <link rel="icon" href="images/favicon.png" type="image/png">
     <title>Категория товаров</title>
 </head>
@@ -26,7 +25,7 @@
 
                 <div class="catalog-wrapper">
                     <div class="catalog-btn">
-                        <a href="catalog.html" id="catalogTrigger">Каталог</a>
+                        <a href="catalog.html" id="catalogTrigger" ><img src="images/catalog-icon.png" alt="Каталог" class="nav-icon">Каталог</a>
                     </div>
                     <ul class="catalog-dropdown" id="catalogMenu">
                         <li><a href="#">Классика</a></li>
@@ -62,7 +61,7 @@
                         </a>
                     </li>
                     <li class="icon-item">
-                        <a href="profile.html">
+                        <a href="profile-registration.html">
                             <img src="images/profile-icon.png" alt="Личный кабинет" class="nav-icon">
                         </a>
                     </li>
@@ -82,32 +81,23 @@
 
                 <h2 class="category-title">Классика</h2>
                 <div class="catalog-grid-system">
-                    <script>
-                        for (let i = 0; i < 10; i++) {
-                            document.write(`
-                <div class="Block">
-                    <a href="product.html">
-                        <div class="book-image-container">
-                            <img src="images/1.jpeg" alt="Я переиграю тебя" class="book-image">
-                        </div>
-                    </a>
-                    <div class="book-info">
-                        <div class="price-tag">850 ₽</div>
-                        <a href="product.html"><span class="book-title">Я переиграю тебя</span></a>
-                        <p class="book-author">Тони Майрон</p>
-                    </div>
-                    <button class="add-to-cart-btn" 
-                            data-id="book_1_${i}" 
-                            data-title="Я переиграю тебя"
-                            data-author="Тони Майрон" 
-                            data-price="850" 
-                            data-image="images/1.jpeg">
-                        В корзину
-                    </button>
-                </div>
-            `);
-                        }
-                    </script>
+                    
+                <div class="book-card">
+                                <a href="product.html">
+                                    <div class="book-image-container">
+                                        <img src="images/1.jpeg" alt="Я переиграю тебя" class="book-image">
+                                    </div>
+                                </a>
+                                <div class="book-info">
+                                    <div class="price-tag">850 ₽</div>
+                                    <a href="product.html"><span class="book-title">Я переиграю тебя</span></a>
+                                    <p class="book-author">Тони Майрон</p>
+                                </div>
+                                <button class="add-to-cart-btn" data-id="book_1" data-title="Я переиграю тебя"
+                                    data-author="Тони Майрон" data-price="850" data-image="images/1.jpeg">
+                                    В корзину
+                                </button>
+                            </div>
                 </div>
             </main>
 

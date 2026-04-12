@@ -9,6 +9,7 @@
     padding: 0;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    font-size: 20px;
 }
 .breadcrumbs::-webkit-scrollbar {
     display: none;
@@ -17,14 +18,13 @@
     color: #888;
     text-decoration: none;
     transition: 0.3s;
-    font-size: 14px;
 }
 .breadcrumbs a:hover {
     color: #FA9021;
 }
 .breadcrumbs span {
     color: #fff;
-    font-size: 14px;
+    
 }
 .breadcrumbs .separator {
     color: #444;
@@ -90,7 +90,7 @@
 .product-specs li span {
     color: #888;
 }
-.add-to-cart-btn {
+.add-to-cart-btn-product {
     background: #FA9021;
     color: #fff;
     border: none;
@@ -104,7 +104,7 @@
     letter-spacing: 1px;
     width: fit-content;
 }
-.add-to-cart-btn:hover {
+.add-to-cart-btn-product:hover {
     background: #DC7000;
     box-shadow: 0 0 25px rgba(250, 144, 33, 0.5);
     transform: translateY(-3px);
@@ -396,48 +396,3 @@
     color: #666;
 }
 
-/* Кнопка отзыва */
-.add-review-btn {
-    
-    background-color: #fa9021 ;
-    border: 1px solid #f47e00;
-    color: #ffffff;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-bottom: 30px; 
-}
-
-.add-review-btn:hover {
-    background: #cb6900;
-    color: #ffffff;
-}
-
-/* Уникальные стили для секции похожих товаров */
-.similar-products {
-    margin-top: 60px; /* Отступ всей секции от отзывов */
-}
-
-.similar-products .Books {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: flex-start; /* Выравнивание по левому краю, как в каталоге */
-    padding: 20px 0;
-}
-
-/* Если нужно, чтобы в похожих товарах карточки были чуть меньше */
-.similar-products .Block {
-    flex: 0 1 280px; /* Гибкость: не растут, но могут сжиматься до 280px */
-    margin-bottom: 10px;
-}
-
-/* Специфичный заголовок для этой страницы */
-.similar-products .section-title {
-    margin-bottom: 10px;
-    border-bottom: 1px solid rgba(250, 144, 33, 0.1);
-    padding-bottom: 15px;
-}

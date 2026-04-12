@@ -127,12 +127,14 @@ header nav ul li a {
     display: inline-block;
     background-color: #FA9021;
     color: white;
-    padding: 12px 30px;
+    padding: 10px 30px;
     border-radius: 50px;
+    font-size: 25px;
     font-weight: 600;
     transition: background-color 0.3s ease;
     border: none;
-    white-space: nowrap;
+    display: flex;
+    gap: 10px;
 }
 
 .catalog-btn a:hover {
@@ -144,8 +146,20 @@ header nav ul li a {
 .catalog-wrapper:hover .catalog-dropdown {
     display: block;
 }
+@media (max-width: 768px) {
+    .catalog-text {
+        display: none;
+    }
 
+    .catalog-btn a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    
+
+}
 .search-item {
     flex-grow: 1; 
     max-width: 500px;
@@ -544,8 +558,130 @@ header nav ul {
 .trending-controls {
     display: none;
 }
+/* Единая сетка для всех страниц */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    width: 100%;
+    margin-top: 30px;
+}
 
+/* Единый стиль карточки (Block) */
+.book-card {
+    background: rgba(37, 33, 29, 0.8);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    height: 100%; /* Чтобы все карточки были одной высоты */
+    text-decoration: none; /* Если карточка целиком ссылка */
+}
+
+.book-card:hover {
+    transform: translateY(-8px);
+    border-color: #FA9021;
+    background: rgba(37, 33, 29, 0.95);
+    box-shadow: 0 10px 25px rgba(250, 144, 33, 0.2);
+}
+
+/* Контейнер для картинки */
 .book-image-container {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.book-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover .book-image {
+    transform: scale(1.05);
+}
+
+/* Информация о книге */
+.book-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.price-tag {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FA9021;
+    margin-bottom: 10px;
+}
+
+.book-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.book-author {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+}
+
+/* Кнопка */
+.add-to-cart-btn {
+    width: 100%;
+    padding: 12px;
+    background: #FA9021;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #DC7000;
+}
+/* Специальный контейнер для слайдов внутри слайдера */
+/* Ограничиваем обертку, чтобы в нее влезало ровно 3 или 4 карточки */
+.books-slider-wrapper {
+    overflow: hidden;
+    margin: 0 60px; 
+    max-width: 880px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.books-slider-wrapper .books-grid {
+    display: flex;
+    gap: 20px; /* Тот самый отступ, который мы учитывали в расчете */
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
+    will-change: transform; /* Для плавности на мобилках */
+}
+
+.books-slider-wrapper .book-card {
+    min-width: 280px;
+    max-width: 280px;
+    flex-shrink: 0;
+}
+
+
+/* Ограничиваем видимую область */
+/*  */
+/* .book-image-container {
 
     width: 100%;
     height: 350px; 
@@ -625,8 +761,8 @@ header nav ul {
     margin-top: 15px;
     flex-grow: 1; 
 }
+ */
 
-/* Название книги */
 .book-title {
     font-size: 19px;
     font-weight: 600;
@@ -643,7 +779,6 @@ header nav ul {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-/* Цена книги */
 .price-tag {
     font-size: 23px;
     font-weight: 700;
@@ -656,7 +791,10 @@ header nav ul {
 .add-to-cart-btn {
     width: calc(100% - 30px); 
     margin-bottom: 15px;
-}
+    align-self: center;
+    font-size: 16px;
+} 
+
 /* Секция О нас */
 .about-section {
     padding: 80px 0;
