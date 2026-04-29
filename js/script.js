@@ -187,7 +187,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!slider || !prevBtn || !nextBtn) return;
 
     let scrollAmount = 0;
-    // Рассчитываем шаг: ширина одной карточки + gap
     const step = 300; 
 
     nextBtn.addEventListener('click', () => {
@@ -208,3 +207,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+

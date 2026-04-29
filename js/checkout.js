@@ -111,3 +111,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderCheckout();
 });
+
+//Маска для номера телефона
+if (userPhone) {
+    userPhone.addEventListener('input', (e) => {
+        let x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+        
+        // Формат: +7 (999) 000-00-00
+        if (!x[2]) {
+            e.target.value = x[1] ? `+${x[1]}` : '';
+        } else {
+            e.target.value = `+${x[1]} (${x[2]}` + (x[3] ? `) ${x[3]}` : '') + (x[4] ? `-${x[4]}` : '') + (x[5] ? `-${x[5]}` : '');
+        }
+    });
+
+    // Ограничиваем длину
+    userPhone.addEventListener('keydown', (e) => {
+        if (e.target.value.length >= 18 && e.keyCode !== 8 && e.keyCode !== 46) {
+            e.preventDefault();
+        }
+    });
+}

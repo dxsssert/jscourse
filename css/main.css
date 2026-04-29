@@ -654,8 +654,7 @@ header nav ul {
 .add-to-cart-btn:hover {
     background: #DC7000;
 }
-/* Специальный контейнер для слайдов внутри слайдера */
-/* Ограничиваем обертку, чтобы в нее влезало ровно 3 или 4 карточки */
+
 .books-slider-wrapper {
     overflow: hidden;
     margin: 0 60px; 
