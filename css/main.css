@@ -395,17 +395,20 @@ header nav ul {
     display: none;
 }
 
-.trending-header {
+
+
+/* .trending-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
-}
+} */
 .trending h3 {
     font-weight: 600;
-    font-size: 31px;
+    font-size: 35px;
     padding: 0;
-    text-align: left;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .trending .see-all {
@@ -516,13 +519,8 @@ header nav ul {
     display: flex;
     align-items: center;
     width: 100%;
-}
-
-
-.books-slider-wrapper {
-    overflow: hidden;
-    width: 100%;
-    margin: 0 55px; 
+    border-bottom: 1px solid rgba(250, 144, 33, 0.3);
+    padding-bottom: 40px;    
 }
 
 
@@ -569,40 +567,39 @@ header nav ul {
 
 /* Единый стиль карточки (Block) */
 .book-card {
-    background: rgba(37, 33, 29, 0.8);
+    /* background: rgba(37, 33, 29, 0.8); */
     border-radius: 12px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     border: 1px solid transparent;
     transition: all 0.3s ease;
-    height: 100%; /* Чтобы все карточки были одной высоты */
+    height: 100%;
+    width: 100%; /* Чтобы все карточки были одной высоты */
     text-decoration: none; /* Если карточка целиком ссылка */
 }
 
 .book-card:hover {
     transform: translateY(-8px);
     border-color: #FA9021;
-    background: rgba(37, 33, 29, 0.95);
-    box-shadow: 0 10px 25px rgba(250, 144, 33, 0.2);
+    /* background: rgba(37, 33, 29, 0.95); */
+    box-shadow: 0 10px 25px rgba(250, 144, 33, 0.2); 
 }
 
 /* Контейнер для картинки */
 .book-image-container {
     width: 100%;
-    height: 320px;
+    height: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
-    background: rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
 }
 
 .book-image {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -616,6 +613,7 @@ header nav ul {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    padding: 20px;
 }
 
 .price-tag {
@@ -657,110 +655,23 @@ header nav ul {
 
 .books-slider-wrapper {
     overflow: hidden;
-    margin: 0 60px; 
-    max-width: 880px; 
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0; 
+    
 }
 
 .books-slider-wrapper .books-grid {
     display: flex;
-    gap: 20px; /* Тот самый отступ, который мы учитывали в расчете */
+    gap: 20px; 
     transition: transform 0.5s ease-in-out;
     width: max-content;
-    will-change: transform; /* Для плавности на мобилках */
+    will-change: transform; 
 }
 
 .books-slider-wrapper .book-card {
-    min-width: 280px;
-    max-width: 280px;
+    min-width: 10%;
+    max-width: 15%;
     flex-shrink: 0;
 }
-
-
-/* Ограничиваем видимую область */
-/*  */
-/* .book-image-container {
-
-    width: 100%;
-    height: 350px; 
-    display: flex;
-    align-items: flex-end; 
-    justify-content: center;
-    overflow: hidden;
-    margin-bottom: 15px;
-}
-
-.book-image {
-    max-width: 100%;
-    max-height: 100%; 
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.Block:hover .book-image {
-    transform: scale(1.05);
-}
-
-.Block:hover span {
-    color: #FA9021;
-}
-
-.Block::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: #FA9021;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.Block:hover::before {
-    transform: scaleX(1);
-}
-.add-to-cart-btn {
-    margin-top: 1rem;
-    padding: 10px 20px;
-    background-color: #FA9021;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    width: 80%;
-    align-self: center;
-    margin-top: auto;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #DC7000;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.divider {
-    border: none;
-    height: 1px;
-    background-color: #FA9021;
-    margin: 40px auto;
-    width: 80%;
-    opacity: 0.3;
-}
-
-.book-info {
-    width: 100%;
-    padding: 0 15px; 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    margin-top: 15px;
-    flex-grow: 1; 
-}
- */
 
 .book-title {
     font-size: 19px;
@@ -793,6 +704,110 @@ header nav ul {
     align-self: center;
     font-size: 16px;
 } 
+
+.blog-section {
+    padding: 60px 0;
+}
+.blog-section h3{
+    font-weight: 600;
+    font-size: 35px;
+    padding: 0;
+    text-align: center;
+}
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.blog-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(250, 144, 33, 0.15);
+    border-color: rgba(250, 144, 33, 0.3);
+}
+
+.blog-image {
+    position: relative;
+    height: 200px;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-category {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #FA9021;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.blog-content {
+    padding: 25px;
+}
+
+.blog-date {
+    color: #666;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.blog-content h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-family: 'Alegreya SC', serif;
+}
+
+.blog-content p {
+    color: #aaa;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Обрезает текст после 3 строки */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.read-more {
+    color: #FA9021;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.read-more:hover {
+    letter-spacing: 1px;
+}
+
+/* Адаптивность для мобилок */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr; /* По одной колонке на телефон */
+    }
+}
+
 
 /* Секция О нас */
 .about-section {
@@ -1420,24 +1435,6 @@ header.container {
         height: 26px !important;
     }
    
-    .trending .Books {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 20px !important;
-        padding: 0 10px !important;
-    }
-
-    .trending .Block {
-        flex: 0 0 calc(33.333% - 20px) !important;
-        min-width: calc(33.333% - 20px) !important;
-        max-width: calc(33.333% - 20px) !important;
-        box-sizing: border-box !important;
-    }
-
-    .book-image-container img {
-        width: 100% !important;
-        height: auto !important;
-    }
     .hero-content {
         display: flex !important;
         flex-direction: column !important;
@@ -1489,28 +1486,6 @@ header.container {
         justify-content: center;
     }
 
-    .trending .Books {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 20px !important;
-    }
-
-    .trending .Block {
-        flex: 0 0 calc(50% - 20px) !important;
-        min-width: calc(50% - 20px) !important;
-        max-width: calc(50% - 20px) !important;
-        padding: 15px !important;
-    }
-
-    .book-image-container {
-        height: 280px;
-    }
-
-    .trending-prev, 
-    .trending-next {
-        display: none !important;
-    }
     .catalog-dropdown {
         left: 50% !important;
         right: auto !important;
